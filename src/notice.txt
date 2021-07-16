@@ -1,0 +1,41 @@
+(main)
+db ops
+create top message stack
+fill top message stack by identifying messageType
+    (message with resources)
+    receive bytes(decrypted,un-protoed)
+    split multi-in-one components and create specific object and maintenance them
+        (spare object)
+        receive single bytes
+        use protoHandle to unserialize data included
+        fill self's fields
+inform messages instack to return externalOpCmdlines
+    (message with resources)
+    pass informs to objects maintenance by it
+        (spare object)
+        finish necessary calculation
+        return cmdline with replaceable format marks
+collect all the cmdlines and generate batch file
+write it out
+execute it
+generate necessary strings of html
+ask messages instack to return html string
+    (message with resources)
+    pass it down
+        (spare object)
+        return
+    decorate and return
+write them out
+exit
+
+
+called pb <- mixedmsg
+    com.tencent.mobileqq
+        activity
+            ChatHistory c6
+        data
+            MessageForMixedMsg c7
+        mixedmsg
+            MixedMsgManager$2 c9
+        service.message
+            MessageProtoCodec c10
