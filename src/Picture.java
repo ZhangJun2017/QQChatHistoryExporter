@@ -7,11 +7,9 @@
  */
 
 public class Picture {
-    public int thumbHeight;
-    public int thumbWidth;
     public String md5;
-    public String fileName = "Haven't get ready!";
-    public String outputString = "[图片]";
+    public String localPath = "[图片未解析]";
+    public String fileName;
     private RichMsgHandle.PicRec parser = null;
 
     /*
@@ -33,25 +31,32 @@ public class Picture {
 
     public Picture(RichMsgHandle.PicRec parser) {
         this.parser = parser;
-        thumbHeight = parser.getUint32ThumbHeight();
-        thumbWidth = parser.getUint32ThumbWidth();
         md5 = parser.getMd5();
+        localPath = parser.getLocalPath();
+        String CRC64Value = String.valueOf(CRC64.crc64Long(("chatimg:" + md5)));
+        if (CRC64Value.startsWith("-")) {
+            CRC64Value.replace("-", "");
+            fileName = "Cache_-" + Long.toHexString(Long.valueOf(CRC64Value));
+        } else {
+            fileName = "Cache_" + Long.toHexString(Long.valueOf(CRC64Value));
+        }
     }
 
     @Override
     public String toString() {
-        return outputString;
+        return GlobalValues.HtmlFormattingText.PICTURE_HTML.replace("{PICTURE_SRC}", GlobalValues.AssetsPath.PICTURE_PATH + fileName).replace("{PICTURE_ALT}", "[图片](" + localPath + ")");
     }
 
     public String getExternalOperationCmdline() {
-        if (parser != null) {
+        /*if (parser != null) {
             String[] minusOperator = {"", "-"};
             String[] valueArray = String.valueOf(CRC64.crc64Long(("chatimg:" + md5))).split("-");
             fileName = "Cache_" + minusOperator[valueArray.length - 1] + Long.toHexString(Long.valueOf(valueArray[valueArray.length - 1]));
             outputString = fileName;
-        }
-        return "copy <sourceDir>\\" + fileName + " <destDir>\\" + fileName + "\n";
+        }*/
+        return "copy /Y <sourceDir>\\" + fileName.substring(fileName.length() - 3) + "\\" + fileName + " <destDir>\\" + fileName + "\r\n";
     }
+
 }
 
 //copied from http://www.java2s.com/example/java/security/a-function-that-returns-a-64bit-crc-for-string.html

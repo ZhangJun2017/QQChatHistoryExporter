@@ -40,8 +40,8 @@ public class MessageStack {
             } else {
                 toAppend = GlobalValues.HtmlFormattingText.MESSAGE_RECEIVED_HTML;
             }
-            toAppend = toAppend.replaceAll("<MESSAGE_HEADER>", message.sender.nickName + " " + LocalDateTime.ofInstant(Instant.ofEpochSecond(message.time), ZoneOffset.of("+8")).format(dateTimeFormatter));
-            toAppend = toAppend.replaceAll("<MESSAGE_CONTENT>", message.printToHtml());
+            toAppend = toAppend.replace("{MESSAGE_HEADER}", message.sender.nickName + " " + LocalDateTime.ofInstant(Instant.ofEpochSecond(message.time), ZoneOffset.of("+8")).format(dateTimeFormatter));
+            toAppend = toAppend.replace("{MESSAGE_CONTENT}", message.printToHtml());
             stringBuilder.append(toAppend);
         });
         return stringBuilder.toString();

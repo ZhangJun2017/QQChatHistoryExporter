@@ -16,6 +16,7 @@ public class PictureMessage extends Message {
         try {
             this.picture = new Picture(RichMsgHandle.PicRec.parseFrom(data));
         } catch (InvalidProtocolBufferException e) {
+            //this should not happen
             this.picture = new Picture();
             e.printStackTrace();
         }
@@ -28,7 +29,7 @@ public class PictureMessage extends Message {
 
     @Override
     public String printToHtml() {
-        return null;
+        return GlobalValues.HtmlFormattingText.PICTURE_MESSAGE_HTML.replace("{PICTURE_MESSAGE_CONTENT}", picture.toString());
     }
 
     @Override

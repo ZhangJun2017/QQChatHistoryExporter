@@ -19,9 +19,14 @@ public class TextMessage extends Message {
         return "<TextMessage>" + sender.nickName + "(" + sender.uin + "):" + content;
     }
 
-    @Override
-    public String printToHtml() {
-        return GlobalValues.HtmlFormattingText.TEXT_MESSAGE_HTML.replaceAll("<TEXT_MESSAGE_CONTENT>", content);
+    public static String escapeHtml(String toEscape) {
+        toEscape = toEscape.replace("&", "&amp;");
+        toEscape = toEscape.replace("\"", "&quot;");
+        toEscape = toEscape.replace("'", "&apos;");
+        toEscape = toEscape.replace(" ", "&nbsp;");
+        toEscape = toEscape.replace("<", "&lt;");
+        toEscape = toEscape.replace(">", "&gt;");
+        return toEscape;
     }
 
     @Override
@@ -29,4 +34,8 @@ public class TextMessage extends Message {
         return "";
     }
 
+    @Override
+    public String printToHtml() {
+        return GlobalValues.HtmlFormattingText.TEXT_MESSAGE_HTML.replace("{TEXT_MESSAGE_CONTENT}", escapeHtml(content));
+    }
 }

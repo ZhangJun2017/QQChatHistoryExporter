@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -18,7 +17,7 @@ import java.util.HashMap;
  */
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         System.out.println("Hello QQ!");
         /*HashMap config = new HashMap();
         config.put("dateTimeFormatter",DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
@@ -133,9 +132,10 @@ public class Main {
         //-
         String uinOpposite = "-";
         //-
-        //String uinOpposite="-";
+        //String uinOpposite = "-";
         final String Class_Name = "org.sqlite.JDBC";
         final String DB_URL = "jdbc:sqlite:-";
+        final String DB_URL_slowtable = "jdbc:sqlite:-";
         Connection connection;
         HashMap<String, String> friendMap = new HashMap<>();
         MessageStack topMessageStack = new MessageStack();
@@ -151,26 +151,50 @@ public class Main {
             Person me = new Person(uinSelf, friendMap.get(uinSelf));
             Person opposite = new Person(uinOpposite, friendMap.get(uinOpposite));
             Person toStore;
-            rs = statement.executeQuery("select msgData,senderuin,time,msgtype,uniseq from mr_friend_<TARGET>_New".replaceAll("<TARGET>", new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase()));
-            while (rs.next()) {
-                if (decryptString(rs.getBytes(2), key).equals(uinSelf)) toStore = me;
-                else toStore = opposite;
-                switch (rs.getString("msgtype")) {
-                    case "-1000":
-                        topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
-                        break;
-                    default:
-                        topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), rs.getString("msgtype")));
-                        break;
+            for (int i = 0; i < 2; i++) {
+                if (i == 0) {
+                    connection = DriverManager.getConnection(DB_URL);
+                } else {
+                    connection = DriverManager.getConnection(DB_URL_slowtable);
+                }
+                statement = connection.createStatement();
+                try {
+                    rs = statement.executeQuery("select msgData,senderuin,time,msgtype,uniseq from mr_friend_<TARGET>_New".replace("<TARGET>", new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase()));
+                } catch (SQLException e) {
+                    //slowtable.db might not have that table since the common table is enough to store messages
+                }
+                while (rs.next()) {
+                    if (decryptString(rs.getBytes(2), key).equals(uinSelf)) toStore = me;
+                    else toStore = opposite;
+                    switch (rs.getString("msgtype")) {
+                        case "-1000":
+                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
+                            break;
+                        case "-2000":
+                            topMessageStack.add(new PictureMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptProtobuf(rs.getBytes("msgData"), key)));
+                            break;
+                        default:
+                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), rs.getString("msgtype")));
+                            break;
+                    }
                 }
             }
             FileOutputStream fileOutputStream = new FileOutputStream(destDir + "exop.bat", false);
-            fileOutputStream.write(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replaceAll("<BATCH_FILE_BODY>", topMessageStack.getExternalOperationCmdline()).getBytes("GB2312"));
+            fileOutputStream.write(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline()).getBytes("GB2312"));
             fileOutputStream.flush();
             fileOutputStream.close();
-            Runtime.getRuntime().exec(destDir + "exop.bat");
+            //Runtime.getRuntime().exec(destDir + "exop.bat");
+            fileOutputStream = new FileOutputStream(destDir + GlobalValues.AssetsPath.CSS_FILE_PATH, false);
+            fileOutputStream.write(GlobalValues.HtmlFormattingText.CSS_CONTENT.getBytes(StandardCharsets.UTF_8));
+            fileOutputStream.flush();
+            fileOutputStream.close();
             fileOutputStream = new FileOutputStream(destDir + uinOpposite + ".html", false);
-            fileOutputStream.write(topMessageStack.printToHtml(me).getBytes(StandardCharsets.UTF_8));
+            StringBuilder htmlBuilder = new StringBuilder();
+            String htmlTitle = GlobalValues.HtmlFormattingText.HTML_TITLE.replace("{HOST_NICKNAME}", me.nickName).replace("{HOST_UIN}", me.uin).replace("{OPPOSITE_NICKNAME}", opposite.nickName).replace("{OPPOSITE_UIN}", opposite.uin);
+            htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_HEADER.replace("{HTML_TITLE}", htmlTitle));
+            htmlBuilder.append(topMessageStack.printToHtml(me));
+            htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_FOOTER);
+            fileOutputStream.write(htmlBuilder.toString().getBytes(StandardCharsets.UTF_8));
             fileOutputStream.flush();
             fileOutputStream.close();
         } catch (SQLException | ClassNotFoundException | NoSuchAlgorithmException | UnsupportedEncodingException e) {
@@ -181,7 +205,6 @@ public class Main {
             e.printStackTrace();
         }
     }
-
 
     static String decryptChar(String data, String key) {
         if (data == null) {

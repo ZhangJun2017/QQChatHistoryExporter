@@ -11,8 +11,8 @@ message ForwardExtra {
 
 message PicRec {
   string localPath = 1;
-  int32 size = 2;
-  int32 type = 3;
+  uint64 size = 2;
+  uint32 type = 3;
   bool isRead = 4;
   string uuid = 5;
   string md5 = 6;
@@ -22,7 +22,7 @@ message PicRec {
   string rawMsgUrl = 10;
   int32 fileSizeFlag = 11;
   int32 uiOperatorFlag = 12;
-  ForwardExtra forwardInfo = 13;
+  ForwardExtra fowardInfo = 13;
   int32 version = 14;
   int32 isReport = 15;
   uint64 groupFileID = 16;
@@ -34,13 +34,13 @@ message PicRec {
   uint32 uint32_thumb_height = 22;
   uint32 uint32_width = 23;
   uint32 uint32_height = 24;
-  uint32 uint32_image_type = 25;
+  uint32 uint32_image_type = 25 ;
   uint32 uint32_show_len = 26;
   uint32 uint32_download_len = 27;
   uint32 uint32_current_len = 28;
-  uint32 notPreDownloadReason = 29;
+  uint32 notPredownloadReason = 29;
   bool enableEnc = 30;
-  string bigThumbMsgUrl = 31;
+  string bigthumbMsgUrl = 31;
   bytes bytes_pb_reserved = 32;
   bool bool_story_pic_send_to_recent = 33;
 }

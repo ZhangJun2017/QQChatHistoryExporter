@@ -36,55 +36,55 @@ public final class RichMsgHandle {
           descriptor;
 
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
             "\n\023RichMsgHandle.proto\"\255\001\n\014ForwardExtra\022\025" +
                     "\n\rforward_orgId\030\001 \001(\005\022\026\n\016forward_orgUin\030" +
                     "\002 \001(\t\022\032\n\022forward_orgUinType\030\003 \001(\005\022\026\n\016for" +
                     "ward_orgUrl\030\004 \001(\t\022\031\n\021forward_thumbPath\030\005" +
-                    " \001(\t\022\037\n\027forward_orgFileSizeType\030\006 \001(\005\"\366\005" +
+                    " \001(\t\022\037\n\027forward_orgFileSizeType\030\006 \001(\005\"\365\005" +
                     "\n\006PicRec\022\021\n\tlocalPath\030\001 \001(\t\022\014\n\004size\030\002 \001(" +
-                    "\005\022\014\n\004type\030\003 \001(\005\022\016\n\006isRead\030\004 \001(\010\022\014\n\004uuid\030" +
+                    "\004\022\014\n\004type\030\003 \001(\r\022\016\n\006isRead\030\004 \001(\010\022\014\n\004uuid\030" +
                     "\005 \001(\t\022\013\n\003md5\030\006 \001(\t\022\033\n\023serverStorageSourc" +
                     "e\030\007 \001(\t\022\023\n\013thumbMsgUrl\030\010 \001(\t\022\021\n\tbigMsgUr" +
                     "l\030\t \001(\t\022\021\n\trawMsgUrl\030\n \001(\t\022\024\n\014fileSizeFl" +
-                    "ag\030\013 \001(\005\022\026\n\016uiOperatorFlag\030\014 \001(\005\022\"\n\013forw" +
-                    "ardInfo\030\r \001(\0132\r.ForwardExtra\022\017\n\007version\030" +
-                    "\016 \001(\005\022\020\n\010isReport\030\017 \001(\005\022\023\n\013groupFileID\030\020" +
-                    " \001(\004\022\021\n\tlocalUUID\030\021 \001(\t\022\024\n\014preDownState\030" +
-                    "\022 \001(\005\022\026\n\016preDownNetwork\030\023 \001(\005\022\021\n\tpreview" +
-                    "ed\030\024 \001(\005\022\032\n\022uint32_thumb_width\030\025 \001(\r\022\033\n\023" +
-                    "uint32_thumb_height\030\026 \001(\r\022\024\n\014uint32_widt" +
-                    "h\030\027 \001(\r\022\025\n\ruint32_height\030\030 \001(\r\022\031\n\021uint32" +
-                    "_image_type\030\031 \001(\r\022\027\n\017uint32_show_len\030\032 \001" +
-                    "(\r\022\033\n\023uint32_download_len\030\033 \001(\r\022\032\n\022uint3" +
-                    "2_current_len\030\034 \001(\r\022\034\n\024notPreDownloadRea" +
-                    "son\030\035 \001(\r\022\021\n\tenableEnc\030\036 \001(\010\022\026\n\016bigThumb" +
-                    "MsgUrl\030\037 \001(\t\022\031\n\021bytes_pb_reserved\030  \001(\014\022" +
-                    "%\n\035bool_story_pic_send_to_recent\030! \001(\010\"\377" +
-                    "\003\n\006PttRec\022\021\n\tlocalPath\030\001 \001(\t\022\014\n\004size\030\002 \001" +
-                    "(\004\022\014\n\004type\030\003 \001(\r\022\016\n\006isRead\030\004 \001(\010\022\014\n\004uuid" +
-                    "\030\005 \001(\t\022\013\n\003md5\030\006 \001(\t\022\033\n\023serverStorageSour" +
-                    "ce\030\007 \001(\t\022\017\n\007version\030\010 \001(\005\022\020\n\010isReport\030\t " +
-                    "\001(\005\022\017\n\007pttFlag\030\n \001(\005\022\023\n\013groupFileID\030\013 \001(" +
-                    "\004\022\017\n\007sttText\030\014 \001(\t\022\026\n\016longPttVipFlag\030\r \001" +
-                    "(\005\022\021\n\texpandStt\030\016 \001(\010\022\026\n\016group_file_key\030" +
-                    "\017 \001(\t\022\022\n\nmsgRecTime\030\020 \001(\004\022\017\n\007msgTime\030\021 \001" +
-                    "(\004\022\021\n\tvoiceType\030\022 \001(\r\022\023\n\013voiceLength\030\023 \001" +
-                    "(\r\022\027\n\017voiceChangeFlag\030\024 \001(\r\022\021\n\tdirectUrl" +
-                    "\030\025 \001(\t\022\020\n\010busiType\030\026 \001(\r\022\025\n\rfullLocalPat" +
-                    "h\030\027 \001(\t\022\017\n\007extFlag\030\030 \001(\004\022\024\n\014redpack_type" +
-                    "\030\031 \001(\r\022\030\n\020autototext_voice\030\032 \001(\r\"\237\002\n\rMar" +
-                    "ketFaceRec\022\027\n\017bytes_face_name\030\001 \001(\014\022\030\n\020u" +
-                    "int32_item_type\030\002 \001(\r\022\030\n\020uint32_face_inf" +
-                    "o\030\003 \001(\r\022\025\n\rbytes_face_id\030\004 \001(\014\022\025\n\ruint32" +
-                    "_tab_id\030\005 \001(\r\022\027\n\017uint32_sub_type\030\006 \001(\r\022\021" +
-                    "\n\tbytes_key\030\007 \001(\014\022\023\n\013bytes_param\030\010 \001(\014\022\031" +
-                    "\n\021uint32_media_type\030\t \001(\r\022\032\n\022uint32_imag" +
-                    "e_width\030\n \001(\r\022\033\n\023uint32_image_height\030\013 \001" +
-                    "(\r\"l\n\004Elem\022\017\n\007textMsg\030\001 \001(\t\022\027\n\006picMsg\030\002 " +
-                    "\001(\0132\007.PicRec\022#\n\013markfaceMsg\030\003 \001(\0132\016.Mark" +
-                    "etFaceRec\022\025\n\rsourceMsgInfo\030\004 \001(\t\"\033\n\003Msg\022" +
-                    "\024\n\005elems\030\001 \003(\0132\005.Elemb\006proto3"
+                    "ag\030\013 \001(\005\022\026\n\016uiOperatorFlag\030\014 \001(\005\022!\n\nfowa" +
+                    "rdInfo\030\r \001(\0132\r.ForwardExtra\022\017\n\007version\030\016" +
+                    " \001(\005\022\020\n\010isReport\030\017 \001(\005\022\023\n\013groupFileID\030\020 " +
+                    "\001(\004\022\021\n\tlocalUUID\030\021 \001(\t\022\024\n\014preDownState\030\022" +
+                    " \001(\005\022\026\n\016preDownNetwork\030\023 \001(\005\022\021\n\tpreviewe" +
+                    "d\030\024 \001(\005\022\032\n\022uint32_thumb_width\030\025 \001(\r\022\033\n\023u" +
+                    "int32_thumb_height\030\026 \001(\r\022\024\n\014uint32_width" +
+                    "\030\027 \001(\r\022\025\n\ruint32_height\030\030 \001(\r\022\031\n\021uint32_" +
+                    "image_type\030\031 \001(\r\022\027\n\017uint32_show_len\030\032 \001(" +
+                    "\r\022\033\n\023uint32_download_len\030\033 \001(\r\022\032\n\022uint32" +
+                    "_current_len\030\034 \001(\r\022\034\n\024notPredownloadReas" +
+                    "on\030\035 \001(\r\022\021\n\tenableEnc\030\036 \001(\010\022\026\n\016bigthumbM" +
+                    "sgUrl\030\037 \001(\t\022\031\n\021bytes_pb_reserved\030  \001(\014\022%" +
+                    "\n\035bool_story_pic_send_to_recent\030! \001(\010\"\377\003" +
+                    "\n\006PttRec\022\021\n\tlocalPath\030\001 \001(\t\022\014\n\004size\030\002 \001(" +
+                    "\004\022\014\n\004type\030\003 \001(\r\022\016\n\006isRead\030\004 \001(\010\022\014\n\004uuid\030" +
+                    "\005 \001(\t\022\013\n\003md5\030\006 \001(\t\022\033\n\023serverStorageSourc" +
+                    "e\030\007 \001(\t\022\017\n\007version\030\010 \001(\005\022\020\n\010isReport\030\t \001" +
+                    "(\005\022\017\n\007pttFlag\030\n \001(\005\022\023\n\013groupFileID\030\013 \001(\004" +
+                    "\022\017\n\007sttText\030\014 \001(\t\022\026\n\016longPttVipFlag\030\r \001(" +
+                    "\005\022\021\n\texpandStt\030\016 \001(\010\022\026\n\016group_file_key\030\017" +
+                    " \001(\t\022\022\n\nmsgRecTime\030\020 \001(\004\022\017\n\007msgTime\030\021 \001(" +
+                    "\004\022\021\n\tvoiceType\030\022 \001(\r\022\023\n\013voiceLength\030\023 \001(" +
+                    "\r\022\027\n\017voiceChangeFlag\030\024 \001(\r\022\021\n\tdirectUrl\030" +
+                    "\025 \001(\t\022\020\n\010busiType\030\026 \001(\r\022\025\n\rfullLocalPath" +
+                    "\030\027 \001(\t\022\017\n\007extFlag\030\030 \001(\004\022\024\n\014redpack_type\030" +
+                    "\031 \001(\r\022\030\n\020autototext_voice\030\032 \001(\r\"\237\002\n\rMark" +
+                    "etFaceRec\022\027\n\017bytes_face_name\030\001 \001(\014\022\030\n\020ui" +
+                    "nt32_item_type\030\002 \001(\r\022\030\n\020uint32_face_info" +
+                    "\030\003 \001(\r\022\025\n\rbytes_face_id\030\004 \001(\014\022\025\n\ruint32_" +
+                    "tab_id\030\005 \001(\r\022\027\n\017uint32_sub_type\030\006 \001(\r\022\021\n" +
+                    "\tbytes_key\030\007 \001(\014\022\023\n\013bytes_param\030\010 \001(\014\022\031\n" +
+                    "\021uint32_media_type\030\t \001(\r\022\032\n\022uint32_image" +
+                    "_width\030\n \001(\r\022\033\n\023uint32_image_height\030\013 \001(" +
+                    "\r\"l\n\004Elem\022\017\n\007textMsg\030\001 \001(\t\022\027\n\006picMsg\030\002 \001" +
+                    "(\0132\007.PicRec\022#\n\013markfaceMsg\030\003 \001(\0132\016.Marke" +
+                    "tFaceRec\022\025\n\rsourceMsgInfo\030\004 \001(\t\"\033\n\003Msg\022\024" +
+                    "\n\005elems\030\001 \003(\0132\005.Elemb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
             .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,37 +95,37 @@ public final class RichMsgHandle {
     internal_static_ForwardExtra_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_ForwardExtra_descriptor,
-            new java.lang.String[]{"ForwardOrgId", "ForwardOrgUin", "ForwardOrgUinType", "ForwardOrgUrl", "ForwardThumbPath", "ForwardOrgFileSizeType",});
+            new String[]{"ForwardOrgId", "ForwardOrgUin", "ForwardOrgUinType", "ForwardOrgUrl", "ForwardThumbPath", "ForwardOrgFileSizeType",});
     internal_static_PicRec_descriptor =
             getDescriptor().getMessageTypes().get(1);
     internal_static_PicRec_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_PicRec_descriptor,
-            new java.lang.String[]{"LocalPath", "Size", "Type", "IsRead", "Uuid", "Md5", "ServerStorageSource", "ThumbMsgUrl", "BigMsgUrl", "RawMsgUrl", "FileSizeFlag", "UiOperatorFlag", "ForwardInfo", "Version", "IsReport", "GroupFileID", "LocalUUID", "PreDownState", "PreDownNetwork", "Previewed", "Uint32ThumbWidth", "Uint32ThumbHeight", "Uint32Width", "Uint32Height", "Uint32ImageType", "Uint32ShowLen", "Uint32DownloadLen", "Uint32CurrentLen", "NotPreDownloadReason", "EnableEnc", "BigThumbMsgUrl", "BytesPbReserved", "BoolStoryPicSendToRecent",});
+            new String[]{"LocalPath", "Size", "Type", "IsRead", "Uuid", "Md5", "ServerStorageSource", "ThumbMsgUrl", "BigMsgUrl", "RawMsgUrl", "FileSizeFlag", "UiOperatorFlag", "FowardInfo", "Version", "IsReport", "GroupFileID", "LocalUUID", "PreDownState", "PreDownNetwork", "Previewed", "Uint32ThumbWidth", "Uint32ThumbHeight", "Uint32Width", "Uint32Height", "Uint32ImageType", "Uint32ShowLen", "Uint32DownloadLen", "Uint32CurrentLen", "NotPredownloadReason", "EnableEnc", "BigthumbMsgUrl", "BytesPbReserved", "BoolStoryPicSendToRecent",});
     internal_static_PttRec_descriptor =
             getDescriptor().getMessageTypes().get(2);
     internal_static_PttRec_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_PttRec_descriptor,
-            new java.lang.String[]{"LocalPath", "Size", "Type", "IsRead", "Uuid", "Md5", "ServerStorageSource", "Version", "IsReport", "PttFlag", "GroupFileID", "SttText", "LongPttVipFlag", "ExpandStt", "GroupFileKey", "MsgRecTime", "MsgTime", "VoiceType", "VoiceLength", "VoiceChangeFlag", "DirectUrl", "BusiType", "FullLocalPath", "ExtFlag", "RedpackType", "AutototextVoice",});
+            new String[]{"LocalPath", "Size", "Type", "IsRead", "Uuid", "Md5", "ServerStorageSource", "Version", "IsReport", "PttFlag", "GroupFileID", "SttText", "LongPttVipFlag", "ExpandStt", "GroupFileKey", "MsgRecTime", "MsgTime", "VoiceType", "VoiceLength", "VoiceChangeFlag", "DirectUrl", "BusiType", "FullLocalPath", "ExtFlag", "RedpackType", "AutototextVoice",});
     internal_static_MarketFaceRec_descriptor =
             getDescriptor().getMessageTypes().get(3);
     internal_static_MarketFaceRec_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_MarketFaceRec_descriptor,
-            new java.lang.String[]{"BytesFaceName", "Uint32ItemType", "Uint32FaceInfo", "BytesFaceId", "Uint32TabId", "Uint32SubType", "BytesKey", "BytesParam", "Uint32MediaType", "Uint32ImageWidth", "Uint32ImageHeight",});
+            new String[]{"BytesFaceName", "Uint32ItemType", "Uint32FaceInfo", "BytesFaceId", "Uint32TabId", "Uint32SubType", "BytesKey", "BytesParam", "Uint32MediaType", "Uint32ImageWidth", "Uint32ImageHeight",});
     internal_static_Elem_descriptor =
             getDescriptor().getMessageTypes().get(4);
     internal_static_Elem_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_Elem_descriptor,
-            new java.lang.String[]{"TextMsg", "PicMsg", "MarkfaceMsg", "SourceMsgInfo",});
+            new String[]{"TextMsg", "PicMsg", "MarkfaceMsg", "SourceMsgInfo",});
     internal_static_Msg_descriptor =
             getDescriptor().getMessageTypes().get(5);
     internal_static_Msg_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_Msg_descriptor,
-            new java.lang.String[]{"Elems",});
+            new String[]{"Elems",});
   }
 
   private RichMsgHandle() {
@@ -162,7 +162,7 @@ public final class RichMsgHandle {
      *
      * @return The forwardOrgUin.
      */
-    java.lang.String getForwardOrgUin();
+    String getForwardOrgUin();
 
     /**
      * <code>string forward_orgUin = 2;</code>
@@ -174,7 +174,6 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 forward_orgUinType = 3;</code>
-     *
      * @return The forwardOrgUinType.
      */
     int getForwardOrgUinType();
@@ -184,11 +183,10 @@ public final class RichMsgHandle {
      *
      * @return The forwardOrgUrl.
      */
-    java.lang.String getForwardOrgUrl();
+    String getForwardOrgUrl();
 
     /**
      * <code>string forward_orgUrl = 4;</code>
-     *
      * @return The bytes for forwardOrgUrl.
      */
     com.google.protobuf.ByteString
@@ -199,7 +197,7 @@ public final class RichMsgHandle {
      *
      * @return The forwardThumbPath.
      */
-    java.lang.String getForwardThumbPath();
+    String getForwardThumbPath();
 
     /**
      * <code>string forward_thumbPath = 5;</code>
@@ -226,26 +224,23 @@ public final class RichMsgHandle {
      *
      * @return The localPath.
      */
-    java.lang.String getLocalPath();
+    String getLocalPath();
 
     /**
      * <code>string localPath = 1;</code>
-     *
      * @return The bytes for localPath.
      */
     com.google.protobuf.ByteString
     getLocalPathBytes();
 
     /**
-     * <code>int32 size = 2;</code>
-     *
+     * <code>uint64 size = 2;</code>
      * @return The size.
      */
-    int getSize();
+    long getSize();
 
     /**
-     * <code>int32 type = 3;</code>
-     *
+     * <code>uint32 type = 3;</code>
      * @return The type.
      */
     int getType();
@@ -259,10 +254,9 @@ public final class RichMsgHandle {
 
     /**
      * <code>string uuid = 5;</code>
-     *
      * @return The uuid.
      */
-    java.lang.String getUuid();
+    String getUuid();
 
     /**
      * <code>string uuid = 5;</code>
@@ -274,10 +268,9 @@ public final class RichMsgHandle {
 
     /**
      * <code>string md5 = 6;</code>
-     *
      * @return The md5.
      */
-    java.lang.String getMd5();
+    String getMd5();
 
     /**
      * <code>string md5 = 6;</code>
@@ -289,10 +282,9 @@ public final class RichMsgHandle {
 
     /**
      * <code>string serverStorageSource = 7;</code>
-     *
      * @return The serverStorageSource.
      */
-    java.lang.String getServerStorageSource();
+    String getServerStorageSource();
 
     /**
      * <code>string serverStorageSource = 7;</code>
@@ -304,10 +296,9 @@ public final class RichMsgHandle {
 
     /**
      * <code>string thumbMsgUrl = 8;</code>
-     *
      * @return The thumbMsgUrl.
      */
-    java.lang.String getThumbMsgUrl();
+    String getThumbMsgUrl();
 
     /**
      * <code>string thumbMsgUrl = 8;</code>
@@ -322,7 +313,7 @@ public final class RichMsgHandle {
      *
      * @return The bigMsgUrl.
      */
-    java.lang.String getBigMsgUrl();
+    String getBigMsgUrl();
 
     /**
      * <code>string bigMsgUrl = 9;</code>
@@ -334,14 +325,11 @@ public final class RichMsgHandle {
 
     /**
      * <code>string rawMsgUrl = 10;</code>
-     *
      * @return The rawMsgUrl.
      */
-    java.lang.String getRawMsgUrl();
-
+    String getRawMsgUrl();
     /**
      * <code>string rawMsgUrl = 10;</code>
-     *
      * @return The bytes for rawMsgUrl.
      */
     com.google.protobuf.ByteString
@@ -362,23 +350,19 @@ public final class RichMsgHandle {
     int getUiOperatorFlag();
 
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
-     *
-     * @return Whether the forwardInfo field is set.
+     * <code>.ForwardExtra fowardInfo = 13;</code>
+     * @return Whether the fowardInfo field is set.
      */
-    boolean hasForwardInfo();
-
+    boolean hasFowardInfo();
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
-     *
-     * @return The forwardInfo.
+     * <code>.ForwardExtra fowardInfo = 13;</code>
+     * @return The fowardInfo.
      */
-    RichMsgHandle.ForwardExtra getForwardInfo();
-
+    ForwardExtra getFowardInfo();
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
+     * <code>.ForwardExtra fowardInfo = 13;</code>
      */
-    RichMsgHandle.ForwardExtraOrBuilder getForwardInfoOrBuilder();
+    ForwardExtraOrBuilder getFowardInfoOrBuilder();
 
     /**
      * <code>int32 version = 14;</code>
@@ -396,78 +380,66 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint64 groupFileID = 16;</code>
-     *
      * @return The groupFileID.
      */
     long getGroupFileID();
 
     /**
      * <code>string localUUID = 17;</code>
-     *
      * @return The localUUID.
      */
-    java.lang.String getLocalUUID();
-
+    String getLocalUUID();
     /**
      * <code>string localUUID = 17;</code>
-     *
      * @return The bytes for localUUID.
      */
     com.google.protobuf.ByteString
-    getLocalUUIDBytes();
+        getLocalUUIDBytes();
 
     /**
      * <code>int32 preDownState = 18;</code>
-     *
      * @return The preDownState.
      */
     int getPreDownState();
 
     /**
      * <code>int32 preDownNetwork = 19;</code>
-     *
      * @return The preDownNetwork.
      */
     int getPreDownNetwork();
 
     /**
      * <code>int32 previewed = 20;</code>
-     *
      * @return The previewed.
      */
     int getPreviewed();
 
     /**
      * <code>uint32 uint32_thumb_width = 21;</code>
-     *
      * @return The uint32ThumbWidth.
      */
     int getUint32ThumbWidth();
 
     /**
      * <code>uint32 uint32_thumb_height = 22;</code>
-     *
      * @return The uint32ThumbHeight.
      */
     int getUint32ThumbHeight();
 
     /**
      * <code>uint32 uint32_width = 23;</code>
-     *
      * @return The uint32Width.
      */
     int getUint32Width();
 
     /**
      * <code>uint32 uint32_height = 24;</code>
-     *
      * @return The uint32Height.
      */
     int getUint32Height();
 
     /**
      * <code>uint32 uint32_image_type = 25;</code>
-     *
      * @return The uint32ImageType.
      */
     int getUint32ImageType();
@@ -481,7 +453,6 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint32 uint32_download_len = 27;</code>
-     *
      * @return The uint32DownloadLen.
      */
     int getUint32DownloadLen();
@@ -494,33 +465,32 @@ public final class RichMsgHandle {
     int getUint32CurrentLen();
 
     /**
-     * <code>uint32 notPreDownloadReason = 29;</code>
+     * <code>uint32 notPredownloadReason = 29;</code>
      *
-     * @return The notPreDownloadReason.
+     * @return The notPredownloadReason.
      */
-    int getNotPreDownloadReason();
+    int getNotPredownloadReason();
 
     /**
      * <code>bool enableEnc = 30;</code>
-     *
      * @return The enableEnc.
      */
     boolean getEnableEnc();
 
     /**
-     * <code>string bigThumbMsgUrl = 31;</code>
+     * <code>string bigthumbMsgUrl = 31;</code>
      *
-     * @return The bigThumbMsgUrl.
+     * @return The bigthumbMsgUrl.
      */
-    java.lang.String getBigThumbMsgUrl();
+    String getBigthumbMsgUrl();
 
     /**
-     * <code>string bigThumbMsgUrl = 31;</code>
+     * <code>string bigthumbMsgUrl = 31;</code>
      *
-     * @return The bytes for bigThumbMsgUrl.
+     * @return The bytes for bigthumbMsgUrl.
      */
     com.google.protobuf.ByteString
-    getBigThumbMsgUrlBytes();
+    getBigthumbMsgUrlBytes();
 
     /**
      * <code>bytes bytes_pb_reserved = 32;</code>
@@ -531,22 +501,19 @@ public final class RichMsgHandle {
 
     /**
      * <code>bool bool_story_pic_send_to_recent = 33;</code>
-     *
      * @return The boolStoryPicSendToRecent.
      */
     boolean getBoolStoryPicSendToRecent();
   }
-
   public interface PttRecOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:PttRec)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:PttRec)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string localPath = 1;</code>
-     *
      * @return The localPath.
      */
-    java.lang.String getLocalPath();
+    String getLocalPath();
 
     /**
      * <code>string localPath = 1;</code>
@@ -582,37 +549,32 @@ public final class RichMsgHandle {
      *
      * @return The uuid.
      */
-    java.lang.String getUuid();
+    String getUuid();
 
     /**
      * <code>string uuid = 5;</code>
-     *
      * @return The bytes for uuid.
      */
     com.google.protobuf.ByteString
-    getUuidBytes();
+        getUuidBytes();
 
     /**
      * <code>string md5 = 6;</code>
-     *
      * @return The md5.
      */
-    java.lang.String getMd5();
-
+    String getMd5();
     /**
      * <code>string md5 = 6;</code>
-     *
      * @return The bytes for md5.
      */
     com.google.protobuf.ByteString
-    getMd5Bytes();
+        getMd5Bytes();
 
     /**
      * <code>string serverStorageSource = 7;</code>
-     *
      * @return The serverStorageSource.
      */
-    java.lang.String getServerStorageSource();
+    String getServerStorageSource();
 
     /**
      * <code>string serverStorageSource = 7;</code>
@@ -624,21 +586,18 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 version = 8;</code>
-     *
      * @return The version.
      */
     int getVersion();
 
     /**
      * <code>int32 isReport = 9;</code>
-     *
      * @return The isReport.
      */
     int getIsReport();
 
     /**
      * <code>int32 pttFlag = 10;</code>
-     *
      * @return The pttFlag.
      */
     int getPttFlag();
@@ -655,40 +614,33 @@ public final class RichMsgHandle {
      *
      * @return The sttText.
      */
-    java.lang.String getSttText();
-
+    String getSttText();
     /**
      * <code>string sttText = 12;</code>
-     *
      * @return The bytes for sttText.
      */
     com.google.protobuf.ByteString
-    getSttTextBytes();
+        getSttTextBytes();
 
     /**
      * <code>int32 longPttVipFlag = 13;</code>
-     *
      * @return The longPttVipFlag.
      */
     int getLongPttVipFlag();
 
     /**
      * <code>bool expandStt = 14;</code>
-     *
      * @return The expandStt.
      */
     boolean getExpandStt();
 
     /**
      * <code>string group_file_key = 15;</code>
-     *
      * @return The groupFileKey.
      */
-    java.lang.String getGroupFileKey();
-
+    String getGroupFileKey();
     /**
      * <code>string group_file_key = 15;</code>
-     *
      * @return The bytes for groupFileKey.
      */
     com.google.protobuf.ByteString
@@ -703,7 +655,6 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint64 msgTime = 17;</code>
-     *
      * @return The msgTime.
      */
     long getMsgTime();
@@ -724,17 +675,15 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint32 voiceChangeFlag = 20;</code>
-     *
      * @return The voiceChangeFlag.
      */
     int getVoiceChangeFlag();
 
     /**
      * <code>string directUrl = 21;</code>
-     *
      * @return The directUrl.
      */
-    java.lang.String getDirectUrl();
+    String getDirectUrl();
 
     /**
      * <code>string directUrl = 21;</code>
@@ -756,7 +705,7 @@ public final class RichMsgHandle {
      *
      * @return The fullLocalPath.
      */
-    java.lang.String getFullLocalPath();
+    String getFullLocalPath();
 
     /**
      * <code>string fullLocalPath = 23;</code>
@@ -764,51 +713,44 @@ public final class RichMsgHandle {
      * @return The bytes for fullLocalPath.
      */
     com.google.protobuf.ByteString
-    getFullLocalPathBytes();
+        getFullLocalPathBytes();
 
     /**
      * <code>uint64 extFlag = 24;</code>
-     *
      * @return The extFlag.
      */
     long getExtFlag();
 
     /**
      * <code>uint32 redpack_type = 25;</code>
-     *
      * @return The redpackType.
      */
     int getRedpackType();
 
     /**
      * <code>uint32 autototext_voice = 26;</code>
-     *
      * @return The autototextVoice.
      */
     int getAutototextVoice();
   }
-
   public interface MarketFaceRecOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:MarketFaceRec)
-          com.google.protobuf.MessageOrBuilder {
+      // @@protoc_insertion_point(interface_extends:MarketFaceRec)
+      com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>bytes bytes_face_name = 1;</code>
-     *
      * @return The bytesFaceName.
      */
     com.google.protobuf.ByteString getBytesFaceName();
 
     /**
      * <code>uint32 uint32_item_type = 2;</code>
-     *
      * @return The uint32ItemType.
      */
     int getUint32ItemType();
 
     /**
      * <code>uint32 uint32_face_info = 3;</code>
-     *
      * @return The uint32FaceInfo.
      */
     int getUint32FaceInfo();
@@ -879,7 +821,7 @@ public final class RichMsgHandle {
      *
      * @return The textMsg.
      */
-    java.lang.String getTextMsg();
+    String getTextMsg();
 
     /**
      * <code>string textMsg = 1;</code>
@@ -901,12 +843,12 @@ public final class RichMsgHandle {
      *
      * @return The picMsg.
      */
-    RichMsgHandle.PicRec getPicMsg();
+    PicRec getPicMsg();
 
     /**
      * <code>.PicRec picMsg = 2;</code>
      */
-    RichMsgHandle.PicRecOrBuilder getPicMsgOrBuilder();
+    PicRecOrBuilder getPicMsgOrBuilder();
 
     /**
      * <code>.MarketFaceRec markfaceMsg = 3;</code>
@@ -920,19 +862,19 @@ public final class RichMsgHandle {
      *
      * @return The markfaceMsg.
      */
-    RichMsgHandle.MarketFaceRec getMarkfaceMsg();
+    MarketFaceRec getMarkfaceMsg();
 
     /**
      * <code>.MarketFaceRec markfaceMsg = 3;</code>
      */
-    RichMsgHandle.MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder();
+    MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder();
 
     /**
      * <code>string sourceMsgInfo = 4;</code>
      *
      * @return The sourceMsgInfo.
      */
-    java.lang.String getSourceMsgInfo();
+    String getSourceMsgInfo();
 
     /**
      * <code>string sourceMsgInfo = 4;</code>
@@ -950,13 +892,13 @@ public final class RichMsgHandle {
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    java.util.List<RichMsgHandle.Elem>
+    java.util.List<Elem>
     getElemsList();
 
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    RichMsgHandle.Elem getElems(int index);
+    Elem getElems(int index);
 
     /**
      * <code>repeated .Elem elems = 1;</code>
@@ -966,13 +908,13 @@ public final class RichMsgHandle {
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    java.util.List<? extends RichMsgHandle.ElemOrBuilder>
+    java.util.List<? extends ElemOrBuilder>
     getElemsOrBuilderList();
 
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    RichMsgHandle.ElemOrBuilder getElemsOrBuilder(
+    ElemOrBuilder getElemsOrBuilder(
             int index);
   }
 
@@ -984,36 +926,6 @@ public final class RichMsgHandle {
           // @@protoc_insertion_point(message_implements:ForwardExtra)
           ForwardExtraOrBuilder {
     public static final int FORWARD_ORGID_FIELD_NUMBER = 1;
-    public static final int FORWARD_ORGUIN_FIELD_NUMBER = 2;
-    public static final int FORWARD_ORGUINTYPE_FIELD_NUMBER = 3;
-    public static final int FORWARD_ORGURL_FIELD_NUMBER = 4;
-    public static final int FORWARD_THUMBPATH_FIELD_NUMBER = 5;
-    public static final int FORWARD_ORGFILESIZETYPE_FIELD_NUMBER = 6;
-    private static final long serialVersionUID = 0L;
-    // @@protoc_insertion_point(class_scope:ForwardExtra)
-    private static final RichMsgHandle.ForwardExtra DEFAULT_INSTANCE;
-    private static final com.google.protobuf.Parser<ForwardExtra>
-            PARSER = new com.google.protobuf.AbstractParser<ForwardExtra>() {
-      @java.lang.Override
-      public ForwardExtra parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ForwardExtra(input, extensionRegistry);
-      }
-    };
-
-    static {
-      DEFAULT_INSTANCE = new RichMsgHandle.ForwardExtra();
-    }
-
-    private int forwardOrgId_;
-    private volatile java.lang.Object forwardOrgUin_;
-    private int forwardOrgUinType_;
-    private volatile java.lang.Object forwardOrgUrl_;
-    private volatile java.lang.Object forwardThumbPath_;
-    private int forwardOrgFileSizeType_;
-    private byte memoizedIsInitialized = -1;
 
     // Use ForwardExtra.newBuilder() to construct.
     private ForwardExtra(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -1026,13 +938,44 @@ public final class RichMsgHandle {
       forwardThumbPath_ = "";
     }
 
+    public static final int FORWARD_ORGUIN_FIELD_NUMBER = 2;
+    public static final int FORWARD_ORGUINTYPE_FIELD_NUMBER = 3;
+    public static final int FORWARD_ORGURL_FIELD_NUMBER = 4;
+    public static final int FORWARD_THUMBPATH_FIELD_NUMBER = 5;
+    public static final int FORWARD_ORGFILESIZETYPE_FIELD_NUMBER = 6;
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:ForwardExtra)
+    private static final ForwardExtra DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<ForwardExtra>
+            PARSER = new com.google.protobuf.AbstractParser<ForwardExtra>() {
+      @Override
+      public ForwardExtra parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ForwardExtra(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new ForwardExtra();
+    }
+
+    private int forwardOrgId_;
+    private volatile Object forwardOrgUin_;
+    private int forwardOrgUinType_;
+    private volatile Object forwardOrgUrl_;
+    private volatile Object forwardThumbPath_;
+    private int forwardOrgFileSizeType_;
+    private byte memoizedIsInitialized = -1;
+
     private ForwardExtra(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1050,7 +993,7 @@ public final class RichMsgHandle {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               forwardOrgUin_ = s;
               break;
@@ -1061,13 +1004,13 @@ public final class RichMsgHandle {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               forwardOrgUrl_ = s;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               forwardThumbPath_ = s;
               break;
@@ -1102,51 +1045,51 @@ public final class RichMsgHandle {
       return RichMsgHandle.internal_static_ForwardExtra_descriptor;
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(byte[] data)
+    public static ForwardExtra parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(java.io.InputStream input)
+    public static ForwardExtra parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1154,13 +1097,13 @@ public final class RichMsgHandle {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.ForwardExtra parseDelimitedFrom(java.io.InputStream input)
+    public static ForwardExtra parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.ForwardExtra parseDelimitedFrom(
+    public static ForwardExtra parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1168,14 +1111,14 @@ public final class RichMsgHandle {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.ForwardExtra parseFrom(
+    public static ForwardExtra parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1187,11 +1130,11 @@ public final class RichMsgHandle {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.ForwardExtra prototype) {
+    public static Builder newBuilder(ForwardExtra prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.ForwardExtra getDefaultInstance() {
+    public static ForwardExtra getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1199,33 +1142,32 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new ForwardExtra();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_ForwardExtra_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.ForwardExtra.class, RichMsgHandle.ForwardExtra.Builder.class);
+                      ForwardExtra.class, Builder.class);
     }
 
     /**
      * <code>int32 forward_orgId = 1;</code>
-     *
      * @return The forwardOrgId.
      */
-    @java.lang.Override
+    @Override
     public int getForwardOrgId() {
       return forwardOrgId_;
     }
@@ -1235,15 +1177,15 @@ public final class RichMsgHandle {
      *
      * @return The forwardOrgUin.
      */
-    @java.lang.Override
-    public java.lang.String getForwardOrgUin() {
-      java.lang.Object ref = forwardOrgUin_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getForwardOrgUin() {
+      Object ref = forwardOrgUin_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         forwardOrgUin_ = s;
         return s;
       }
@@ -1254,14 +1196,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for forwardOrgUin.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getForwardOrgUinBytes() {
-      java.lang.Object ref = forwardOrgUin_;
-      if (ref instanceof java.lang.String) {
+      Object ref = forwardOrgUin_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         forwardOrgUin_ = b;
         return b;
       } else {
@@ -1274,25 +1216,24 @@ public final class RichMsgHandle {
      *
      * @return The forwardOrgUinType.
      */
-    @java.lang.Override
+    @Override
     public int getForwardOrgUinType() {
       return forwardOrgUinType_;
     }
 
     /**
      * <code>string forward_orgUrl = 4;</code>
-     *
      * @return The forwardOrgUrl.
      */
-    @java.lang.Override
-    public java.lang.String getForwardOrgUrl() {
-      java.lang.Object ref = forwardOrgUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getForwardOrgUrl() {
+      Object ref = forwardOrgUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         forwardOrgUrl_ = s;
         return s;
       }
@@ -1303,14 +1244,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for forwardOrgUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getForwardOrgUrlBytes() {
-      java.lang.Object ref = forwardOrgUrl_;
-      if (ref instanceof java.lang.String) {
+      Object ref = forwardOrgUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         forwardOrgUrl_ = b;
         return b;
       } else {
@@ -1320,18 +1261,17 @@ public final class RichMsgHandle {
 
     /**
      * <code>string forward_thumbPath = 5;</code>
-     *
      * @return The forwardThumbPath.
      */
-    @java.lang.Override
-    public java.lang.String getForwardThumbPath() {
-      java.lang.Object ref = forwardThumbPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getForwardThumbPath() {
+      Object ref = forwardThumbPath_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         forwardThumbPath_ = s;
         return s;
       }
@@ -1339,17 +1279,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string forward_thumbPath = 5;</code>
-     *
      * @return The bytes for forwardThumbPath.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getForwardThumbPathBytes() {
-      java.lang.Object ref = forwardThumbPath_;
-      if (ref instanceof java.lang.String) {
+      Object ref = forwardThumbPath_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         forwardThumbPath_ = b;
         return b;
       } else {
@@ -1359,15 +1298,14 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 forward_orgFileSizeType = 6;</code>
-     *
      * @return The forwardOrgFileSizeType.
      */
-    @java.lang.Override
+    @Override
     public int getForwardOrgFileSizeType() {
       return forwardOrgFileSizeType_;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1377,7 +1315,7 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (forwardOrgId_ != 0) {
@@ -1401,7 +1339,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1433,15 +1371,15 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof RichMsgHandle.ForwardExtra)) {
+      if (!(obj instanceof ForwardExtra)) {
         return super.equals(obj);
       }
-      RichMsgHandle.ForwardExtra other = (RichMsgHandle.ForwardExtra) obj;
+      ForwardExtra other = (ForwardExtra) obj;
 
       if (getForwardOrgId()
               != other.getForwardOrgId()) return false;
@@ -1458,7 +1396,7 @@ public final class RichMsgHandle {
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1482,31 +1420,31 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
               ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<ForwardExtra> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.ForwardExtra getDefaultInstanceForType() {
+    @Override
+    public ForwardExtra getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1516,21 +1454,29 @@ public final class RichMsgHandle {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:ForwardExtra)
-            RichMsgHandle.ForwardExtraOrBuilder {
+            ForwardExtraOrBuilder {
       private int forwardOrgId_;
-      private java.lang.Object forwardOrgUin_ = "";
-      private int forwardOrgUinType_;
-      private java.lang.Object forwardOrgUrl_ = "";
-      private java.lang.Object forwardThumbPath_ = "";
-      private int forwardOrgFileSizeType_;
+      private Object forwardOrgUin_ = "";
 
       // Construct using RichMsgHandle.ForwardExtra.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
+      private int forwardOrgUinType_;
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      private Object forwardOrgUrl_ = "";
+      private Object forwardThumbPath_ = "";
+      private int forwardOrgFileSizeType_;
+
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1540,21 +1486,15 @@ public final class RichMsgHandle {
         return RichMsgHandle.internal_static_ForwardExtra_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
       internalGetFieldAccessorTable() {
         return RichMsgHandle.internal_static_ForwardExtra_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.ForwardExtra.class, RichMsgHandle.ForwardExtra.Builder.class);
+                        ForwardExtra.class, Builder.class);
       }
 
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         forwardOrgId_ = 0;
@@ -1572,29 +1512,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
         return RichMsgHandle.internal_static_ForwardExtra_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.ForwardExtra getDefaultInstanceForType() {
-        return RichMsgHandle.ForwardExtra.getDefaultInstance();
+      @Override
+      public ForwardExtra getDefaultInstanceForType() {
+        return ForwardExtra.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.ForwardExtra build() {
-        RichMsgHandle.ForwardExtra result = buildPartial();
+      @Override
+      public ForwardExtra build() {
+        ForwardExtra result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.ForwardExtra buildPartial() {
-        RichMsgHandle.ForwardExtra result = new RichMsgHandle.ForwardExtra(this);
+      @Override
+      public ForwardExtra buildPartial() {
+        ForwardExtra result = new ForwardExtra(this);
         result.forwardOrgId_ = forwardOrgId_;
         result.forwardOrgUin_ = forwardOrgUin_;
         result.forwardOrgUinType_ = forwardOrgUinType_;
@@ -1605,56 +1545,56 @@ public final class RichMsgHandle {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+              int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.ForwardExtra) {
-          return mergeFrom((RichMsgHandle.ForwardExtra) other);
+        if (other instanceof ForwardExtra) {
+          return mergeFrom((ForwardExtra) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.ForwardExtra other) {
-        if (other == RichMsgHandle.ForwardExtra.getDefaultInstance()) return this;
+      public Builder mergeFrom(ForwardExtra other) {
+        if (other == ForwardExtra.getDefaultInstance()) return this;
         if (other.getForwardOrgId() != 0) {
           setForwardOrgId(other.getForwardOrgId());
         }
@@ -1681,21 +1621,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        RichMsgHandle.ForwardExtra parsedMessage = null;
+        ForwardExtra parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.ForwardExtra) e.getUnfinishedMessage();
+          parsedMessage = (ForwardExtra) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1710,7 +1650,7 @@ public final class RichMsgHandle {
        *
        * @return The forwardOrgId.
        */
-      @java.lang.Override
+      @Override
       public int getForwardOrgId() {
         return forwardOrgId_;
       }
@@ -1745,27 +1685,26 @@ public final class RichMsgHandle {
        *
        * @return The forwardOrgUin.
        */
-      public java.lang.String getForwardOrgUin() {
-        java.lang.Object ref = forwardOrgUin_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getForwardOrgUin() {
+        Object ref = forwardOrgUin_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           forwardOrgUin_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string forward_orgUin = 2;</code>
-       *
        * @param value The forwardOrgUin to set.
        * @return This builder for chaining.
        */
       public Builder setForwardOrgUin(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1777,16 +1716,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string forward_orgUin = 2;</code>
-       *
        * @return The bytes for forwardOrgUin.
        */
       public com.google.protobuf.ByteString
       getForwardOrgUinBytes() {
-        java.lang.Object ref = forwardOrgUin_;
+        Object ref = forwardOrgUin_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           forwardOrgUin_ = b;
           return b;
         } else {
@@ -1829,7 +1767,7 @@ public final class RichMsgHandle {
        *
        * @return The forwardOrgUinType.
        */
-      @java.lang.Override
+      @Override
       public int getForwardOrgUinType() {
         return forwardOrgUinType_;
       }
@@ -1864,16 +1802,16 @@ public final class RichMsgHandle {
        *
        * @return The forwardOrgUrl.
        */
-      public java.lang.String getForwardOrgUrl() {
-        java.lang.Object ref = forwardOrgUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getForwardOrgUrl() {
+        Object ref = forwardOrgUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           forwardOrgUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -1884,7 +1822,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setForwardOrgUrl(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1901,11 +1839,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getForwardOrgUrlBytes() {
-        java.lang.Object ref = forwardOrgUrl_;
+        Object ref = forwardOrgUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           forwardOrgUrl_ = b;
           return b;
         } else {
@@ -1945,30 +1883,28 @@ public final class RichMsgHandle {
 
       /**
        * <code>string forward_thumbPath = 5;</code>
-       *
        * @return The forwardThumbPath.
        */
-      public java.lang.String getForwardThumbPath() {
-        java.lang.Object ref = forwardThumbPath_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getForwardThumbPath() {
+        Object ref = forwardThumbPath_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           forwardThumbPath_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string forward_thumbPath = 5;</code>
-       *
        * @param value The forwardThumbPath to set.
        * @return This builder for chaining.
        */
       public Builder setForwardThumbPath(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -1985,11 +1921,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getForwardThumbPathBytes() {
-        java.lang.Object ref = forwardThumbPath_;
+        Object ref = forwardThumbPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           forwardThumbPath_ = b;
           return b;
         } else {
@@ -1999,7 +1935,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string forward_thumbPath = 5;</code>
-       *
        * @param value The bytes for forwardThumbPath to set.
        * @return This builder for chaining.
        */
@@ -2032,14 +1967,13 @@ public final class RichMsgHandle {
        *
        * @return The forwardOrgFileSizeType.
        */
-      @java.lang.Override
+      @Override
       public int getForwardOrgFileSizeType() {
         return forwardOrgFileSizeType_;
       }
 
       /**
        * <code>int32 forward_orgFileSizeType = 6;</code>
-       *
        * @param value The forwardOrgFileSizeType to set.
        * @return This builder for chaining.
        */
@@ -2052,7 +1986,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 forward_orgFileSizeType = 6;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearForwardOrgFileSizeType() {
@@ -2062,13 +1995,13 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2084,10 +2017,16 @@ public final class RichMsgHandle {
    * Protobuf type {@code PicRec}
    */
   public static final class PicRec extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:PicRec)
-          PicRecOrBuilder {
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PicRec)
+      PicRecOrBuilder {
     public static final int LOCALPATH_FIELD_NUMBER = 1;
+
+    // Use PicRec.newBuilder() to construct.
+    private PicRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
     public static final int SIZE_FIELD_NUMBER = 2;
     public static final int TYPE_FIELD_NUMBER = 3;
     public static final int ISREAD_FIELD_NUMBER = 4;
@@ -2099,7 +2038,7 @@ public final class RichMsgHandle {
     public static final int RAWMSGURL_FIELD_NUMBER = 10;
     public static final int FILESIZEFLAG_FIELD_NUMBER = 11;
     public static final int UIOPERATORFLAG_FIELD_NUMBER = 12;
-    public static final int FORWARDINFO_FIELD_NUMBER = 13;
+    public static final int FOWARDINFO_FIELD_NUMBER = 13;
     public static final int VERSION_FIELD_NUMBER = 14;
     public static final int ISREPORT_FIELD_NUMBER = 15;
     public static final int GROUPFILEID_FIELD_NUMBER = 16;
@@ -2122,10 +2061,10 @@ public final class RichMsgHandle {
     public static final int BOOL_STORY_PIC_SEND_TO_RECENT_FIELD_NUMBER = 33;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:PicRec)
-    private static final RichMsgHandle.PicRec DEFAULT_INSTANCE;
+    private static final PicRec DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<PicRec>
             PARSER = new com.google.protobuf.AbstractParser<PicRec>() {
-      @java.lang.Override
+      @Override
       public PicRec parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2135,26 +2074,26 @@ public final class RichMsgHandle {
     };
 
     static {
-      DEFAULT_INSTANCE = new RichMsgHandle.PicRec();
+      DEFAULT_INSTANCE = new PicRec();
     }
 
-    private volatile java.lang.Object localPath_;
-    private int size_;
+    private volatile Object localPath_;
+    private long size_;
     private int type_;
     private boolean isRead_;
-    private volatile java.lang.Object uuid_;
-    private volatile java.lang.Object md5_;
-    private volatile java.lang.Object serverStorageSource_;
-    private volatile java.lang.Object thumbMsgUrl_;
-    private volatile java.lang.Object bigMsgUrl_;
-    private volatile java.lang.Object rawMsgUrl_;
+    private volatile Object uuid_;
+    private volatile Object md5_;
+    private volatile Object serverStorageSource_;
+    private volatile Object thumbMsgUrl_;
+    private volatile Object bigMsgUrl_;
+    private volatile Object rawMsgUrl_;
     private int fileSizeFlag_;
     private int uiOperatorFlag_;
-    private RichMsgHandle.ForwardExtra forwardInfo_;
+    private ForwardExtra fowardInfo_;
     private int version_;
     private int isReport_;
     private long groupFileID_;
-    private volatile java.lang.Object localUUID_;
+    private volatile Object localUUID_;
     private int preDownState_;
     private int preDownNetwork_;
     private int previewed_;
@@ -2166,17 +2105,12 @@ public final class RichMsgHandle {
     private int uint32ShowLen_;
     private int uint32DownloadLen_;
     private int uint32CurrentLen_;
-    private int notPreDownloadReason_;
+    private int notPredownloadReason_;
     private boolean enableEnc_;
-    private volatile java.lang.Object bigThumbMsgUrl_;
+    private volatile Object bigthumbMsgUrl_;
     private com.google.protobuf.ByteString bytesPbReserved_;
     private boolean boolStoryPicSendToRecent_;
     private byte memoizedIsInitialized = -1;
-
-    // Use PicRec.newBuilder() to construct.
-    private PicRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
 
     private PicRec() {
       localPath_ = "";
@@ -2187,17 +2121,16 @@ public final class RichMsgHandle {
       bigMsgUrl_ = "";
       rawMsgUrl_ = "";
       localUUID_ = "";
-      bigThumbMsgUrl_ = "";
+      bigthumbMsgUrl_ = "";
       bytesPbReserved_ = com.google.protobuf.ByteString.EMPTY;
     }
-
     private PicRec(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -2210,19 +2143,19 @@ public final class RichMsgHandle {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               localPath_ = s;
               break;
             }
             case 16: {
 
-              size_ = input.readInt32();
+              size_ = input.readUInt64();
               break;
             }
             case 24: {
 
-              type_ = input.readInt32();
+              type_ = input.readUInt32();
               break;
             }
             case 32: {
@@ -2231,37 +2164,37 @@ public final class RichMsgHandle {
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               uuid_ = s;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               md5_ = s;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               serverStorageSource_ = s;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               thumbMsgUrl_ = s;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               bigMsgUrl_ = s;
               break;
             }
             case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               rawMsgUrl_ = s;
               break;
@@ -2277,14 +2210,14 @@ public final class RichMsgHandle {
               break;
             }
             case 106: {
-              RichMsgHandle.ForwardExtra.Builder subBuilder = null;
-              if (forwardInfo_ != null) {
-                subBuilder = forwardInfo_.toBuilder();
+              ForwardExtra.Builder subBuilder = null;
+              if (fowardInfo_ != null) {
+                subBuilder = fowardInfo_.toBuilder();
               }
-              forwardInfo_ = input.readMessage(RichMsgHandle.ForwardExtra.parser(), extensionRegistry);
+              fowardInfo_ = input.readMessage(ForwardExtra.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(forwardInfo_);
-                forwardInfo_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(fowardInfo_);
+                fowardInfo_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2305,7 +2238,7 @@ public final class RichMsgHandle {
               break;
             }
             case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               localUUID_ = s;
               break;
@@ -2367,7 +2300,7 @@ public final class RichMsgHandle {
             }
             case 232: {
 
-              notPreDownloadReason_ = input.readUInt32();
+              notPredownloadReason_ = input.readUInt32();
               break;
             }
             case 240: {
@@ -2376,9 +2309,9 @@ public final class RichMsgHandle {
               break;
             }
             case 250: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
-              bigThumbMsgUrl_ = s;
+              bigthumbMsgUrl_ = s;
               break;
             }
             case 258: {
@@ -2416,51 +2349,51 @@ public final class RichMsgHandle {
       return RichMsgHandle.internal_static_PicRec_descriptor;
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(byte[] data)
+    public static PicRec parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(java.io.InputStream input)
+    public static PicRec parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2468,13 +2401,13 @@ public final class RichMsgHandle {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.PicRec parseDelimitedFrom(java.io.InputStream input)
+    public static PicRec parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PicRec parseDelimitedFrom(
+    public static PicRec parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2482,14 +2415,14 @@ public final class RichMsgHandle {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PicRec parseFrom(
+    public static PicRec parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -2501,11 +2434,11 @@ public final class RichMsgHandle {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.PicRec prototype) {
+    public static Builder newBuilder(PicRec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.PicRec getDefaultInstance() {
+    public static PicRec getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2513,25 +2446,25 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new PicRec();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_PicRec_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.PicRec.class, RichMsgHandle.PicRec.Builder.class);
+                      PicRec.class, Builder.class);
     }
 
     /**
@@ -2539,15 +2472,15 @@ public final class RichMsgHandle {
      *
      * @return The localPath.
      */
-    @java.lang.Override
-    public java.lang.String getLocalPath() {
-      java.lang.Object ref = localPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getLocalPath() {
+      Object ref = localPath_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         localPath_ = s;
         return s;
       }
@@ -2558,14 +2491,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for localPath.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getLocalPathBytes() {
-      java.lang.Object ref = localPath_;
-      if (ref instanceof java.lang.String) {
+      Object ref = localPath_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         localPath_ = b;
         return b;
       } else {
@@ -2574,21 +2507,21 @@ public final class RichMsgHandle {
     }
 
     /**
-     * <code>int32 size = 2;</code>
+     * <code>uint64 size = 2;</code>
      *
      * @return The size.
      */
-    @java.lang.Override
-    public int getSize() {
+    @Override
+    public long getSize() {
       return size_;
     }
 
     /**
-     * <code>int32 type = 3;</code>
+     * <code>uint32 type = 3;</code>
      *
      * @return The type.
      */
-    @java.lang.Override
+    @Override
     public int getType() {
       return type_;
     }
@@ -2598,7 +2531,7 @@ public final class RichMsgHandle {
      *
      * @return The isRead.
      */
-    @java.lang.Override
+    @Override
     public boolean getIsRead() {
       return isRead_;
     }
@@ -2608,15 +2541,15 @@ public final class RichMsgHandle {
      *
      * @return The uuid.
      */
-    @java.lang.Override
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getUuid() {
+      Object ref = uuid_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         uuid_ = s;
         return s;
       }
@@ -2627,14 +2560,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for uuid.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
+      Object ref = uuid_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         uuid_ = b;
         return b;
       } else {
@@ -2647,15 +2580,15 @@ public final class RichMsgHandle {
      *
      * @return The md5.
      */
-    @java.lang.Override
-    public java.lang.String getMd5() {
-      java.lang.Object ref = md5_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getMd5() {
+      Object ref = md5_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         md5_ = s;
         return s;
       }
@@ -2666,14 +2599,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for md5.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getMd5Bytes() {
-      java.lang.Object ref = md5_;
-      if (ref instanceof java.lang.String) {
+      Object ref = md5_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         md5_ = b;
         return b;
       } else {
@@ -2686,15 +2619,15 @@ public final class RichMsgHandle {
      *
      * @return The serverStorageSource.
      */
-    @java.lang.Override
-    public java.lang.String getServerStorageSource() {
-      java.lang.Object ref = serverStorageSource_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getServerStorageSource() {
+      Object ref = serverStorageSource_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         serverStorageSource_ = s;
         return s;
       }
@@ -2705,14 +2638,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for serverStorageSource.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getServerStorageSourceBytes() {
-      java.lang.Object ref = serverStorageSource_;
-      if (ref instanceof java.lang.String) {
+      Object ref = serverStorageSource_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         serverStorageSource_ = b;
         return b;
       } else {
@@ -2722,18 +2655,17 @@ public final class RichMsgHandle {
 
     /**
      * <code>string thumbMsgUrl = 8;</code>
-     *
      * @return The thumbMsgUrl.
      */
-    @java.lang.Override
-    public java.lang.String getThumbMsgUrl() {
-      java.lang.Object ref = thumbMsgUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getThumbMsgUrl() {
+      Object ref = thumbMsgUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         thumbMsgUrl_ = s;
         return s;
       }
@@ -2744,14 +2676,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for thumbMsgUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getThumbMsgUrlBytes() {
-      java.lang.Object ref = thumbMsgUrl_;
-      if (ref instanceof java.lang.String) {
+        getThumbMsgUrlBytes() {
+      Object ref = thumbMsgUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                    (String) ref);
         thumbMsgUrl_ = b;
         return b;
       } else {
@@ -2764,15 +2696,15 @@ public final class RichMsgHandle {
      *
      * @return The bigMsgUrl.
      */
-    @java.lang.Override
-    public java.lang.String getBigMsgUrl() {
-      java.lang.Object ref = bigMsgUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getBigMsgUrl() {
+      Object ref = bigMsgUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         bigMsgUrl_ = s;
         return s;
       }
@@ -2783,14 +2715,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for bigMsgUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getBigMsgUrlBytes() {
-      java.lang.Object ref = bigMsgUrl_;
-      if (ref instanceof java.lang.String) {
+        getBigMsgUrlBytes() {
+      Object ref = bigMsgUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
         bigMsgUrl_ = b;
         return b;
       } else {
@@ -2800,18 +2732,17 @@ public final class RichMsgHandle {
 
     /**
      * <code>string rawMsgUrl = 10;</code>
-     *
      * @return The rawMsgUrl.
      */
-    @java.lang.Override
-    public java.lang.String getRawMsgUrl() {
-      java.lang.Object ref = rawMsgUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getRawMsgUrl() {
+      Object ref = rawMsgUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         rawMsgUrl_ = s;
         return s;
       }
@@ -2819,17 +2750,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string rawMsgUrl = 10;</code>
-     *
      * @return The bytes for rawMsgUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getRawMsgUrlBytes() {
-      java.lang.Object ref = rawMsgUrl_;
-      if (ref instanceof java.lang.String) {
+      Object ref = rawMsgUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         rawMsgUrl_ = b;
         return b;
       } else {
@@ -2839,96 +2769,88 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 fileSizeFlag = 11;</code>
-     *
      * @return The fileSizeFlag.
      */
-    @java.lang.Override
+    @Override
     public int getFileSizeFlag() {
       return fileSizeFlag_;
     }
 
     /**
      * <code>int32 uiOperatorFlag = 12;</code>
-     *
      * @return The uiOperatorFlag.
      */
-    @java.lang.Override
+    @Override
     public int getUiOperatorFlag() {
       return uiOperatorFlag_;
     }
 
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
-     *
-     * @return Whether the forwardInfo field is set.
+     * <code>.ForwardExtra fowardInfo = 13;</code>
+     * @return Whether the fowardInfo field is set.
      */
-    @java.lang.Override
-    public boolean hasForwardInfo() {
-      return forwardInfo_ != null;
+    @Override
+    public boolean hasFowardInfo() {
+      return fowardInfo_ != null;
     }
 
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
-     *
-     * @return The forwardInfo.
+     * <code>.ForwardExtra fowardInfo = 13;</code>
+     * @return The fowardInfo.
      */
-    @java.lang.Override
-    public RichMsgHandle.ForwardExtra getForwardInfo() {
-      return forwardInfo_ == null ? RichMsgHandle.ForwardExtra.getDefaultInstance() : forwardInfo_;
+    @Override
+    public ForwardExtra getFowardInfo() {
+      return fowardInfo_ == null ? ForwardExtra.getDefaultInstance() : fowardInfo_;
     }
 
     /**
-     * <code>.ForwardExtra forwardInfo = 13;</code>
+     * <code>.ForwardExtra fowardInfo = 13;</code>
      */
-    @java.lang.Override
-    public RichMsgHandle.ForwardExtraOrBuilder getForwardInfoOrBuilder() {
-      return getForwardInfo();
+    @Override
+    public ForwardExtraOrBuilder getFowardInfoOrBuilder() {
+      return getFowardInfo();
     }
 
     /**
      * <code>int32 version = 14;</code>
-     *
      * @return The version.
      */
-    @java.lang.Override
+    @Override
     public int getVersion() {
       return version_;
     }
 
     /**
      * <code>int32 isReport = 15;</code>
-     *
      * @return The isReport.
      */
-    @java.lang.Override
+    @Override
     public int getIsReport() {
       return isReport_;
     }
 
     /**
      * <code>uint64 groupFileID = 16;</code>
-     *
      * @return The groupFileID.
      */
-    @java.lang.Override
+    @Override
     public long getGroupFileID() {
       return groupFileID_;
     }
 
     /**
      * <code>string localUUID = 17;</code>
-     *
      * @return The localUUID.
      */
-    @java.lang.Override
-    public java.lang.String getLocalUUID() {
-      java.lang.Object ref = localUUID_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getLocalUUID() {
+      Object ref = localUUID_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
         localUUID_ = s;
         return s;
       }
@@ -2936,17 +2858,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string localUUID = 17;</code>
-     *
      * @return The bytes for localUUID.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getLocalUUIDBytes() {
-      java.lang.Object ref = localUUID_;
-      if (ref instanceof java.lang.String) {
+        getLocalUUIDBytes() {
+      Object ref = localUUID_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         localUUID_ = b;
         return b;
       } else {
@@ -2956,10 +2877,9 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 preDownState = 18;</code>
-     *
      * @return The preDownState.
      */
-    @java.lang.Override
+    @Override
     public int getPreDownState() {
       return preDownState_;
     }
@@ -2969,7 +2889,7 @@ public final class RichMsgHandle {
      *
      * @return The preDownNetwork.
      */
-    @java.lang.Override
+    @Override
     public int getPreDownNetwork() {
       return preDownNetwork_;
     }
@@ -2979,7 +2899,7 @@ public final class RichMsgHandle {
      *
      * @return The previewed.
      */
-    @java.lang.Override
+    @Override
     public int getPreviewed() {
       return previewed_;
     }
@@ -2989,7 +2909,7 @@ public final class RichMsgHandle {
      *
      * @return The uint32ThumbWidth.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ThumbWidth() {
       return uint32ThumbWidth_;
     }
@@ -2999,7 +2919,7 @@ public final class RichMsgHandle {
      *
      * @return The uint32ThumbHeight.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ThumbHeight() {
       return uint32ThumbHeight_;
     }
@@ -3009,47 +2929,43 @@ public final class RichMsgHandle {
      *
      * @return The uint32Width.
      */
-    @java.lang.Override
+    @Override
     public int getUint32Width() {
       return uint32Width_;
     }
 
     /**
      * <code>uint32 uint32_height = 24;</code>
-     *
      * @return The uint32Height.
      */
-    @java.lang.Override
+    @Override
     public int getUint32Height() {
       return uint32Height_;
     }
 
     /**
      * <code>uint32 uint32_image_type = 25;</code>
-     *
      * @return The uint32ImageType.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ImageType() {
       return uint32ImageType_;
     }
 
     /**
      * <code>uint32 uint32_show_len = 26;</code>
-     *
      * @return The uint32ShowLen.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ShowLen() {
       return uint32ShowLen_;
     }
 
     /**
      * <code>uint32 uint32_download_len = 27;</code>
-     *
      * @return The uint32DownloadLen.
      */
-    @java.lang.Override
+    @Override
     public int getUint32DownloadLen() {
       return uint32DownloadLen_;
     }
@@ -3059,64 +2975,62 @@ public final class RichMsgHandle {
      *
      * @return The uint32CurrentLen.
      */
-    @java.lang.Override
+    @Override
     public int getUint32CurrentLen() {
       return uint32CurrentLen_;
     }
 
     /**
-     * <code>uint32 notPreDownloadReason = 29;</code>
+     * <code>uint32 notPredownloadReason = 29;</code>
      *
-     * @return The notPreDownloadReason.
+     * @return The notPredownloadReason.
      */
-    @java.lang.Override
-    public int getNotPreDownloadReason() {
-      return notPreDownloadReason_;
+    @Override
+    public int getNotPredownloadReason() {
+      return notPredownloadReason_;
     }
 
     /**
      * <code>bool enableEnc = 30;</code>
-     *
      * @return The enableEnc.
      */
-    @java.lang.Override
+    @Override
     public boolean getEnableEnc() {
       return enableEnc_;
     }
 
     /**
-     * <code>string bigThumbMsgUrl = 31;</code>
-     *
-     * @return The bigThumbMsgUrl.
+     * <code>string bigthumbMsgUrl = 31;</code>
+     * @return The bigthumbMsgUrl.
      */
-    @java.lang.Override
-    public java.lang.String getBigThumbMsgUrl() {
-      java.lang.Object ref = bigThumbMsgUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getBigthumbMsgUrl() {
+      Object ref = bigthumbMsgUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        bigThumbMsgUrl_ = s;
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        bigthumbMsgUrl_ = s;
         return s;
       }
     }
 
     /**
-     * <code>string bigThumbMsgUrl = 31;</code>
+     * <code>string bigthumbMsgUrl = 31;</code>
      *
-     * @return The bytes for bigThumbMsgUrl.
+     * @return The bytes for bigthumbMsgUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getBigThumbMsgUrlBytes() {
-      java.lang.Object ref = bigThumbMsgUrl_;
-      if (ref instanceof java.lang.String) {
+    getBigthumbMsgUrlBytes() {
+      Object ref = bigthumbMsgUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
-        bigThumbMsgUrl_ = b;
+                        (String) ref);
+        bigthumbMsgUrl_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3125,25 +3039,23 @@ public final class RichMsgHandle {
 
     /**
      * <code>bytes bytes_pb_reserved = 32;</code>
-     *
      * @return The bytesPbReserved.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString getBytesPbReserved() {
       return bytesPbReserved_;
     }
 
     /**
      * <code>bool bool_story_pic_send_to_recent = 33;</code>
-     *
      * @return The boolStoryPicSendToRecent.
      */
-    @java.lang.Override
+    @Override
     public boolean getBoolStoryPicSendToRecent() {
       return boolStoryPicSendToRecent_;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -3153,17 +3065,17 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (!getLocalPathBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, localPath_);
       }
-      if (size_ != 0) {
-        output.writeInt32(2, size_);
+      if (size_ != 0L) {
+        output.writeUInt64(2, size_);
       }
       if (type_ != 0) {
-        output.writeInt32(3, type_);
+        output.writeUInt32(3, type_);
       }
       if (isRead_ != false) {
         output.writeBool(4, isRead_);
@@ -3192,8 +3104,8 @@ public final class RichMsgHandle {
       if (uiOperatorFlag_ != 0) {
         output.writeInt32(12, uiOperatorFlag_);
       }
-      if (forwardInfo_ != null) {
-        output.writeMessage(13, getForwardInfo());
+      if (fowardInfo_ != null) {
+        output.writeMessage(13, getFowardInfo());
       }
       if (version_ != 0) {
         output.writeInt32(14, version_);
@@ -3240,14 +3152,14 @@ public final class RichMsgHandle {
       if (uint32CurrentLen_ != 0) {
         output.writeUInt32(28, uint32CurrentLen_);
       }
-      if (notPreDownloadReason_ != 0) {
-        output.writeUInt32(29, notPreDownloadReason_);
+      if (notPredownloadReason_ != 0) {
+        output.writeUInt32(29, notPredownloadReason_);
       }
       if (enableEnc_ != false) {
         output.writeBool(30, enableEnc_);
       }
-      if (!getBigThumbMsgUrlBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, bigThumbMsgUrl_);
+      if (!getBigthumbMsgUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 31, bigthumbMsgUrl_);
       }
       if (!bytesPbReserved_.isEmpty()) {
         output.writeBytes(32, bytesPbReserved_);
@@ -3258,7 +3170,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -3267,13 +3179,13 @@ public final class RichMsgHandle {
       if (!getLocalPathBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, localPath_);
       }
-      if (size_ != 0) {
+      if (size_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(2, size_);
+                .computeUInt64Size(2, size_);
       }
       if (type_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(3, type_);
+                .computeUInt32Size(3, type_);
       }
       if (isRead_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -3305,9 +3217,9 @@ public final class RichMsgHandle {
         size += com.google.protobuf.CodedOutputStream
                 .computeInt32Size(12, uiOperatorFlag_);
       }
-      if (forwardInfo_ != null) {
+      if (fowardInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-                .computeMessageSize(13, getForwardInfo());
+                .computeMessageSize(13, getFowardInfo());
       }
       if (version_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -3368,16 +3280,16 @@ public final class RichMsgHandle {
         size += com.google.protobuf.CodedOutputStream
                 .computeUInt32Size(28, uint32CurrentLen_);
       }
-      if (notPreDownloadReason_ != 0) {
+      if (notPredownloadReason_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(29, notPreDownloadReason_);
+                .computeUInt32Size(29, notPredownloadReason_);
       }
       if (enableEnc_ != false) {
         size += com.google.protobuf.CodedOutputStream
                 .computeBoolSize(30, enableEnc_);
       }
-      if (!getBigThumbMsgUrlBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, bigThumbMsgUrl_);
+      if (!getBigthumbMsgUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, bigthumbMsgUrl_);
       }
       if (!bytesPbReserved_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -3392,15 +3304,15 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof RichMsgHandle.PicRec)) {
+      if (!(obj instanceof PicRec)) {
         return super.equals(obj);
       }
-      RichMsgHandle.PicRec other = (RichMsgHandle.PicRec) obj;
+      PicRec other = (PicRec) obj;
 
       if (!getLocalPath()
               .equals(other.getLocalPath())) return false;
@@ -3426,10 +3338,10 @@ public final class RichMsgHandle {
               != other.getFileSizeFlag()) return false;
       if (getUiOperatorFlag()
               != other.getUiOperatorFlag()) return false;
-      if (hasForwardInfo() != other.hasForwardInfo()) return false;
-      if (hasForwardInfo()) {
-        if (!getForwardInfo()
-                .equals(other.getForwardInfo())) return false;
+      if (hasFowardInfo() != other.hasFowardInfo()) return false;
+      if (hasFowardInfo()) {
+        if (!getFowardInfo()
+                .equals(other.getFowardInfo())) return false;
       }
       if (getVersion()
               != other.getVersion()) return false;
@@ -3461,20 +3373,20 @@ public final class RichMsgHandle {
               != other.getUint32DownloadLen()) return false;
       if (getUint32CurrentLen()
               != other.getUint32CurrentLen()) return false;
-      if (getNotPreDownloadReason()
-              != other.getNotPreDownloadReason()) return false;
+      if (getNotPredownloadReason()
+              != other.getNotPredownloadReason()) return false;
       if (getEnableEnc()
-              != other.getEnableEnc()) return false;
-      if (!getBigThumbMsgUrl()
-              .equals(other.getBigThumbMsgUrl())) return false;
+          != other.getEnableEnc()) return false;
+      if (!getBigthumbMsgUrl()
+          .equals(other.getBigthumbMsgUrl())) return false;
       if (!getBytesPbReserved()
-              .equals(other.getBytesPbReserved())) return false;
+          .equals(other.getBytesPbReserved())) return false;
       if (getBoolStoryPicSendToRecent()
-              != other.getBoolStoryPicSendToRecent()) return false;
+          != other.getBoolStoryPicSendToRecent()) return false;
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -3484,12 +3396,13 @@ public final class RichMsgHandle {
       hash = (37 * hash) + LOCALPATH_FIELD_NUMBER;
       hash = (53 * hash) + getLocalPath().hashCode();
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + getSize();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType();
       hash = (37 * hash) + ISREAD_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getIsRead());
+          getIsRead());
       hash = (37 * hash) + UUID_FIELD_NUMBER;
       hash = (53 * hash) + getUuid().hashCode();
       hash = (37 * hash) + MD5_FIELD_NUMBER;
@@ -3506,9 +3419,9 @@ public final class RichMsgHandle {
       hash = (53 * hash) + getFileSizeFlag();
       hash = (37 * hash) + UIOPERATORFLAG_FIELD_NUMBER;
       hash = (53 * hash) + getUiOperatorFlag();
-      if (hasForwardInfo()) {
-        hash = (37 * hash) + FORWARDINFO_FIELD_NUMBER;
-        hash = (53 * hash) + getForwardInfo().hashCode();
+      if (hasFowardInfo()) {
+        hash = (37 * hash) + FOWARDINFO_FIELD_NUMBER;
+        hash = (53 * hash) + getFowardInfo().hashCode();
       }
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion();
@@ -3542,12 +3455,12 @@ public final class RichMsgHandle {
       hash = (37 * hash) + UINT32_CURRENT_LEN_FIELD_NUMBER;
       hash = (53 * hash) + getUint32CurrentLen();
       hash = (37 * hash) + NOTPREDOWNLOADREASON_FIELD_NUMBER;
-      hash = (53 * hash) + getNotPreDownloadReason();
+      hash = (53 * hash) + getNotPredownloadReason();
       hash = (37 * hash) + ENABLEENC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getEnableEnc());
       hash = (37 * hash) + BIGTHUMBMSGURL_FIELD_NUMBER;
-      hash = (53 * hash) + getBigThumbMsgUrl().hashCode();
+      hash = (53 * hash) + getBigthumbMsgUrl().hashCode();
       hash = (37 * hash) + BYTES_PB_RESERVED_FIELD_NUMBER;
       hash = (53 * hash) + getBytesPbReserved().hashCode();
       hash = (37 * hash) + BOOL_STORY_PIC_SEND_TO_RECENT_FIELD_NUMBER;
@@ -3558,31 +3471,31 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
               ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PicRec> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.PicRec getDefaultInstanceForType() {
+    @Override
+    public PicRec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3591,27 +3504,34 @@ public final class RichMsgHandle {
      */
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:PicRec)
-            RichMsgHandle.PicRecOrBuilder {
-      private java.lang.Object localPath_ = "";
-      private int size_;
+        // @@protoc_insertion_point(builder_implements:PicRec)
+            PicRecOrBuilder {
+      private Object localPath_ = "";
+      private long size_;
       private int type_;
       private boolean isRead_;
-      private java.lang.Object uuid_ = "";
-      private java.lang.Object md5_ = "";
-      private java.lang.Object serverStorageSource_ = "";
-      private java.lang.Object thumbMsgUrl_ = "";
-      private java.lang.Object bigMsgUrl_ = "";
-      private java.lang.Object rawMsgUrl_ = "";
-      private int fileSizeFlag_;
-      private int uiOperatorFlag_;
-      private RichMsgHandle.ForwardExtra forwardInfo_;
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      private Object uuid_ = "";
+      private Object md5_ = "";
+      private Object serverStorageSource_ = "";
+      private Object thumbMsgUrl_ = "";
+      private Object bigMsgUrl_ = "";
+      private Object rawMsgUrl_ = "";
+      private int fileSizeFlag_ ;
+      private int uiOperatorFlag_ ;
+      private ForwardExtra fowardInfo_;
       private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.ForwardExtra, RichMsgHandle.ForwardExtra.Builder, RichMsgHandle.ForwardExtraOrBuilder> forwardInfoBuilder_;
-      private int version_;
-      private int isReport_;
-      private long groupFileID_;
-      private java.lang.Object localUUID_ = "";
+          ForwardExtra, ForwardExtra.Builder, ForwardExtraOrBuilder> fowardInfoBuilder_;
+      private int version_ ;
+      private int isReport_ ;
+      private long groupFileID_ ;
+      private Object localUUID_ = "";
       private int preDownState_;
       private int preDownNetwork_;
       private int previewed_;
@@ -3623,9 +3543,9 @@ public final class RichMsgHandle {
       private int uint32ShowLen_;
       private int uint32DownloadLen_;
       private int uint32CurrentLen_;
-      private int notPreDownloadReason_;
+      private int notPredownloadReason_;
       private boolean enableEnc_;
-      private java.lang.Object bigThumbMsgUrl_ = "";
+      private Object bigthumbMsgUrl_ = "";
       private com.google.protobuf.ByteString bytesPbReserved_ = com.google.protobuf.ByteString.EMPTY;
       private boolean boolStoryPicSendToRecent_;
 
@@ -3635,7 +3555,7 @@ public final class RichMsgHandle {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3645,26 +3565,20 @@ public final class RichMsgHandle {
         return RichMsgHandle.internal_static_PicRec_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
       internalGetFieldAccessorTable() {
         return RichMsgHandle.internal_static_PicRec_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.PicRec.class, RichMsgHandle.PicRec.Builder.class);
+                        PicRec.class, Builder.class);
       }
 
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         localPath_ = "";
 
-        size_ = 0;
+        size_ = 0L;
 
         type_ = 0;
 
@@ -3686,11 +3600,11 @@ public final class RichMsgHandle {
 
         uiOperatorFlag_ = 0;
 
-        if (forwardInfoBuilder_ == null) {
-          forwardInfo_ = null;
+        if (fowardInfoBuilder_ == null) {
+          fowardInfo_ = null;
         } else {
-          forwardInfo_ = null;
-          forwardInfoBuilder_ = null;
+          fowardInfo_ = null;
+          fowardInfoBuilder_ = null;
         }
         version_ = 0;
 
@@ -3722,11 +3636,11 @@ public final class RichMsgHandle {
 
         uint32CurrentLen_ = 0;
 
-        notPreDownloadReason_ = 0;
+        notPredownloadReason_ = 0;
 
         enableEnc_ = false;
 
-        bigThumbMsgUrl_ = "";
+        bigthumbMsgUrl_ = "";
 
         bytesPbReserved_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -3735,29 +3649,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
         return RichMsgHandle.internal_static_PicRec_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PicRec getDefaultInstanceForType() {
-        return RichMsgHandle.PicRec.getDefaultInstance();
+      @Override
+      public PicRec getDefaultInstanceForType() {
+        return PicRec.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PicRec build() {
-        RichMsgHandle.PicRec result = buildPartial();
+      @Override
+      public PicRec build() {
+        PicRec result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PicRec buildPartial() {
-        RichMsgHandle.PicRec result = new RichMsgHandle.PicRec(this);
+      @Override
+      public PicRec buildPartial() {
+        PicRec result = new PicRec(this);
         result.localPath_ = localPath_;
         result.size_ = size_;
         result.type_ = type_;
@@ -3770,10 +3684,10 @@ public final class RichMsgHandle {
         result.rawMsgUrl_ = rawMsgUrl_;
         result.fileSizeFlag_ = fileSizeFlag_;
         result.uiOperatorFlag_ = uiOperatorFlag_;
-        if (forwardInfoBuilder_ == null) {
-          result.forwardInfo_ = forwardInfo_;
+        if (fowardInfoBuilder_ == null) {
+          result.fowardInfo_ = fowardInfo_;
         } else {
-          result.forwardInfo_ = forwardInfoBuilder_.build();
+          result.fowardInfo_ = fowardInfoBuilder_.build();
         }
         result.version_ = version_;
         result.isReport_ = isReport_;
@@ -3790,70 +3704,70 @@ public final class RichMsgHandle {
         result.uint32ShowLen_ = uint32ShowLen_;
         result.uint32DownloadLen_ = uint32DownloadLen_;
         result.uint32CurrentLen_ = uint32CurrentLen_;
-        result.notPreDownloadReason_ = notPreDownloadReason_;
+        result.notPredownloadReason_ = notPredownloadReason_;
         result.enableEnc_ = enableEnc_;
-        result.bigThumbMsgUrl_ = bigThumbMsgUrl_;
+        result.bigthumbMsgUrl_ = bigthumbMsgUrl_;
         result.bytesPbReserved_ = bytesPbReserved_;
         result.boolStoryPicSendToRecent_ = boolStoryPicSendToRecent_;
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.PicRec) {
-          return mergeFrom((RichMsgHandle.PicRec) other);
+        if (other instanceof PicRec) {
+          return mergeFrom((PicRec)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.PicRec other) {
-        if (other == RichMsgHandle.PicRec.getDefaultInstance()) return this;
+      public Builder mergeFrom(PicRec other) {
+        if (other == PicRec.getDefaultInstance()) return this;
         if (!other.getLocalPath().isEmpty()) {
           localPath_ = other.localPath_;
           onChanged();
         }
-        if (other.getSize() != 0) {
+        if (other.getSize() != 0L) {
           setSize(other.getSize());
         }
         if (other.getType() != 0) {
@@ -3892,8 +3806,8 @@ public final class RichMsgHandle {
         if (other.getUiOperatorFlag() != 0) {
           setUiOperatorFlag(other.getUiOperatorFlag());
         }
-        if (other.hasForwardInfo()) {
-          mergeForwardInfo(other.getForwardInfo());
+        if (other.hasFowardInfo()) {
+          mergeFowardInfo(other.getFowardInfo());
         }
         if (other.getVersion() != 0) {
           setVersion(other.getVersion());
@@ -3941,14 +3855,14 @@ public final class RichMsgHandle {
         if (other.getUint32CurrentLen() != 0) {
           setUint32CurrentLen(other.getUint32CurrentLen());
         }
-        if (other.getNotPreDownloadReason() != 0) {
-          setNotPreDownloadReason(other.getNotPreDownloadReason());
+        if (other.getNotPredownloadReason() != 0) {
+          setNotPredownloadReason(other.getNotPredownloadReason());
         }
         if (other.getEnableEnc() != false) {
           setEnableEnc(other.getEnableEnc());
         }
-        if (!other.getBigThumbMsgUrl().isEmpty()) {
-          bigThumbMsgUrl_ = other.bigThumbMsgUrl_;
+        if (!other.getBigthumbMsgUrl().isEmpty()) {
+          bigthumbMsgUrl_ = other.bigthumbMsgUrl_;
           onChanged();
         }
         if (other.getBytesPbReserved() != com.google.protobuf.ByteString.EMPTY) {
@@ -3962,21 +3876,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        RichMsgHandle.PicRec parsedMessage = null;
+        PicRec parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.PicRec) e.getUnfinishedMessage();
+          parsedMessage = (PicRec) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3988,33 +3902,31 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localPath = 1;</code>
-       *
        * @return The localPath.
        */
-      public java.lang.String getLocalPath() {
-        java.lang.Object ref = localPath_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalPath() {
+        Object ref = localPath_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           localPath_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string localPath = 1;</code>
-       *
        * @param value The localPath to set.
        * @return This builder for chaining.
        */
       public Builder setLocalPath(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         localPath_ = value;
         onChanged();
@@ -4023,16 +3935,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localPath = 1;</code>
-       *
        * @return The bytes for localPath.
        */
       public com.google.protobuf.ByteString
-      getLocalPathBytes() {
-        java.lang.Object ref = localPath_;
+          getLocalPathBytes() {
+        Object ref = localPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           localPath_ = b;
           return b;
         } else {
@@ -4042,7 +3953,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localPath = 1;</code>
-       *
        * @param value The bytes for localPath to set.
        * @return This builder for chaining.
        */
@@ -4060,7 +3970,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localPath = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearLocalPath() {
@@ -4071,22 +3980,22 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>int32 size = 2;</code>
+       * <code>uint64 size = 2;</code>
        *
        * @return The size.
        */
-      @java.lang.Override
-      public int getSize() {
+      @Override
+      public long getSize() {
         return size_;
       }
 
       /**
-       * <code>int32 size = 2;</code>
+       * <code>uint64 size = 2;</code>
        *
        * @param value The size to set.
        * @return This builder for chaining.
        */
-      public Builder setSize(int value) {
+      public Builder setSize(long value) {
 
         size_ = value;
         onChanged();
@@ -4094,29 +4003,29 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>int32 size = 2;</code>
+       * <code>uint64 size = 2;</code>
        *
        * @return This builder for chaining.
        */
       public Builder clearSize() {
 
-        size_ = 0;
+        size_ = 0L;
         onChanged();
         return this;
       }
 
       /**
-       * <code>int32 type = 3;</code>
+       * <code>uint32 type = 3;</code>
        *
        * @return The type.
        */
-      @java.lang.Override
+      @Override
       public int getType() {
         return type_;
       }
 
       /**
-       * <code>int32 type = 3;</code>
+       * <code>uint32 type = 3;</code>
        *
        * @param value The type to set.
        * @return This builder for chaining.
@@ -4129,8 +4038,7 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>int32 type = 3;</code>
-       *
+       * <code>uint32 type = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearType() {
@@ -4145,14 +4053,13 @@ public final class RichMsgHandle {
        *
        * @return The isRead.
        */
-      @java.lang.Override
+      @Override
       public boolean getIsRead() {
         return isRead_;
       }
 
       /**
        * <code>bool isRead = 4;</code>
-       *
        * @param value The isRead to set.
        * @return This builder for chaining.
        */
@@ -4180,16 +4087,16 @@ public final class RichMsgHandle {
        *
        * @return The uuid.
        */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUuid() {
+        Object ref = uuid_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           uuid_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -4200,7 +4107,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setUuid(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4212,16 +4119,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string uuid = 5;</code>
-       *
        * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
-      getUuidBytes() {
-        java.lang.Object ref = uuid_;
+          getUuidBytes() {
+        Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           uuid_ = b;
           return b;
         } else {
@@ -4264,16 +4170,16 @@ public final class RichMsgHandle {
        *
        * @return The md5.
        */
-      public java.lang.String getMd5() {
-        java.lang.Object ref = md5_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMd5() {
+        Object ref = md5_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           md5_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -4284,7 +4190,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setMd5(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4300,12 +4206,12 @@ public final class RichMsgHandle {
        * @return The bytes for md5.
        */
       public com.google.protobuf.ByteString
-      getMd5Bytes() {
-        java.lang.Object ref = md5_;
+          getMd5Bytes() {
+        Object ref = md5_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           md5_ = b;
           return b;
         } else {
@@ -4348,16 +4254,16 @@ public final class RichMsgHandle {
        *
        * @return The serverStorageSource.
        */
-      public java.lang.String getServerStorageSource() {
-        java.lang.Object ref = serverStorageSource_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getServerStorageSource() {
+        Object ref = serverStorageSource_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           serverStorageSource_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -4368,7 +4274,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setServerStorageSource(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4380,16 +4286,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string serverStorageSource = 7;</code>
-       *
        * @return The bytes for serverStorageSource.
        */
       public com.google.protobuf.ByteString
-      getServerStorageSourceBytes() {
-        java.lang.Object ref = serverStorageSource_;
+          getServerStorageSourceBytes() {
+        Object ref = serverStorageSource_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           serverStorageSource_ = b;
           return b;
         } else {
@@ -4399,7 +4304,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string serverStorageSource = 7;</code>
-       *
        * @param value The bytes for serverStorageSource to set.
        * @return This builder for chaining.
        */
@@ -4417,7 +4321,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string serverStorageSource = 7;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearServerStorageSource() {
@@ -4432,16 +4335,16 @@ public final class RichMsgHandle {
        *
        * @return The thumbMsgUrl.
        */
-      public java.lang.String getThumbMsgUrl() {
-        java.lang.Object ref = thumbMsgUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getThumbMsgUrl() {
+        Object ref = thumbMsgUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           thumbMsgUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -4452,10 +4355,10 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setThumbMsgUrl(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         thumbMsgUrl_ = value;
         onChanged();
@@ -4464,16 +4367,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string thumbMsgUrl = 8;</code>
-       *
        * @return The bytes for thumbMsgUrl.
        */
       public com.google.protobuf.ByteString
       getThumbMsgUrlBytes() {
-        java.lang.Object ref = thumbMsgUrl_;
+        Object ref = thumbMsgUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           thumbMsgUrl_ = b;
           return b;
         } else {
@@ -4513,33 +4415,31 @@ public final class RichMsgHandle {
 
       /**
        * <code>string bigMsgUrl = 9;</code>
-       *
        * @return The bigMsgUrl.
        */
-      public java.lang.String getBigMsgUrl() {
-        java.lang.Object ref = bigMsgUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getBigMsgUrl() {
+        Object ref = bigMsgUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           bigMsgUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string bigMsgUrl = 9;</code>
-       *
        * @param value The bigMsgUrl to set.
        * @return This builder for chaining.
        */
       public Builder setBigMsgUrl(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         bigMsgUrl_ = value;
         onChanged();
@@ -4548,16 +4448,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string bigMsgUrl = 9;</code>
-       *
        * @return The bytes for bigMsgUrl.
        */
       public com.google.protobuf.ByteString
-      getBigMsgUrlBytes() {
-        java.lang.Object ref = bigMsgUrl_;
+          getBigMsgUrlBytes() {
+        Object ref = bigMsgUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           bigMsgUrl_ = b;
           return b;
         } else {
@@ -4567,16 +4466,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string bigMsgUrl = 9;</code>
-       *
        * @param value The bytes for bigMsgUrl to set.
        * @return This builder for chaining.
        */
       public Builder setBigMsgUrlBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         bigMsgUrl_ = value;
         onChanged();
@@ -4585,7 +4483,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string bigMsgUrl = 9;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBigMsgUrl() {
@@ -4597,19 +4494,18 @@ public final class RichMsgHandle {
 
       /**
        * <code>string rawMsgUrl = 10;</code>
-       *
        * @return The rawMsgUrl.
        */
-      public java.lang.String getRawMsgUrl() {
-        java.lang.Object ref = rawMsgUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getRawMsgUrl() {
+        Object ref = rawMsgUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           rawMsgUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -4620,7 +4516,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setRawMsgUrl(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -4637,11 +4533,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getRawMsgUrlBytes() {
-        java.lang.Object ref = rawMsgUrl_;
+        Object ref = rawMsgUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           rawMsgUrl_ = b;
           return b;
         } else {
@@ -4684,14 +4580,13 @@ public final class RichMsgHandle {
        *
        * @return The fileSizeFlag.
        */
-      @java.lang.Override
+      @Override
       public int getFileSizeFlag() {
         return fileSizeFlag_;
       }
 
       /**
        * <code>int32 fileSizeFlag = 11;</code>
-       *
        * @param value The fileSizeFlag to set.
        * @return This builder for chaining.
        */
@@ -4716,10 +4611,9 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 uiOperatorFlag = 12;</code>
-       *
        * @return The uiOperatorFlag.
        */
-      @java.lang.Override
+      @Override
       public int getUiOperatorFlag() {
         return uiOperatorFlag_;
       }
@@ -4750,129 +4644,127 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
-       *
-       * @return Whether the forwardInfo field is set.
+       * <code>.ForwardExtra fowardInfo = 13;</code>
+       * @return Whether the fowardInfo field is set.
        */
-      public boolean hasForwardInfo() {
-        return forwardInfoBuilder_ != null || forwardInfo_ != null;
+      public boolean hasFowardInfo() {
+        return fowardInfoBuilder_ != null || fowardInfo_ != null;
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
-       *
-       * @return The forwardInfo.
+       * <code>.ForwardExtra fowardInfo = 13;</code>
+       * @return The fowardInfo.
        */
-      public RichMsgHandle.ForwardExtra getForwardInfo() {
-        if (forwardInfoBuilder_ == null) {
-          return forwardInfo_ == null ? RichMsgHandle.ForwardExtra.getDefaultInstance() : forwardInfo_;
+      public ForwardExtra getFowardInfo() {
+        if (fowardInfoBuilder_ == null) {
+          return fowardInfo_ == null ? ForwardExtra.getDefaultInstance() : fowardInfo_;
         } else {
-          return forwardInfoBuilder_.getMessage();
+          return fowardInfoBuilder_.getMessage();
         }
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public Builder setForwardInfo(RichMsgHandle.ForwardExtra value) {
-        if (forwardInfoBuilder_ == null) {
+      public Builder setFowardInfo(ForwardExtra value) {
+        if (fowardInfoBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          forwardInfo_ = value;
+          fowardInfo_ = value;
           onChanged();
         } else {
-          forwardInfoBuilder_.setMessage(value);
+          fowardInfoBuilder_.setMessage(value);
         }
 
         return this;
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public Builder setForwardInfo(
-              RichMsgHandle.ForwardExtra.Builder builderForValue) {
-        if (forwardInfoBuilder_ == null) {
-          forwardInfo_ = builderForValue.build();
+      public Builder setFowardInfo(
+          ForwardExtra.Builder builderForValue) {
+        if (fowardInfoBuilder_ == null) {
+          fowardInfo_ = builderForValue.build();
           onChanged();
         } else {
-          forwardInfoBuilder_.setMessage(builderForValue.build());
+          fowardInfoBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public Builder mergeForwardInfo(RichMsgHandle.ForwardExtra value) {
-        if (forwardInfoBuilder_ == null) {
-          if (forwardInfo_ != null) {
-            forwardInfo_ =
-                    RichMsgHandle.ForwardExtra.newBuilder(forwardInfo_).mergeFrom(value).buildPartial();
+      public Builder mergeFowardInfo(ForwardExtra value) {
+        if (fowardInfoBuilder_ == null) {
+          if (fowardInfo_ != null) {
+            fowardInfo_ =
+              ForwardExtra.newBuilder(fowardInfo_).mergeFrom(value).buildPartial();
           } else {
-            forwardInfo_ = value;
+            fowardInfo_ = value;
           }
           onChanged();
         } else {
-          forwardInfoBuilder_.mergeFrom(value);
+          fowardInfoBuilder_.mergeFrom(value);
         }
 
         return this;
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public Builder clearForwardInfo() {
-        if (forwardInfoBuilder_ == null) {
-          forwardInfo_ = null;
+      public Builder clearFowardInfo() {
+        if (fowardInfoBuilder_ == null) {
+          fowardInfo_ = null;
           onChanged();
         } else {
-          forwardInfo_ = null;
-          forwardInfoBuilder_ = null;
+          fowardInfo_ = null;
+          fowardInfoBuilder_ = null;
         }
 
         return this;
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public RichMsgHandle.ForwardExtra.Builder getForwardInfoBuilder() {
+      public ForwardExtra.Builder getFowardInfoBuilder() {
 
         onChanged();
-        return getForwardInfoFieldBuilder().getBuilder();
+        return getFowardInfoFieldBuilder().getBuilder();
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
-      public RichMsgHandle.ForwardExtraOrBuilder getForwardInfoOrBuilder() {
-        if (forwardInfoBuilder_ != null) {
-          return forwardInfoBuilder_.getMessageOrBuilder();
+      public ForwardExtraOrBuilder getFowardInfoOrBuilder() {
+        if (fowardInfoBuilder_ != null) {
+          return fowardInfoBuilder_.getMessageOrBuilder();
         } else {
-          return forwardInfo_ == null ?
-                  RichMsgHandle.ForwardExtra.getDefaultInstance() : forwardInfo_;
+          return fowardInfo_ == null ?
+                  ForwardExtra.getDefaultInstance() : fowardInfo_;
         }
       }
 
       /**
-       * <code>.ForwardExtra forwardInfo = 13;</code>
+       * <code>.ForwardExtra fowardInfo = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.ForwardExtra, RichMsgHandle.ForwardExtra.Builder, RichMsgHandle.ForwardExtraOrBuilder>
-      getForwardInfoFieldBuilder() {
-        if (forwardInfoBuilder_ == null) {
-          forwardInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  RichMsgHandle.ForwardExtra, RichMsgHandle.ForwardExtra.Builder, RichMsgHandle.ForwardExtraOrBuilder>(
-                  getForwardInfo(),
+              ForwardExtra, ForwardExtra.Builder, ForwardExtraOrBuilder>
+      getFowardInfoFieldBuilder() {
+        if (fowardInfoBuilder_ == null) {
+          fowardInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  ForwardExtra, ForwardExtra.Builder, ForwardExtraOrBuilder>(
+                  getFowardInfo(),
                   getParentForChildren(),
                   isClean());
-          forwardInfo_ = null;
+          fowardInfo_ = null;
         }
-        return forwardInfoBuilder_;
+        return fowardInfoBuilder_;
       }
 
       /**
@@ -4880,14 +4772,13 @@ public final class RichMsgHandle {
        *
        * @return The version.
        */
-      @java.lang.Override
+      @Override
       public int getVersion() {
         return version_;
       }
 
       /**
        * <code>int32 version = 14;</code>
-       *
        * @param value The version to set.
        * @return This builder for chaining.
        */
@@ -4900,7 +4791,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 version = 14;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
@@ -4912,17 +4802,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 isReport = 15;</code>
-       *
        * @return The isReport.
        */
-      @java.lang.Override
+      @Override
       public int getIsReport() {
         return isReport_;
       }
 
       /**
        * <code>int32 isReport = 15;</code>
-       *
        * @param value The isReport to set.
        * @return This builder for chaining.
        */
@@ -4935,7 +4823,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 isReport = 15;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearIsReport() {
@@ -4947,17 +4834,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 groupFileID = 16;</code>
-       *
        * @return The groupFileID.
        */
-      @java.lang.Override
+      @Override
       public long getGroupFileID() {
         return groupFileID_;
       }
 
       /**
        * <code>uint64 groupFileID = 16;</code>
-       *
        * @param value The groupFileID to set.
        * @return This builder for chaining.
        */
@@ -4970,7 +4855,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 groupFileID = 16;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearGroupFileID() {
@@ -4982,33 +4866,31 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localUUID = 17;</code>
-       *
        * @return The localUUID.
        */
-      public java.lang.String getLocalUUID() {
-        java.lang.Object ref = localUUID_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalUUID() {
+        Object ref = localUUID_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           localUUID_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string localUUID = 17;</code>
-       *
        * @param value The localUUID to set.
        * @return This builder for chaining.
        */
       public Builder setLocalUUID(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         localUUID_ = value;
         onChanged();
@@ -5017,16 +4899,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localUUID = 17;</code>
-       *
        * @return The bytes for localUUID.
        */
       public com.google.protobuf.ByteString
-      getLocalUUIDBytes() {
-        java.lang.Object ref = localUUID_;
+          getLocalUUIDBytes() {
+        Object ref = localUUID_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           localUUID_ = b;
           return b;
         } else {
@@ -5036,16 +4917,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localUUID = 17;</code>
-       *
        * @param value The bytes for localUUID to set.
        * @return This builder for chaining.
        */
       public Builder setLocalUUIDBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         localUUID_ = value;
         onChanged();
@@ -5054,7 +4934,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string localUUID = 17;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearLocalUUID() {
@@ -5066,17 +4945,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 preDownState = 18;</code>
-       *
        * @return The preDownState.
        */
-      @java.lang.Override
+      @Override
       public int getPreDownState() {
         return preDownState_;
       }
 
       /**
        * <code>int32 preDownState = 18;</code>
-       *
        * @param value The preDownState to set.
        * @return This builder for chaining.
        */
@@ -5089,7 +4966,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 preDownState = 18;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearPreDownState() {
@@ -5101,17 +4977,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 preDownNetwork = 19;</code>
-       *
        * @return The preDownNetwork.
        */
-      @java.lang.Override
+      @Override
       public int getPreDownNetwork() {
         return preDownNetwork_;
       }
 
       /**
        * <code>int32 preDownNetwork = 19;</code>
-       *
        * @param value The preDownNetwork to set.
        * @return This builder for chaining.
        */
@@ -5124,7 +4998,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 preDownNetwork = 19;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearPreDownNetwork() {
@@ -5136,17 +5009,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 previewed = 20;</code>
-       *
        * @return The previewed.
        */
-      @java.lang.Override
+      @Override
       public int getPreviewed() {
         return previewed_;
       }
 
       /**
        * <code>int32 previewed = 20;</code>
-       *
        * @param value The previewed to set.
        * @return This builder for chaining.
        */
@@ -5159,7 +5030,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 previewed = 20;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearPreviewed() {
@@ -5171,17 +5041,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_thumb_width = 21;</code>
-       *
        * @return The uint32ThumbWidth.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ThumbWidth() {
         return uint32ThumbWidth_;
       }
 
       /**
        * <code>uint32 uint32_thumb_width = 21;</code>
-       *
        * @param value The uint32ThumbWidth to set.
        * @return This builder for chaining.
        */
@@ -5194,7 +5062,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_thumb_width = 21;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32ThumbWidth() {
@@ -5206,17 +5073,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_thumb_height = 22;</code>
-       *
        * @return The uint32ThumbHeight.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ThumbHeight() {
         return uint32ThumbHeight_;
       }
 
       /**
        * <code>uint32 uint32_thumb_height = 22;</code>
-       *
        * @param value The uint32ThumbHeight to set.
        * @return This builder for chaining.
        */
@@ -5229,7 +5094,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_thumb_height = 22;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32ThumbHeight() {
@@ -5241,17 +5105,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_width = 23;</code>
-       *
        * @return The uint32Width.
        */
-      @java.lang.Override
+      @Override
       public int getUint32Width() {
         return uint32Width_;
       }
 
       /**
        * <code>uint32 uint32_width = 23;</code>
-       *
        * @param value The uint32Width to set.
        * @return This builder for chaining.
        */
@@ -5264,7 +5126,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_width = 23;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32Width() {
@@ -5276,17 +5137,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_height = 24;</code>
-       *
        * @return The uint32Height.
        */
-      @java.lang.Override
+      @Override
       public int getUint32Height() {
         return uint32Height_;
       }
 
       /**
        * <code>uint32 uint32_height = 24;</code>
-       *
        * @param value The uint32Height to set.
        * @return This builder for chaining.
        */
@@ -5314,14 +5173,13 @@ public final class RichMsgHandle {
        *
        * @return The uint32ImageType.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ImageType() {
         return uint32ImageType_;
       }
 
       /**
        * <code>uint32 uint32_image_type = 25;</code>
-       *
        * @param value The uint32ImageType to set.
        * @return This builder for chaining.
        */
@@ -5334,7 +5192,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_image_type = 25;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32ImageType() {
@@ -5346,10 +5203,9 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_show_len = 26;</code>
-       *
        * @return The uint32ShowLen.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ShowLen() {
         return uint32ShowLen_;
       }
@@ -5384,7 +5240,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32DownloadLen.
        */
-      @java.lang.Override
+      @Override
       public int getUint32DownloadLen() {
         return uint32DownloadLen_;
       }
@@ -5404,7 +5260,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_download_len = 27;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32DownloadLen() {
@@ -5419,7 +5274,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32CurrentLen.
        */
-      @java.lang.Override
+      @Override
       public int getUint32CurrentLen() {
         return uint32CurrentLen_;
       }
@@ -5439,7 +5294,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_current_len = 28;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32CurrentLen() {
@@ -5450,53 +5304,48 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>uint32 notPreDownloadReason = 29;</code>
-       *
-       * @return The notPreDownloadReason.
+       * <code>uint32 notPredownloadReason = 29;</code>
+       * @return The notPredownloadReason.
        */
-      @java.lang.Override
-      public int getNotPreDownloadReason() {
-        return notPreDownloadReason_;
+      @Override
+      public int getNotPredownloadReason() {
+        return notPredownloadReason_;
       }
 
       /**
-       * <code>uint32 notPreDownloadReason = 29;</code>
-       *
-       * @param value The notPreDownloadReason to set.
+       * <code>uint32 notPredownloadReason = 29;</code>
+       * @param value The notPredownloadReason to set.
        * @return This builder for chaining.
        */
-      public Builder setNotPreDownloadReason(int value) {
+      public Builder setNotPredownloadReason(int value) {
 
-        notPreDownloadReason_ = value;
+        notPredownloadReason_ = value;
         onChanged();
         return this;
       }
 
       /**
-       * <code>uint32 notPreDownloadReason = 29;</code>
-       *
+       * <code>uint32 notPredownloadReason = 29;</code>
        * @return This builder for chaining.
        */
-      public Builder clearNotPreDownloadReason() {
+      public Builder clearNotPredownloadReason() {
 
-        notPreDownloadReason_ = 0;
+        notPredownloadReason_ = 0;
         onChanged();
         return this;
       }
 
       /**
        * <code>bool enableEnc = 30;</code>
-       *
        * @return The enableEnc.
        */
-      @java.lang.Override
+      @Override
       public boolean getEnableEnc() {
         return enableEnc_;
       }
 
       /**
        * <code>bool enableEnc = 30;</code>
-       *
        * @param value The enableEnc to set.
        * @return This builder for chaining.
        */
@@ -5520,53 +5369,53 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>string bigThumbMsgUrl = 31;</code>
+       * <code>string bigthumbMsgUrl = 31;</code>
        *
-       * @return The bigThumbMsgUrl.
+       * @return The bigthumbMsgUrl.
        */
-      public java.lang.String getBigThumbMsgUrl() {
-        java.lang.Object ref = bigThumbMsgUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getBigthumbMsgUrl() {
+        Object ref = bigthumbMsgUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          bigThumbMsgUrl_ = s;
+          String s = bs.toStringUtf8();
+          bigthumbMsgUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
-       * <code>string bigThumbMsgUrl = 31;</code>
+       * <code>string bigthumbMsgUrl = 31;</code>
        *
-       * @param value The bigThumbMsgUrl to set.
+       * @param value The bigthumbMsgUrl to set.
        * @return This builder for chaining.
        */
-      public Builder setBigThumbMsgUrl(
-              java.lang.String value) {
+      public Builder setBigthumbMsgUrl(
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
 
-        bigThumbMsgUrl_ = value;
+        bigthumbMsgUrl_ = value;
         onChanged();
         return this;
       }
 
       /**
-       * <code>string bigThumbMsgUrl = 31;</code>
+       * <code>string bigthumbMsgUrl = 31;</code>
        *
-       * @return The bytes for bigThumbMsgUrl.
+       * @return The bytes for bigthumbMsgUrl.
        */
       public com.google.protobuf.ByteString
-      getBigThumbMsgUrlBytes() {
-        java.lang.Object ref = bigThumbMsgUrl_;
+      getBigthumbMsgUrlBytes() {
+        Object ref = bigthumbMsgUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
-          bigThumbMsgUrl_ = b;
+                          (String) ref);
+          bigthumbMsgUrl_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -5574,41 +5423,38 @@ public final class RichMsgHandle {
       }
 
       /**
-       * <code>string bigThumbMsgUrl = 31;</code>
-       *
-       * @param value The bytes for bigThumbMsgUrl to set.
+       * <code>string bigthumbMsgUrl = 31;</code>
+       * @param value The bytes for bigthumbMsgUrl to set.
        * @return This builder for chaining.
        */
-      public Builder setBigThumbMsgUrlBytes(
-              com.google.protobuf.ByteString value) {
+      public Builder setBigthumbMsgUrlBytes(
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
-        bigThumbMsgUrl_ = value;
+        bigthumbMsgUrl_ = value;
         onChanged();
         return this;
       }
 
       /**
-       * <code>string bigThumbMsgUrl = 31;</code>
-       *
+       * <code>string bigthumbMsgUrl = 31;</code>
        * @return This builder for chaining.
        */
-      public Builder clearBigThumbMsgUrl() {
+      public Builder clearBigthumbMsgUrl() {
 
-        bigThumbMsgUrl_ = getDefaultInstance().getBigThumbMsgUrl();
+        bigthumbMsgUrl_ = getDefaultInstance().getBigthumbMsgUrl();
         onChanged();
         return this;
       }
 
       /**
        * <code>bytes bytes_pb_reserved = 32;</code>
-       *
        * @return The bytesPbReserved.
        */
-      @java.lang.Override
+      @Override
       public com.google.protobuf.ByteString getBytesPbReserved() {
         return bytesPbReserved_;
       }
@@ -5646,7 +5492,7 @@ public final class RichMsgHandle {
        *
        * @return The boolStoryPicSendToRecent.
        */
-      @java.lang.Override
+      @Override
       public boolean getBoolStoryPicSendToRecent() {
         return boolStoryPicSendToRecent_;
       }
@@ -5666,7 +5512,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bool bool_story_pic_send_to_recent = 33;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBoolStoryPicSendToRecent() {
@@ -5676,13 +5521,13 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5698,10 +5543,25 @@ public final class RichMsgHandle {
    * Protobuf type {@code PttRec}
    */
   public static final class PttRec extends
-          com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:PttRec)
-          PttRecOrBuilder {
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PttRec)
+      PttRecOrBuilder {
     public static final int LOCALPATH_FIELD_NUMBER = 1;
+    // Use PttRec.newBuilder() to construct.
+    private PttRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PttRec() {
+      localPath_ = "";
+      uuid_ = "";
+      md5_ = "";
+      serverStorageSource_ = "";
+      sttText_ = "";
+      groupFileKey_ = "";
+      directUrl_ = "";
+      fullLocalPath_ = "";
+    }
+
     public static final int SIZE_FIELD_NUMBER = 2;
     public static final int TYPE_FIELD_NUMBER = 3;
     public static final int ISREAD_FIELD_NUMBER = 4;
@@ -5727,67 +5587,51 @@ public final class RichMsgHandle {
     public static final int EXTFLAG_FIELD_NUMBER = 24;
     public static final int REDPACK_TYPE_FIELD_NUMBER = 25;
     public static final int AUTOTOTEXT_VOICE_FIELD_NUMBER = 26;
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:PttRec)
-    private static final RichMsgHandle.PttRec DEFAULT_INSTANCE;
+    private static final PttRec DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<PttRec>
-            PARSER = new com.google.protobuf.AbstractParser<PttRec>() {
-      @java.lang.Override
+        PARSER = new com.google.protobuf.AbstractParser<PttRec>() {
+      @Override
       public PttRec parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         return new PttRec(input, extensionRegistry);
       }
     };
 
     static {
-      DEFAULT_INSTANCE = new RichMsgHandle.PttRec();
+      DEFAULT_INSTANCE = new PttRec();
     }
 
-    private volatile java.lang.Object localPath_;
+    private volatile Object localPath_;
     private long size_;
     private int type_;
     private boolean isRead_;
-    private volatile java.lang.Object uuid_;
-    private volatile java.lang.Object md5_;
-    private volatile java.lang.Object serverStorageSource_;
+    private volatile Object uuid_;
+    private volatile Object md5_;
+    private volatile Object serverStorageSource_;
     private int version_;
     private int isReport_;
     private int pttFlag_;
     private long groupFileID_;
-    private volatile java.lang.Object sttText_;
+    private volatile Object sttText_;
     private int longPttVipFlag_;
     private boolean expandStt_;
-    private volatile java.lang.Object groupFileKey_;
+    private volatile Object groupFileKey_;
     private long msgRecTime_;
     private long msgTime_;
     private int voiceType_;
     private int voiceLength_;
     private int voiceChangeFlag_;
-    private volatile java.lang.Object directUrl_;
+    private volatile Object directUrl_;
     private int busiType_;
-    private volatile java.lang.Object fullLocalPath_;
+    private volatile Object fullLocalPath_;
     private long extFlag_;
     private int redpackType_;
     private int autototextVoice_;
     private byte memoizedIsInitialized = -1;
-
-    // Use PttRec.newBuilder() to construct.
-    private PttRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private PttRec() {
-      localPath_ = "";
-      uuid_ = "";
-      md5_ = "";
-      serverStorageSource_ = "";
-      sttText_ = "";
-      groupFileKey_ = "";
-      directUrl_ = "";
-      fullLocalPath_ = "";
-    }
 
     private PttRec(
             com.google.protobuf.CodedInputStream input,
@@ -5795,7 +5639,7 @@ public final class RichMsgHandle {
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -5808,7 +5652,7 @@ public final class RichMsgHandle {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               localPath_ = s;
               break;
@@ -5829,19 +5673,19 @@ public final class RichMsgHandle {
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               uuid_ = s;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               md5_ = s;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               serverStorageSource_ = s;
               break;
@@ -5867,7 +5711,7 @@ public final class RichMsgHandle {
               break;
             }
             case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sttText_ = s;
               break;
@@ -5883,7 +5727,7 @@ public final class RichMsgHandle {
               break;
             }
             case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               groupFileKey_ = s;
               break;
@@ -5914,7 +5758,7 @@ public final class RichMsgHandle {
               break;
             }
             case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               directUrl_ = s;
               break;
@@ -5925,7 +5769,7 @@ public final class RichMsgHandle {
               break;
             }
             case 186: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               fullLocalPath_ = s;
               break;
@@ -5970,51 +5814,51 @@ public final class RichMsgHandle {
       return RichMsgHandle.internal_static_PttRec_descriptor;
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+    public static PttRec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static PttRec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(java.io.InputStream input)
+    public static PttRec parseFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -6022,13 +5866,13 @@ public final class RichMsgHandle {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.PttRec parseDelimitedFrom(java.io.InputStream input)
+    public static PttRec parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PttRec parseDelimitedFrom(
+    public static PttRec parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -6036,14 +5880,14 @@ public final class RichMsgHandle {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.PttRec parseFrom(
+    public static PttRec parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -6055,11 +5899,11 @@ public final class RichMsgHandle {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.PttRec prototype) {
+    public static Builder newBuilder(PttRec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.PttRec getDefaultInstance() {
+    public static PttRec getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6067,41 +5911,40 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new PttRec();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_PttRec_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.PttRec.class, RichMsgHandle.PttRec.Builder.class);
+              PttRec.class, Builder.class);
     }
 
     /**
      * <code>string localPath = 1;</code>
-     *
      * @return The localPath.
      */
-    @java.lang.Override
-    public java.lang.String getLocalPath() {
-      java.lang.Object ref = localPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getLocalPath() {
+      Object ref = localPath_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
         localPath_ = s;
         return s;
       }
@@ -6109,17 +5952,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string localPath = 1;</code>
-     *
      * @return The bytes for localPath.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getLocalPathBytes() {
-      java.lang.Object ref = localPath_;
-      if (ref instanceof java.lang.String) {
+        getLocalPathBytes() {
+      Object ref = localPath_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         localPath_ = b;
         return b;
       } else {
@@ -6132,7 +5974,7 @@ public final class RichMsgHandle {
      *
      * @return The size.
      */
-    @java.lang.Override
+    @Override
     public long getSize() {
       return size_;
     }
@@ -6142,7 +5984,7 @@ public final class RichMsgHandle {
      *
      * @return The type.
      */
-    @java.lang.Override
+    @Override
     public int getType() {
       return type_;
     }
@@ -6152,7 +5994,7 @@ public final class RichMsgHandle {
      *
      * @return The isRead.
      */
-    @java.lang.Override
+    @Override
     public boolean getIsRead() {
       return isRead_;
     }
@@ -6162,15 +6004,15 @@ public final class RichMsgHandle {
      *
      * @return The uuid.
      */
-    @java.lang.Override
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getUuid() {
+      Object ref = uuid_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
         uuid_ = s;
         return s;
       }
@@ -6181,14 +6023,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for uuid.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
+      Object ref = uuid_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         uuid_ = b;
         return b;
       } else {
@@ -6201,15 +6043,15 @@ public final class RichMsgHandle {
      *
      * @return The md5.
      */
-    @java.lang.Override
-    public java.lang.String getMd5() {
-      java.lang.Object ref = md5_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getMd5() {
+      Object ref = md5_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         md5_ = s;
         return s;
       }
@@ -6217,17 +6059,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string md5 = 6;</code>
-     *
      * @return The bytes for md5.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getMd5Bytes() {
-      java.lang.Object ref = md5_;
-      if (ref instanceof java.lang.String) {
+        getMd5Bytes() {
+      Object ref = md5_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
         md5_ = b;
         return b;
       } else {
@@ -6237,18 +6078,17 @@ public final class RichMsgHandle {
 
     /**
      * <code>string serverStorageSource = 7;</code>
-     *
      * @return The serverStorageSource.
      */
-    @java.lang.Override
-    public java.lang.String getServerStorageSource() {
-      java.lang.Object ref = serverStorageSource_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getServerStorageSource() {
+      Object ref = serverStorageSource_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         serverStorageSource_ = s;
         return s;
       }
@@ -6259,14 +6099,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for serverStorageSource.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getServerStorageSourceBytes() {
-      java.lang.Object ref = serverStorageSource_;
-      if (ref instanceof java.lang.String) {
+      Object ref = serverStorageSource_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         serverStorageSource_ = b;
         return b;
       } else {
@@ -6279,7 +6119,7 @@ public final class RichMsgHandle {
      *
      * @return The version.
      */
-    @java.lang.Override
+    @Override
     public int getVersion() {
       return version_;
     }
@@ -6289,17 +6129,16 @@ public final class RichMsgHandle {
      *
      * @return The isReport.
      */
-    @java.lang.Override
+    @Override
     public int getIsReport() {
       return isReport_;
     }
 
     /**
      * <code>int32 pttFlag = 10;</code>
-     *
      * @return The pttFlag.
      */
-    @java.lang.Override
+    @Override
     public int getPttFlag() {
       return pttFlag_;
     }
@@ -6309,7 +6148,7 @@ public final class RichMsgHandle {
      *
      * @return The groupFileID.
      */
-    @java.lang.Override
+    @Override
     public long getGroupFileID() {
       return groupFileID_;
     }
@@ -6319,15 +6158,15 @@ public final class RichMsgHandle {
      *
      * @return The sttText.
      */
-    @java.lang.Override
-    public java.lang.String getSttText() {
-      java.lang.Object ref = sttText_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getSttText() {
+      Object ref = sttText_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sttText_ = s;
         return s;
       }
@@ -6338,14 +6177,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for sttText.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getSttTextBytes() {
-      java.lang.Object ref = sttText_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sttText_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                    (String) ref);
         sttText_ = b;
         return b;
       } else {
@@ -6355,38 +6194,35 @@ public final class RichMsgHandle {
 
     /**
      * <code>int32 longPttVipFlag = 13;</code>
-     *
      * @return The longPttVipFlag.
      */
-    @java.lang.Override
+    @Override
     public int getLongPttVipFlag() {
       return longPttVipFlag_;
     }
 
     /**
      * <code>bool expandStt = 14;</code>
-     *
      * @return The expandStt.
      */
-    @java.lang.Override
+    @Override
     public boolean getExpandStt() {
       return expandStt_;
     }
 
     /**
      * <code>string group_file_key = 15;</code>
-     *
      * @return The groupFileKey.
      */
-    @java.lang.Override
-    public java.lang.String getGroupFileKey() {
-      java.lang.Object ref = groupFileKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getGroupFileKey() {
+      Object ref = groupFileKey_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         groupFileKey_ = s;
         return s;
       }
@@ -6397,14 +6233,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for groupFileKey.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getGroupFileKeyBytes() {
-      java.lang.Object ref = groupFileKey_;
-      if (ref instanceof java.lang.String) {
+      Object ref = groupFileKey_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
         groupFileKey_ = b;
         return b;
       } else {
@@ -6414,68 +6250,62 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint64 msgRecTime = 16;</code>
-     *
      * @return The msgRecTime.
      */
-    @java.lang.Override
+    @Override
     public long getMsgRecTime() {
       return msgRecTime_;
     }
 
     /**
      * <code>uint64 msgTime = 17;</code>
-     *
      * @return The msgTime.
      */
-    @java.lang.Override
+    @Override
     public long getMsgTime() {
       return msgTime_;
     }
 
     /**
      * <code>uint32 voiceType = 18;</code>
-     *
      * @return The voiceType.
      */
-    @java.lang.Override
+    @Override
     public int getVoiceType() {
       return voiceType_;
     }
 
     /**
      * <code>uint32 voiceLength = 19;</code>
-     *
      * @return The voiceLength.
      */
-    @java.lang.Override
+    @Override
     public int getVoiceLength() {
       return voiceLength_;
     }
 
     /**
      * <code>uint32 voiceChangeFlag = 20;</code>
-     *
      * @return The voiceChangeFlag.
      */
-    @java.lang.Override
+    @Override
     public int getVoiceChangeFlag() {
       return voiceChangeFlag_;
     }
 
     /**
      * <code>string directUrl = 21;</code>
-     *
      * @return The directUrl.
      */
-    @java.lang.Override
-    public java.lang.String getDirectUrl() {
-      java.lang.Object ref = directUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getDirectUrl() {
+      Object ref = directUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
         directUrl_ = s;
         return s;
       }
@@ -6483,17 +6313,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string directUrl = 21;</code>
-     *
      * @return The bytes for directUrl.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getDirectUrlBytes() {
-      java.lang.Object ref = directUrl_;
-      if (ref instanceof java.lang.String) {
+        getDirectUrlBytes() {
+      Object ref = directUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
         directUrl_ = b;
         return b;
       } else {
@@ -6503,28 +6332,26 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint32 busiType = 22;</code>
-     *
      * @return The busiType.
      */
-    @java.lang.Override
+    @Override
     public int getBusiType() {
       return busiType_;
     }
 
     /**
      * <code>string fullLocalPath = 23;</code>
-     *
      * @return The fullLocalPath.
      */
-    @java.lang.Override
-    public java.lang.String getFullLocalPath() {
-      java.lang.Object ref = fullLocalPath_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getFullLocalPath() {
+      Object ref = fullLocalPath_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         fullLocalPath_ = s;
         return s;
       }
@@ -6532,17 +6359,16 @@ public final class RichMsgHandle {
 
     /**
      * <code>string fullLocalPath = 23;</code>
-     *
      * @return The bytes for fullLocalPath.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
-    getFullLocalPathBytes() {
-      java.lang.Object ref = fullLocalPath_;
-      if (ref instanceof java.lang.String) {
+        getFullLocalPathBytes() {
+      Object ref = fullLocalPath_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
-                com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
         fullLocalPath_ = b;
         return b;
       } else {
@@ -6552,35 +6378,32 @@ public final class RichMsgHandle {
 
     /**
      * <code>uint64 extFlag = 24;</code>
-     *
      * @return The extFlag.
      */
-    @java.lang.Override
+    @Override
     public long getExtFlag() {
       return extFlag_;
     }
 
     /**
      * <code>uint32 redpack_type = 25;</code>
-     *
      * @return The redpackType.
      */
-    @java.lang.Override
+    @Override
     public int getRedpackType() {
       return redpackType_;
     }
 
     /**
      * <code>uint32 autototext_voice = 26;</code>
-     *
      * @return The autototextVoice.
      */
-    @java.lang.Override
+    @Override
     public int getAutototextVoice() {
       return autototextVoice_;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -6590,9 +6413,9 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-            throws java.io.IOException {
+                        throws java.io.IOException {
       if (!getLocalPathBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, localPath_);
       }
@@ -6674,7 +6497,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -6725,7 +6548,7 @@ public final class RichMsgHandle {
       }
       if (longPttVipFlag_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeInt32Size(13, longPttVipFlag_);
+          .computeInt32Size(13, longPttVipFlag_);
       }
       if (expandStt_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -6736,19 +6559,19 @@ public final class RichMsgHandle {
       }
       if (msgRecTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(16, msgRecTime_);
+          .computeUInt64Size(16, msgRecTime_);
       }
       if (msgTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(17, msgTime_);
+          .computeUInt64Size(17, msgTime_);
       }
       if (voiceType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(18, voiceType_);
+          .computeUInt32Size(18, voiceType_);
       }
       if (voiceLength_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(19, voiceLength_);
+          .computeUInt32Size(19, voiceLength_);
       }
       if (voiceChangeFlag_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -6759,14 +6582,14 @@ public final class RichMsgHandle {
       }
       if (busiType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(22, busiType_);
+          .computeUInt32Size(22, busiType_);
       }
       if (!getFullLocalPathBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, fullLocalPath_);
       }
       if (extFlag_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt64Size(24, extFlag_);
+          .computeUInt64Size(24, extFlag_);
       }
       if (redpackType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -6781,24 +6604,24 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
-      if (!(obj instanceof RichMsgHandle.PttRec)) {
+      if (!(obj instanceof PttRec)) {
         return super.equals(obj);
       }
-      RichMsgHandle.PttRec other = (RichMsgHandle.PttRec) obj;
+      PttRec other = (PttRec) obj;
 
       if (!getLocalPath()
-              .equals(other.getLocalPath())) return false;
+          .equals(other.getLocalPath())) return false;
       if (getSize()
-              != other.getSize()) return false;
+          != other.getSize()) return false;
       if (getType()
-              != other.getType()) return false;
+          != other.getType()) return false;
       if (getIsRead()
-              != other.getIsRead()) return false;
+          != other.getIsRead()) return false;
       if (!getUuid()
               .equals(other.getUuid())) return false;
       if (!getMd5()
@@ -6846,7 +6669,7 @@ public final class RichMsgHandle {
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -6877,19 +6700,19 @@ public final class RichMsgHandle {
       hash = (53 * hash) + getPttFlag();
       hash = (37 * hash) + GROUPFILEID_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getGroupFileID());
+          getGroupFileID());
       hash = (37 * hash) + STTTEXT_FIELD_NUMBER;
       hash = (53 * hash) + getSttText().hashCode();
       hash = (37 * hash) + LONGPTTVIPFLAG_FIELD_NUMBER;
       hash = (53 * hash) + getLongPttVipFlag();
       hash = (37 * hash) + EXPANDSTT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-              getExpandStt());
+          getExpandStt());
       hash = (37 * hash) + GROUP_FILE_KEY_FIELD_NUMBER;
       hash = (53 * hash) + getGroupFileKey().hashCode();
       hash = (37 * hash) + MSGRECTIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getMsgRecTime());
+          getMsgRecTime());
       hash = (37 * hash) + MSGTIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               getMsgTime());
@@ -6917,31 +6740,29 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
+    @Override
+    public Builder newBuilderForType() { return newBuilder(); }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<PttRec> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.PttRec getDefaultInstanceForType() {
+    @Override
+    public PttRec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6951,30 +6772,37 @@ public final class RichMsgHandle {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:PttRec)
-            RichMsgHandle.PttRecOrBuilder {
-      private java.lang.Object localPath_ = "";
+            PttRecOrBuilder {
+      private Object localPath_ = "";
       private long size_;
       private int type_;
       private boolean isRead_;
-      private java.lang.Object uuid_ = "";
-      private java.lang.Object md5_ = "";
-      private java.lang.Object serverStorageSource_ = "";
+
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+
+      private Object uuid_ = "";
+      private Object md5_ = "";
+      private Object serverStorageSource_ = "";
       private int version_;
       private int isReport_;
       private int pttFlag_;
-      private long groupFileID_;
-      private java.lang.Object sttText_ = "";
+      private long groupFileID_ ;
+      private Object sttText_ = "";
       private int longPttVipFlag_;
       private boolean expandStt_;
-      private java.lang.Object groupFileKey_ = "";
+      private Object groupFileKey_ = "";
       private long msgRecTime_;
       private long msgTime_;
       private int voiceType_;
       private int voiceLength_;
       private int voiceChangeFlag_;
-      private java.lang.Object directUrl_ = "";
+      private Object directUrl_ = "";
       private int busiType_;
-      private java.lang.Object fullLocalPath_ = "";
+      private Object fullLocalPath_ = "";
       private long extFlag_;
       private int redpackType_;
       private int autototextVoice_;
@@ -6985,7 +6813,7 @@ public final class RichMsgHandle {
       }
 
       private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+              BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -6995,21 +6823,15 @@ public final class RichMsgHandle {
         return RichMsgHandle.internal_static_PttRec_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return RichMsgHandle.internal_static_PttRec_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.PttRec.class, RichMsgHandle.PttRec.Builder.class);
+            .ensureFieldAccessorsInitialized(
+                PttRec.class, Builder.class);
       }
 
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         localPath_ = "";
@@ -7067,29 +6889,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return RichMsgHandle.internal_static_PttRec_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PttRec getDefaultInstanceForType() {
-        return RichMsgHandle.PttRec.getDefaultInstance();
+      @Override
+      public PttRec getDefaultInstanceForType() {
+        return PttRec.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PttRec build() {
-        RichMsgHandle.PttRec result = buildPartial();
+      @Override
+      public PttRec build() {
+        PttRec result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.PttRec buildPartial() {
-        RichMsgHandle.PttRec result = new RichMsgHandle.PttRec(this);
+      @Override
+      public PttRec buildPartial() {
+        PttRec result = new PttRec(this);
         result.localPath_ = localPath_;
         result.size_ = size_;
         result.type_ = type_;
@@ -7120,56 +6942,56 @@ public final class RichMsgHandle {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+              int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.PttRec) {
-          return mergeFrom((RichMsgHandle.PttRec) other);
+        if (other instanceof PttRec) {
+          return mergeFrom((PttRec) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.PttRec other) {
-        if (other == RichMsgHandle.PttRec.getDefaultInstance()) return this;
+      public Builder mergeFrom(PttRec other) {
+        if (other == PttRec.getDefaultInstance()) return this;
         if (!other.getLocalPath().isEmpty()) {
           localPath_ = other.localPath_;
           onChanged();
@@ -7261,21 +7083,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        RichMsgHandle.PttRec parsedMessage = null;
+        PttRec parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.PttRec) e.getUnfinishedMessage();
+          parsedMessage = (PttRec) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7290,16 +7112,16 @@ public final class RichMsgHandle {
        *
        * @return The localPath.
        */
-      public java.lang.String getLocalPath() {
-        java.lang.Object ref = localPath_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalPath() {
+        Object ref = localPath_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           localPath_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -7310,7 +7132,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setLocalPath(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7327,11 +7149,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getLocalPathBytes() {
-        java.lang.Object ref = localPath_;
+        Object ref = localPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           localPath_ = b;
           return b;
         } else {
@@ -7374,7 +7196,7 @@ public final class RichMsgHandle {
        *
        * @return The size.
        */
-      @java.lang.Override
+      @Override
       public long getSize() {
         return size_;
       }
@@ -7406,17 +7228,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 type = 3;</code>
-       *
        * @return The type.
        */
-      @java.lang.Override
+      @Override
       public int getType() {
         return type_;
       }
 
       /**
        * <code>uint32 type = 3;</code>
-       *
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -7444,7 +7264,7 @@ public final class RichMsgHandle {
        *
        * @return The isRead.
        */
-      @java.lang.Override
+      @Override
       public boolean getIsRead() {
         return isRead_;
       }
@@ -7464,7 +7284,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bool isRead = 4;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearIsRead() {
@@ -7479,16 +7298,16 @@ public final class RichMsgHandle {
        *
        * @return The uuid.
        */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUuid() {
+        Object ref = uuid_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           uuid_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -7499,7 +7318,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setUuid(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7511,16 +7330,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string uuid = 5;</code>
-       *
        * @return The bytes for uuid.
        */
       public com.google.protobuf.ByteString
-      getUuidBytes() {
-        java.lang.Object ref = uuid_;
+          getUuidBytes() {
+        Object ref = uuid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           uuid_ = b;
           return b;
         } else {
@@ -7530,16 +7348,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string uuid = 5;</code>
-       *
        * @param value The bytes for uuid to set.
        * @return This builder for chaining.
        */
       public Builder setUuidBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         uuid_ = value;
         onChanged();
@@ -7548,7 +7365,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string uuid = 5;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
@@ -7560,33 +7376,31 @@ public final class RichMsgHandle {
 
       /**
        * <code>string md5 = 6;</code>
-       *
        * @return The md5.
        */
-      public java.lang.String getMd5() {
-        java.lang.Object ref = md5_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMd5() {
+        Object ref = md5_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           md5_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string md5 = 6;</code>
-       *
        * @param value The md5 to set.
        * @return This builder for chaining.
        */
       public Builder setMd5(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         md5_ = value;
         onChanged();
@@ -7595,16 +7409,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string md5 = 6;</code>
-       *
        * @return The bytes for md5.
        */
       public com.google.protobuf.ByteString
-      getMd5Bytes() {
-        java.lang.Object ref = md5_;
+          getMd5Bytes() {
+        Object ref = md5_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           md5_ = b;
           return b;
         } else {
@@ -7614,16 +7427,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string md5 = 6;</code>
-       *
        * @param value The bytes for md5 to set.
        * @return This builder for chaining.
        */
       public Builder setMd5Bytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         md5_ = value;
         onChanged();
@@ -7632,7 +7444,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string md5 = 6;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMd5() {
@@ -7647,16 +7458,16 @@ public final class RichMsgHandle {
        *
        * @return The serverStorageSource.
        */
-      public java.lang.String getServerStorageSource() {
-        java.lang.Object ref = serverStorageSource_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getServerStorageSource() {
+        Object ref = serverStorageSource_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           serverStorageSource_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -7667,7 +7478,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setServerStorageSource(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -7684,11 +7495,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getServerStorageSourceBytes() {
-        java.lang.Object ref = serverStorageSource_;
+        Object ref = serverStorageSource_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           serverStorageSource_ = b;
           return b;
         } else {
@@ -7698,16 +7509,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string serverStorageSource = 7;</code>
-       *
        * @param value The bytes for serverStorageSource to set.
        * @return This builder for chaining.
        */
       public Builder setServerStorageSourceBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         serverStorageSource_ = value;
         onChanged();
@@ -7716,7 +7526,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string serverStorageSource = 7;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearServerStorageSource() {
@@ -7728,17 +7537,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 version = 8;</code>
-       *
        * @return The version.
        */
-      @java.lang.Override
+      @Override
       public int getVersion() {
         return version_;
       }
 
       /**
        * <code>int32 version = 8;</code>
-       *
        * @param value The version to set.
        * @return This builder for chaining.
        */
@@ -7751,7 +7558,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 version = 8;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
@@ -7763,17 +7569,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 isReport = 9;</code>
-       *
        * @return The isReport.
        */
-      @java.lang.Override
+      @Override
       public int getIsReport() {
         return isReport_;
       }
 
       /**
        * <code>int32 isReport = 9;</code>
-       *
        * @param value The isReport to set.
        * @return This builder for chaining.
        */
@@ -7801,7 +7605,7 @@ public final class RichMsgHandle {
        *
        * @return The pttFlag.
        */
-      @java.lang.Override
+      @Override
       public int getPttFlag() {
         return pttFlag_;
       }
@@ -7836,14 +7640,13 @@ public final class RichMsgHandle {
        *
        * @return The groupFileID.
        */
-      @java.lang.Override
+      @Override
       public long getGroupFileID() {
         return groupFileID_;
       }
 
       /**
        * <code>uint64 groupFileID = 11;</code>
-       *
        * @param value The groupFileID to set.
        * @return This builder for chaining.
        */
@@ -7868,33 +7671,31 @@ public final class RichMsgHandle {
 
       /**
        * <code>string sttText = 12;</code>
-       *
        * @return The sttText.
        */
-      public java.lang.String getSttText() {
-        java.lang.Object ref = sttText_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getSttText() {
+        Object ref = sttText_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           sttText_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string sttText = 12;</code>
-       *
        * @param value The sttText to set.
        * @return This builder for chaining.
        */
       public Builder setSttText(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         sttText_ = value;
         onChanged();
@@ -7903,16 +7704,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string sttText = 12;</code>
-       *
        * @return The bytes for sttText.
        */
       public com.google.protobuf.ByteString
-      getSttTextBytes() {
-        java.lang.Object ref = sttText_;
+          getSttTextBytes() {
+        Object ref = sttText_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           sttText_ = b;
           return b;
         } else {
@@ -7922,16 +7722,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string sttText = 12;</code>
-       *
        * @param value The bytes for sttText to set.
        * @return This builder for chaining.
        */
       public Builder setSttTextBytes(
-              com.google.protobuf.ByteString value) {
+          com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        checkByteStringIsUtf8(value);
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
 
         sttText_ = value;
         onChanged();
@@ -7940,7 +7739,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string sttText = 12;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearSttText() {
@@ -7952,17 +7750,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 longPttVipFlag = 13;</code>
-       *
        * @return The longPttVipFlag.
        */
-      @java.lang.Override
+      @Override
       public int getLongPttVipFlag() {
         return longPttVipFlag_;
       }
 
       /**
        * <code>int32 longPttVipFlag = 13;</code>
-       *
        * @param value The longPttVipFlag to set.
        * @return This builder for chaining.
        */
@@ -7975,7 +7771,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>int32 longPttVipFlag = 13;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearLongPttVipFlag() {
@@ -7987,17 +7782,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>bool expandStt = 14;</code>
-       *
        * @return The expandStt.
        */
-      @java.lang.Override
+      @Override
       public boolean getExpandStt() {
         return expandStt_;
       }
 
       /**
        * <code>bool expandStt = 14;</code>
-       *
        * @param value The expandStt to set.
        * @return This builder for chaining.
        */
@@ -8010,7 +7803,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bool expandStt = 14;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearExpandStt() {
@@ -8022,19 +7814,18 @@ public final class RichMsgHandle {
 
       /**
        * <code>string group_file_key = 15;</code>
-       *
        * @return The groupFileKey.
        */
-      public java.lang.String getGroupFileKey() {
-        java.lang.Object ref = groupFileKey_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getGroupFileKey() {
+        Object ref = groupFileKey_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           groupFileKey_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -8045,7 +7836,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setGroupFileKey(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8062,11 +7853,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getGroupFileKeyBytes() {
-        java.lang.Object ref = groupFileKey_;
+        Object ref = groupFileKey_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           groupFileKey_ = b;
           return b;
         } else {
@@ -8106,17 +7897,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 msgRecTime = 16;</code>
-       *
        * @return The msgRecTime.
        */
-      @java.lang.Override
+      @Override
       public long getMsgRecTime() {
         return msgRecTime_;
       }
 
       /**
        * <code>uint64 msgRecTime = 16;</code>
-       *
        * @param value The msgRecTime to set.
        * @return This builder for chaining.
        */
@@ -8129,7 +7918,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 msgRecTime = 16;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMsgRecTime() {
@@ -8141,10 +7929,9 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 msgTime = 17;</code>
-       *
        * @return The msgTime.
        */
-      @java.lang.Override
+      @Override
       public long getMsgTime() {
         return msgTime_;
       }
@@ -8164,7 +7951,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 msgTime = 17;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearMsgTime() {
@@ -8179,14 +7965,13 @@ public final class RichMsgHandle {
        *
        * @return The voiceType.
        */
-      @java.lang.Override
+      @Override
       public int getVoiceType() {
         return voiceType_;
       }
 
       /**
        * <code>uint32 voiceType = 18;</code>
-       *
        * @param value The voiceType to set.
        * @return This builder for chaining.
        */
@@ -8211,10 +7996,9 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 voiceLength = 19;</code>
-       *
        * @return The voiceLength.
        */
-      @java.lang.Override
+      @Override
       public int getVoiceLength() {
         return voiceLength_;
       }
@@ -8234,7 +8018,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 voiceLength = 19;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearVoiceLength() {
@@ -8246,17 +8029,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 voiceChangeFlag = 20;</code>
-       *
        * @return The voiceChangeFlag.
        */
-      @java.lang.Override
+      @Override
       public int getVoiceChangeFlag() {
         return voiceChangeFlag_;
       }
 
       /**
        * <code>uint32 voiceChangeFlag = 20;</code>
-       *
        * @param value The voiceChangeFlag to set.
        * @return This builder for chaining.
        */
@@ -8269,7 +8050,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 voiceChangeFlag = 20;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearVoiceChangeFlag() {
@@ -8281,32 +8061,30 @@ public final class RichMsgHandle {
 
       /**
        * <code>string directUrl = 21;</code>
-       *
        * @return The directUrl.
        */
-      public java.lang.String getDirectUrl() {
-        java.lang.Object ref = directUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getDirectUrl() {
+        Object ref = directUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
           directUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string directUrl = 21;</code>
-       *
        * @param value The directUrl to set.
        * @return This builder for chaining.
        */
       public Builder setDirectUrl(
-              java.lang.String value) {
+          String value) {
         if (value == null) {
-          throw new NullPointerException();
+    throw new NullPointerException();
         }
 
         directUrl_ = value;
@@ -8316,16 +8094,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>string directUrl = 21;</code>
-       *
        * @return The bytes for directUrl.
        */
       public com.google.protobuf.ByteString
-      getDirectUrlBytes() {
-        java.lang.Object ref = directUrl_;
+          getDirectUrlBytes() {
+        Object ref = directUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                      (String) ref);
           directUrl_ = b;
           return b;
         } else {
@@ -8353,7 +8130,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string directUrl = 21;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearDirectUrl() {
@@ -8368,7 +8144,7 @@ public final class RichMsgHandle {
        *
        * @return The busiType.
        */
-      @java.lang.Override
+      @Override
       public int getBusiType() {
         return busiType_;
       }
@@ -8403,16 +8179,16 @@ public final class RichMsgHandle {
        *
        * @return The fullLocalPath.
        */
-      public java.lang.String getFullLocalPath() {
-        java.lang.Object ref = fullLocalPath_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getFullLocalPath() {
+        Object ref = fullLocalPath_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           fullLocalPath_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -8423,7 +8199,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setFullLocalPath(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -8440,11 +8216,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getFullLocalPathBytes() {
-        java.lang.Object ref = fullLocalPath_;
+        Object ref = fullLocalPath_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           fullLocalPath_ = b;
           return b;
         } else {
@@ -8454,7 +8230,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>string fullLocalPath = 23;</code>
-       *
        * @param value The bytes for fullLocalPath to set.
        * @return This builder for chaining.
        */
@@ -8484,17 +8259,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 extFlag = 24;</code>
-       *
        * @return The extFlag.
        */
-      @java.lang.Override
+      @Override
       public long getExtFlag() {
         return extFlag_;
       }
 
       /**
        * <code>uint64 extFlag = 24;</code>
-       *
        * @param value The extFlag to set.
        * @return This builder for chaining.
        */
@@ -8507,7 +8280,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint64 extFlag = 24;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearExtFlag() {
@@ -8519,17 +8291,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 redpack_type = 25;</code>
-       *
        * @return The redpackType.
        */
-      @java.lang.Override
+      @Override
       public int getRedpackType() {
         return redpackType_;
       }
 
       /**
        * <code>uint32 redpack_type = 25;</code>
-       *
        * @param value The redpackType to set.
        * @return This builder for chaining.
        */
@@ -8542,7 +8312,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 redpack_type = 25;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearRedpackType() {
@@ -8554,17 +8323,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 autototext_voice = 26;</code>
-       *
        * @return The autototextVoice.
        */
-      @java.lang.Override
+      @Override
       public int getAutototextVoice() {
         return autototextVoice_;
       }
 
       /**
        * <code>uint32 autototext_voice = 26;</code>
-       *
        * @param value The autototextVoice to set.
        * @return This builder for chaining.
        */
@@ -8587,13 +8354,13 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -8613,6 +8380,19 @@ public final class RichMsgHandle {
           // @@protoc_insertion_point(message_implements:MarketFaceRec)
           MarketFaceRecOrBuilder {
     public static final int BYTES_FACE_NAME_FIELD_NUMBER = 1;
+
+    // Use MarketFaceRec.newBuilder() to construct.
+    private MarketFaceRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+
+    private MarketFaceRec() {
+      bytesFaceName_ = com.google.protobuf.ByteString.EMPTY;
+      bytesFaceId_ = com.google.protobuf.ByteString.EMPTY;
+      bytesKey_ = com.google.protobuf.ByteString.EMPTY;
+      bytesParam_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
     public static final int UINT32_ITEM_TYPE_FIELD_NUMBER = 2;
     public static final int UINT32_FACE_INFO_FIELD_NUMBER = 3;
     public static final int BYTES_FACE_ID_FIELD_NUMBER = 4;
@@ -8625,10 +8405,10 @@ public final class RichMsgHandle {
     public static final int UINT32_IMAGE_HEIGHT_FIELD_NUMBER = 11;
     private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(class_scope:MarketFaceRec)
-    private static final RichMsgHandle.MarketFaceRec DEFAULT_INSTANCE;
+    private static final MarketFaceRec DEFAULT_INSTANCE;
     private static final com.google.protobuf.Parser<MarketFaceRec>
             PARSER = new com.google.protobuf.AbstractParser<MarketFaceRec>() {
-      @java.lang.Override
+      @Override
       public MarketFaceRec parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8638,7 +8418,7 @@ public final class RichMsgHandle {
     };
 
     static {
-      DEFAULT_INSTANCE = new RichMsgHandle.MarketFaceRec();
+      DEFAULT_INSTANCE = new MarketFaceRec();
     }
 
     private com.google.protobuf.ByteString bytesFaceName_;
@@ -8654,25 +8434,13 @@ public final class RichMsgHandle {
     private int uint32ImageHeight_;
     private byte memoizedIsInitialized = -1;
 
-    // Use MarketFaceRec.newBuilder() to construct.
-    private MarketFaceRec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-
-    private MarketFaceRec() {
-      bytesFaceName_ = com.google.protobuf.ByteString.EMPTY;
-      bytesFaceId_ = com.google.protobuf.ByteString.EMPTY;
-      bytesKey_ = com.google.protobuf.ByteString.EMPTY;
-      bytesParam_ = com.google.protobuf.ByteString.EMPTY;
-    }
-
     private MarketFaceRec(
             com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -8741,7 +8509,7 @@ public final class RichMsgHandle {
             }
             default: {
               if (!parseUnknownField(
-                      input, unknownFields, extensionRegistry, tag)) {
+                  input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
               break;
@@ -8752,7 +8520,7 @@ public final class RichMsgHandle {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
-                e).setUnfinishedMessage(this);
+            e).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -8760,86 +8528,86 @@ public final class RichMsgHandle {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
+        getDescriptor() {
       return RichMsgHandle.internal_static_MarketFaceRec_descriptor;
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
-            java.nio.ByteBuffer data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static MarketFaceRec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
-            java.nio.ByteBuffer data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static MarketFaceRec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
+    public static MarketFaceRec parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
+    public static MarketFaceRec parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static MarketFaceRec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static MarketFaceRec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+    public static MarketFaceRec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
-            java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+    public static MarketFaceRec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseDelimitedFrom(java.io.InputStream input)
+    public static MarketFaceRec parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseDelimitedWithIOException(PARSER, input);
+          .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseDelimitedFrom(
+    public static MarketFaceRec parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
-            com.google.protobuf.CodedInputStream input)
+    public static MarketFaceRec parseFrom(
+        com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.MarketFaceRec parseFrom(
+    public static MarketFaceRec parseFrom(
             com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
@@ -8849,11 +8617,11 @@ public final class RichMsgHandle {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.MarketFaceRec prototype) {
+    public static Builder newBuilder(MarketFaceRec prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.MarketFaceRec getDefaultInstance() {
+    public static MarketFaceRec getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8861,25 +8629,25 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new MarketFaceRec();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_MarketFaceRec_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.MarketFaceRec.class, RichMsgHandle.MarketFaceRec.Builder.class);
+                      MarketFaceRec.class, Builder.class);
     }
 
     /**
@@ -8887,7 +8655,7 @@ public final class RichMsgHandle {
      *
      * @return The bytesFaceName.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString getBytesFaceName() {
       return bytesFaceName_;
     }
@@ -8897,7 +8665,7 @@ public final class RichMsgHandle {
      *
      * @return The uint32ItemType.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ItemType() {
       return uint32ItemType_;
     }
@@ -8907,77 +8675,70 @@ public final class RichMsgHandle {
      *
      * @return The uint32FaceInfo.
      */
-    @java.lang.Override
+    @Override
     public int getUint32FaceInfo() {
       return uint32FaceInfo_;
     }
 
     /**
      * <code>bytes bytes_face_id = 4;</code>
-     *
      * @return The bytesFaceId.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString getBytesFaceId() {
       return bytesFaceId_;
     }
 
     /**
      * <code>uint32 uint32_tab_id = 5;</code>
-     *
      * @return The uint32TabId.
      */
-    @java.lang.Override
+    @Override
     public int getUint32TabId() {
       return uint32TabId_;
     }
 
     /**
      * <code>uint32 uint32_sub_type = 6;</code>
-     *
      * @return The uint32SubType.
      */
-    @java.lang.Override
+    @Override
     public int getUint32SubType() {
       return uint32SubType_;
     }
 
     /**
      * <code>bytes bytes_key = 7;</code>
-     *
      * @return The bytesKey.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString getBytesKey() {
       return bytesKey_;
     }
 
     /**
      * <code>bytes bytes_param = 8;</code>
-     *
      * @return The bytesParam.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString getBytesParam() {
       return bytesParam_;
     }
 
     /**
      * <code>uint32 uint32_media_type = 9;</code>
-     *
      * @return The uint32MediaType.
      */
-    @java.lang.Override
+    @Override
     public int getUint32MediaType() {
       return uint32MediaType_;
     }
 
     /**
      * <code>uint32 uint32_image_width = 10;</code>
-     *
      * @return The uint32ImageWidth.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ImageWidth() {
       return uint32ImageWidth_;
     }
@@ -8987,12 +8748,12 @@ public final class RichMsgHandle {
      *
      * @return The uint32ImageHeight.
      */
-    @java.lang.Override
+    @Override
     public int getUint32ImageHeight() {
       return uint32ImageHeight_;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -9002,7 +8763,7 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (!bytesFaceName_.isEmpty()) {
@@ -9041,7 +8802,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -9077,11 +8838,11 @@ public final class RichMsgHandle {
       }
       if (!bytesParam_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-                .computeBytesSize(8, bytesParam_);
+          .computeBytesSize(8, bytesParam_);
       }
       if (uint32MediaType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(9, uint32MediaType_);
+          .computeUInt32Size(9, uint32MediaType_);
       }
       if (uint32ImageWidth_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -9096,15 +8857,15 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof RichMsgHandle.MarketFaceRec)) {
+      if (!(obj instanceof MarketFaceRec)) {
         return super.equals(obj);
       }
-      RichMsgHandle.MarketFaceRec other = (RichMsgHandle.MarketFaceRec) obj;
+      MarketFaceRec other = (MarketFaceRec) obj;
 
       if (!getBytesFaceName()
               .equals(other.getBytesFaceName())) return false;
@@ -9121,17 +8882,17 @@ public final class RichMsgHandle {
       if (!getBytesKey()
               .equals(other.getBytesKey())) return false;
       if (!getBytesParam()
-              .equals(other.getBytesParam())) return false;
+          .equals(other.getBytesParam())) return false;
       if (getUint32MediaType()
-              != other.getUint32MediaType()) return false;
+          != other.getUint32MediaType()) return false;
       if (getUint32ImageWidth()
-              != other.getUint32ImageWidth()) return false;
+          != other.getUint32ImageWidth()) return false;
       if (getUint32ImageHeight()
               != other.getUint32ImageHeight()) return false;
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -9165,31 +8926,31 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-              ? new Builder() : new Builder().mergeFrom(this);
+          ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<MarketFaceRec> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.MarketFaceRec getDefaultInstanceForType() {
+    @Override
+    public MarketFaceRec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9197,44 +8958,17 @@ public final class RichMsgHandle {
      * Protobuf type {@code MarketFaceRec}
      */
     public static final class Builder extends
-            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:MarketFaceRec)
-            RichMsgHandle.MarketFaceRecOrBuilder {
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:MarketFaceRec)
+        MarketFaceRecOrBuilder {
       private com.google.protobuf.ByteString bytesFaceName_ = com.google.protobuf.ByteString.EMPTY;
-      private int uint32ItemType_;
-      private int uint32FaceInfo_;
-      private com.google.protobuf.ByteString bytesFaceId_ = com.google.protobuf.ByteString.EMPTY;
-      private int uint32TabId_;
-      private int uint32SubType_;
-      private com.google.protobuf.ByteString bytesKey_ = com.google.protobuf.ByteString.EMPTY;
-      private com.google.protobuf.ByteString bytesParam_ = com.google.protobuf.ByteString.EMPTY;
-      private int uint32MediaType_;
-      private int uint32ImageWidth_;
-      private int uint32ImageHeight_;
+      private int uint32ItemType_ ;
 
       // Construct using RichMsgHandle.MarketFaceRec.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return RichMsgHandle.internal_static_MarketFaceRec_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return RichMsgHandle.internal_static_MarketFaceRec_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.MarketFaceRec.class, RichMsgHandle.MarketFaceRec.Builder.class);
-      }
+      private int uint32FaceInfo_;
 
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
@@ -9242,7 +8976,34 @@ public final class RichMsgHandle {
         }
       }
 
-      @java.lang.Override
+      private com.google.protobuf.ByteString bytesFaceId_ = com.google.protobuf.ByteString.EMPTY;
+      private int uint32TabId_;
+      private int uint32SubType_;
+      private com.google.protobuf.ByteString bytesKey_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf.ByteString bytesParam_ = com.google.protobuf.ByteString.EMPTY;
+      private int uint32MediaType_;
+      private int uint32ImageWidth_;
+      private int uint32ImageHeight_ ;
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return RichMsgHandle.internal_static_MarketFaceRec_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return RichMsgHandle.internal_static_MarketFaceRec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                    MarketFaceRec.class, Builder.class);
+      }
+
+      @Override
       public Builder clear() {
         super.clear();
         bytesFaceName_ = com.google.protobuf.ByteString.EMPTY;
@@ -9270,29 +9031,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return RichMsgHandle.internal_static_MarketFaceRec_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.MarketFaceRec getDefaultInstanceForType() {
-        return RichMsgHandle.MarketFaceRec.getDefaultInstance();
+      @Override
+      public MarketFaceRec getDefaultInstanceForType() {
+        return MarketFaceRec.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.MarketFaceRec build() {
-        RichMsgHandle.MarketFaceRec result = buildPartial();
+      @Override
+      public MarketFaceRec build() {
+        MarketFaceRec result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.MarketFaceRec buildPartial() {
-        RichMsgHandle.MarketFaceRec result = new RichMsgHandle.MarketFaceRec(this);
+      @Override
+      public MarketFaceRec buildPartial() {
+        MarketFaceRec result = new MarketFaceRec(this);
         result.bytesFaceName_ = bytesFaceName_;
         result.uint32ItemType_ = uint32ItemType_;
         result.uint32FaceInfo_ = uint32FaceInfo_;
@@ -9308,56 +9069,56 @@ public final class RichMsgHandle {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.MarketFaceRec) {
-          return mergeFrom((RichMsgHandle.MarketFaceRec) other);
+        if (other instanceof MarketFaceRec) {
+          return mergeFrom((MarketFaceRec)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.MarketFaceRec other) {
-        if (other == RichMsgHandle.MarketFaceRec.getDefaultInstance()) return this;
+      public Builder mergeFrom(MarketFaceRec other) {
+        if (other == MarketFaceRec.getDefaultInstance()) return this;
         if (other.getBytesFaceName() != com.google.protobuf.ByteString.EMPTY) {
           setBytesFaceName(other.getBytesFaceName());
         }
@@ -9396,21 +9157,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws java.io.IOException {
-        RichMsgHandle.MarketFaceRec parsedMessage = null;
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MarketFaceRec parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.MarketFaceRec) e.getUnfinishedMessage();
+          parsedMessage = (MarketFaceRec) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9422,24 +9183,22 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_face_name = 1;</code>
-       *
        * @return The bytesFaceName.
        */
-      @java.lang.Override
+      @Override
       public com.google.protobuf.ByteString getBytesFaceName() {
         return bytesFaceName_;
       }
 
       /**
        * <code>bytes bytes_face_name = 1;</code>
-       *
        * @param value The bytesFaceName to set.
        * @return This builder for chaining.
        */
       public Builder setBytesFaceName(com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         bytesFaceName_ = value;
         onChanged();
@@ -9448,7 +9207,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_face_name = 1;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBytesFaceName() {
@@ -9460,17 +9218,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_item_type = 2;</code>
-       *
        * @return The uint32ItemType.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ItemType() {
         return uint32ItemType_;
       }
 
       /**
        * <code>uint32 uint32_item_type = 2;</code>
-       *
        * @param value The uint32ItemType to set.
        * @return This builder for chaining.
        */
@@ -9483,7 +9239,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_item_type = 2;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32ItemType() {
@@ -9495,17 +9250,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_face_info = 3;</code>
-       *
        * @return The uint32FaceInfo.
        */
-      @java.lang.Override
+      @Override
       public int getUint32FaceInfo() {
         return uint32FaceInfo_;
       }
 
       /**
        * <code>uint32 uint32_face_info = 3;</code>
-       *
        * @param value The uint32FaceInfo to set.
        * @return This builder for chaining.
        */
@@ -9518,7 +9271,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_face_info = 3;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearUint32FaceInfo() {
@@ -9530,10 +9282,9 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_face_id = 4;</code>
-       *
        * @return The bytesFaceId.
        */
-      @java.lang.Override
+      @Override
       public com.google.protobuf.ByteString getBytesFaceId() {
         return bytesFaceId_;
       }
@@ -9556,7 +9307,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_face_id = 4;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBytesFaceId() {
@@ -9571,7 +9321,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32TabId.
        */
-      @java.lang.Override
+      @Override
       public int getUint32TabId() {
         return uint32TabId_;
       }
@@ -9606,7 +9356,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32SubType.
        */
-      @java.lang.Override
+      @Override
       public int getUint32SubType() {
         return uint32SubType_;
       }
@@ -9641,7 +9391,7 @@ public final class RichMsgHandle {
        *
        * @return The bytesKey.
        */
-      @java.lang.Override
+      @Override
       public com.google.protobuf.ByteString getBytesKey() {
         return bytesKey_;
       }
@@ -9655,7 +9405,7 @@ public final class RichMsgHandle {
       public Builder setBytesKey(com.google.protobuf.ByteString value) {
         if (value == null) {
           throw new NullPointerException();
-        }
+  }
 
         bytesKey_ = value;
         onChanged();
@@ -9664,7 +9414,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_key = 7;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBytesKey() {
@@ -9676,24 +9425,22 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_param = 8;</code>
-       *
        * @return The bytesParam.
        */
-      @java.lang.Override
+      @Override
       public com.google.protobuf.ByteString getBytesParam() {
         return bytesParam_;
       }
 
       /**
        * <code>bytes bytes_param = 8;</code>
-       *
        * @param value The bytesParam to set.
        * @return This builder for chaining.
        */
       public Builder setBytesParam(com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
+    throw new NullPointerException();
+  }
 
         bytesParam_ = value;
         onChanged();
@@ -9702,7 +9449,6 @@ public final class RichMsgHandle {
 
       /**
        * <code>bytes bytes_param = 8;</code>
-       *
        * @return This builder for chaining.
        */
       public Builder clearBytesParam() {
@@ -9714,17 +9460,15 @@ public final class RichMsgHandle {
 
       /**
        * <code>uint32 uint32_media_type = 9;</code>
-       *
        * @return The uint32MediaType.
        */
-      @java.lang.Override
+      @Override
       public int getUint32MediaType() {
         return uint32MediaType_;
       }
 
       /**
        * <code>uint32 uint32_media_type = 9;</code>
-       *
        * @param value The uint32MediaType to set.
        * @return This builder for chaining.
        */
@@ -9752,7 +9496,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32ImageWidth.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ImageWidth() {
         return uint32ImageWidth_;
       }
@@ -9787,7 +9531,7 @@ public final class RichMsgHandle {
        *
        * @return The uint32ImageHeight.
        */
-      @java.lang.Override
+      @Override
       public int getUint32ImageHeight() {
         return uint32ImageHeight_;
       }
@@ -9817,13 +9561,13 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -9843,32 +9587,6 @@ public final class RichMsgHandle {
           // @@protoc_insertion_point(message_implements:Elem)
           ElemOrBuilder {
     public static final int TEXTMSG_FIELD_NUMBER = 1;
-    public static final int PICMSG_FIELD_NUMBER = 2;
-    public static final int MARKFACEMSG_FIELD_NUMBER = 3;
-    public static final int SOURCEMSGINFO_FIELD_NUMBER = 4;
-    private static final long serialVersionUID = 0L;
-    // @@protoc_insertion_point(class_scope:Elem)
-    private static final RichMsgHandle.Elem DEFAULT_INSTANCE;
-    private static final com.google.protobuf.Parser<Elem>
-            PARSER = new com.google.protobuf.AbstractParser<Elem>() {
-      @java.lang.Override
-      public Elem parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Elem(input, extensionRegistry);
-      }
-    };
-
-    static {
-      DEFAULT_INSTANCE = new RichMsgHandle.Elem();
-    }
-
-    private volatile java.lang.Object textMsg_;
-    private RichMsgHandle.PicRec picMsg_;
-    private RichMsgHandle.MarketFaceRec markfaceMsg_;
-    private volatile java.lang.Object sourceMsgInfo_;
-    private byte memoizedIsInitialized = -1;
 
     // Use Elem.newBuilder() to construct.
     private Elem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -9880,13 +9598,40 @@ public final class RichMsgHandle {
       sourceMsgInfo_ = "";
     }
 
+    public static final int PICMSG_FIELD_NUMBER = 2;
+    public static final int MARKFACEMSG_FIELD_NUMBER = 3;
+    public static final int SOURCEMSGINFO_FIELD_NUMBER = 4;
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:Elem)
+    private static final Elem DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<Elem>
+            PARSER = new com.google.protobuf.AbstractParser<Elem>() {
+      @Override
+      public Elem parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Elem(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new Elem();
+    }
+
+    private volatile Object textMsg_;
+    private PicRec picMsg_;
+    private MarketFaceRec markfaceMsg_;
+    private volatile Object sourceMsgInfo_;
+    private byte memoizedIsInitialized = -1;
+
     private Elem(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
               com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -9899,17 +9644,17 @@ public final class RichMsgHandle {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               textMsg_ = s;
               break;
             }
             case 18: {
-              RichMsgHandle.PicRec.Builder subBuilder = null;
+              PicRec.Builder subBuilder = null;
               if (picMsg_ != null) {
                 subBuilder = picMsg_.toBuilder();
               }
-              picMsg_ = input.readMessage(RichMsgHandle.PicRec.parser(), extensionRegistry);
+              picMsg_ = input.readMessage(PicRec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(picMsg_);
                 picMsg_ = subBuilder.buildPartial();
@@ -9918,11 +9663,11 @@ public final class RichMsgHandle {
               break;
             }
             case 26: {
-              RichMsgHandle.MarketFaceRec.Builder subBuilder = null;
+              MarketFaceRec.Builder subBuilder = null;
               if (markfaceMsg_ != null) {
                 subBuilder = markfaceMsg_.toBuilder();
               }
-              markfaceMsg_ = input.readMessage(RichMsgHandle.MarketFaceRec.parser(), extensionRegistry);
+              markfaceMsg_ = input.readMessage(MarketFaceRec.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(markfaceMsg_);
                 markfaceMsg_ = subBuilder.buildPartial();
@@ -9931,7 +9676,7 @@ public final class RichMsgHandle {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sourceMsgInfo_ = s;
               break;
@@ -9961,65 +9706,65 @@ public final class RichMsgHandle {
       return RichMsgHandle.internal_static_Elem_descriptor;
     }
 
-    public static RichMsgHandle.Elem parseFrom(
+    public static Elem parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
+    public static Elem parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Elem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
+    public static Elem parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Elem parseFrom(byte[] data)
+    public static Elem parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
-            byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+    public static Elem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Elem parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+    public static Elem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
+    public static Elem parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.Elem parseDelimitedFrom(java.io.InputStream input)
+    public static Elem parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Elem parseDelimitedFrom(
+    public static Elem parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -10027,30 +9772,30 @@ public final class RichMsgHandle {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
-            com.google.protobuf.CodedInputStream input)
+    public static Elem parseFrom(
+        com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input);
+          .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Elem parseFrom(
+    public static Elem parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-              .parseWithIOException(PARSER, input, extensionRegistry);
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.Elem prototype) {
+    public static Builder newBuilder(Elem prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.Elem getDefaultInstance() {
+    public static Elem getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10058,25 +9803,25 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new Elem();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_Elem_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.Elem.class, RichMsgHandle.Elem.Builder.class);
+                      Elem.class, Builder.class);
     }
 
     /**
@@ -10084,15 +9829,15 @@ public final class RichMsgHandle {
      *
      * @return The textMsg.
      */
-    @java.lang.Override
-    public java.lang.String getTextMsg() {
-      java.lang.Object ref = textMsg_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getTextMsg() {
+      Object ref = textMsg_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         textMsg_ = s;
         return s;
       }
@@ -10103,14 +9848,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for textMsg.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getTextMsgBytes() {
-      java.lang.Object ref = textMsg_;
-      if (ref instanceof java.lang.String) {
+      Object ref = textMsg_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         textMsg_ = b;
         return b;
       } else {
@@ -10123,7 +9868,7 @@ public final class RichMsgHandle {
      *
      * @return Whether the picMsg field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasPicMsg() {
       return picMsg_ != null;
     }
@@ -10133,16 +9878,16 @@ public final class RichMsgHandle {
      *
      * @return The picMsg.
      */
-    @java.lang.Override
-    public RichMsgHandle.PicRec getPicMsg() {
-      return picMsg_ == null ? RichMsgHandle.PicRec.getDefaultInstance() : picMsg_;
+    @Override
+    public PicRec getPicMsg() {
+      return picMsg_ == null ? PicRec.getDefaultInstance() : picMsg_;
     }
 
     /**
      * <code>.PicRec picMsg = 2;</code>
      */
-    @java.lang.Override
-    public RichMsgHandle.PicRecOrBuilder getPicMsgOrBuilder() {
+    @Override
+    public PicRecOrBuilder getPicMsgOrBuilder() {
       return getPicMsg();
     }
 
@@ -10151,7 +9896,7 @@ public final class RichMsgHandle {
      *
      * @return Whether the markfaceMsg field is set.
      */
-    @java.lang.Override
+    @Override
     public boolean hasMarkfaceMsg() {
       return markfaceMsg_ != null;
     }
@@ -10161,33 +9906,32 @@ public final class RichMsgHandle {
      *
      * @return The markfaceMsg.
      */
-    @java.lang.Override
-    public RichMsgHandle.MarketFaceRec getMarkfaceMsg() {
-      return markfaceMsg_ == null ? RichMsgHandle.MarketFaceRec.getDefaultInstance() : markfaceMsg_;
+    @Override
+    public MarketFaceRec getMarkfaceMsg() {
+      return markfaceMsg_ == null ? MarketFaceRec.getDefaultInstance() : markfaceMsg_;
     }
 
     /**
      * <code>.MarketFaceRec markfaceMsg = 3;</code>
      */
-    @java.lang.Override
-    public RichMsgHandle.MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder() {
+    @Override
+    public MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder() {
       return getMarkfaceMsg();
     }
 
     /**
      * <code>string sourceMsgInfo = 4;</code>
-     *
      * @return The sourceMsgInfo.
      */
-    @java.lang.Override
-    public java.lang.String getSourceMsgInfo() {
-      java.lang.Object ref = sourceMsgInfo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getSourceMsgInfo() {
+      Object ref = sourceMsgInfo_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sourceMsgInfo_ = s;
         return s;
       }
@@ -10198,14 +9942,14 @@ public final class RichMsgHandle {
      *
      * @return The bytes for sourceMsgInfo.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
     getSourceMsgInfoBytes() {
-      java.lang.Object ref = sourceMsgInfo_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sourceMsgInfo_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b =
                 com.google.protobuf.ByteString.copyFromUtf8(
-                        (java.lang.String) ref);
+                        (String) ref);
         sourceMsgInfo_ = b;
         return b;
       } else {
@@ -10213,7 +9957,7 @@ public final class RichMsgHandle {
       }
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -10223,7 +9967,7 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       if (!getTextMsgBytes().isEmpty()) {
@@ -10241,7 +9985,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -10266,22 +10010,22 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
         return true;
       }
-      if (!(obj instanceof RichMsgHandle.Elem)) {
+      if (!(obj instanceof Elem)) {
         return super.equals(obj);
       }
-      RichMsgHandle.Elem other = (RichMsgHandle.Elem) obj;
+      Elem other = (Elem) obj;
 
       if (!getTextMsg()
-              .equals(other.getTextMsg())) return false;
+          .equals(other.getTextMsg())) return false;
       if (hasPicMsg() != other.hasPicMsg()) return false;
       if (hasPicMsg()) {
         if (!getPicMsg()
-                .equals(other.getPicMsg())) return false;
+            .equals(other.getPicMsg())) return false;
       }
       if (hasMarkfaceMsg() != other.hasMarkfaceMsg()) return false;
       if (hasMarkfaceMsg()) {
@@ -10293,7 +10037,7 @@ public final class RichMsgHandle {
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -10317,31 +10061,31 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
               ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Elem> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.Elem getDefaultInstanceForType() {
+    @Override
+    public Elem getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10351,39 +10095,17 @@ public final class RichMsgHandle {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:Elem)
-            RichMsgHandle.ElemOrBuilder {
-      private java.lang.Object textMsg_ = "";
-      private RichMsgHandle.PicRec picMsg_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.PicRec, RichMsgHandle.PicRec.Builder, RichMsgHandle.PicRecOrBuilder> picMsgBuilder_;
-      private RichMsgHandle.MarketFaceRec markfaceMsg_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.MarketFaceRec, RichMsgHandle.MarketFaceRec.Builder, RichMsgHandle.MarketFaceRecOrBuilder> markfaceMsgBuilder_;
-      private java.lang.Object sourceMsgInfo_ = "";
+            ElemOrBuilder {
+      private Object textMsg_ = "";
+      private PicRec picMsg_;
 
       // Construct using RichMsgHandle.Elem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return RichMsgHandle.internal_static_Elem_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return RichMsgHandle.internal_static_Elem_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.Elem.class, RichMsgHandle.Elem.Builder.class);
-      }
+      private com.google.protobuf.SingleFieldBuilderV3<
+              PicRec, PicRec.Builder, PicRecOrBuilder> picMsgBuilder_;
 
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
@@ -10391,7 +10113,31 @@ public final class RichMsgHandle {
         }
       }
 
-      @java.lang.Override
+      private MarketFaceRec markfaceMsg_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+              MarketFaceRec, MarketFaceRec.Builder, MarketFaceRecOrBuilder> markfaceMsgBuilder_;
+      private Object sourceMsgInfo_ = "";
+
+      private Builder(
+          BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return RichMsgHandle.internal_static_Elem_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return RichMsgHandle.internal_static_Elem_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        Elem.class, Builder.class);
+      }
+
+      @Override
       public Builder clear() {
         super.clear();
         textMsg_ = "";
@@ -10413,29 +10159,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
         return RichMsgHandle.internal_static_Elem_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Elem getDefaultInstanceForType() {
-        return RichMsgHandle.Elem.getDefaultInstance();
+      @Override
+      public Elem getDefaultInstanceForType() {
+        return Elem.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Elem build() {
-        RichMsgHandle.Elem result = buildPartial();
+      @Override
+      public Elem build() {
+        Elem result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Elem buildPartial() {
-        RichMsgHandle.Elem result = new RichMsgHandle.Elem(this);
+      @Override
+      public Elem buildPartial() {
+        Elem result = new Elem(this);
         result.textMsg_ = textMsg_;
         if (picMsgBuilder_ == null) {
           result.picMsg_ = picMsg_;
@@ -10452,56 +10198,56 @@ public final class RichMsgHandle {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
               com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+              int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.Elem) {
-          return mergeFrom((RichMsgHandle.Elem) other);
+        if (other instanceof Elem) {
+          return mergeFrom((Elem) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.Elem other) {
-        if (other == RichMsgHandle.Elem.getDefaultInstance()) return this;
+      public Builder mergeFrom(Elem other) {
+        if (other == Elem.getDefaultInstance()) return this;
         if (!other.getTextMsg().isEmpty()) {
           textMsg_ = other.textMsg_;
           onChanged();
@@ -10521,21 +10267,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        RichMsgHandle.Elem parsedMessage = null;
+        Elem parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.Elem) e.getUnfinishedMessage();
+          parsedMessage = (Elem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10550,27 +10296,26 @@ public final class RichMsgHandle {
        *
        * @return The textMsg.
        */
-      public java.lang.String getTextMsg() {
-        java.lang.Object ref = textMsg_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getTextMsg() {
+        Object ref = textMsg_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           textMsg_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
       /**
        * <code>string textMsg = 1;</code>
-       *
        * @param value The textMsg to set.
        * @return This builder for chaining.
        */
       public Builder setTextMsg(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -10581,17 +10326,25 @@ public final class RichMsgHandle {
       }
 
       /**
+       * <code>.PicRec picMsg = 2;</code>
+       * @return Whether the picMsg field is set.
+       */
+      public boolean hasPicMsg() {
+        return picMsgBuilder_ != null || picMsg_ != null;
+      }
+
+      /**
        * <code>string textMsg = 1;</code>
        *
        * @return The bytes for textMsg.
        */
       public com.google.protobuf.ByteString
       getTextMsgBytes() {
-        java.lang.Object ref = textMsg_;
+        Object ref = textMsg_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           textMsg_ = b;
           return b;
         } else {
@@ -10631,75 +10384,14 @@ public final class RichMsgHandle {
 
       /**
        * <code>.PicRec picMsg = 2;</code>
-       *
-       * @return Whether the picMsg field is set.
-       */
-      public boolean hasPicMsg() {
-        return picMsgBuilder_ != null || picMsg_ != null;
-      }
-
-      /**
-       * <code>.PicRec picMsg = 2;</code>
-       *
        * @return The picMsg.
        */
-      public RichMsgHandle.PicRec getPicMsg() {
+      public PicRec getPicMsg() {
         if (picMsgBuilder_ == null) {
-          return picMsg_ == null ? RichMsgHandle.PicRec.getDefaultInstance() : picMsg_;
+          return picMsg_ == null ? PicRec.getDefaultInstance() : picMsg_;
         } else {
           return picMsgBuilder_.getMessage();
         }
-      }
-
-      /**
-       * <code>.PicRec picMsg = 2;</code>
-       */
-      public Builder setPicMsg(RichMsgHandle.PicRec value) {
-        if (picMsgBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          picMsg_ = value;
-          onChanged();
-        } else {
-          picMsgBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-
-      /**
-       * <code>.PicRec picMsg = 2;</code>
-       */
-      public Builder setPicMsg(
-              RichMsgHandle.PicRec.Builder builderForValue) {
-        if (picMsgBuilder_ == null) {
-          picMsg_ = builderForValue.build();
-          onChanged();
-        } else {
-          picMsgBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-
-      /**
-       * <code>.PicRec picMsg = 2;</code>
-       */
-      public Builder mergePicMsg(RichMsgHandle.PicRec value) {
-        if (picMsgBuilder_ == null) {
-          if (picMsg_ != null) {
-            picMsg_ =
-                    RichMsgHandle.PicRec.newBuilder(picMsg_).mergeFrom(value).buildPartial();
-          } else {
-            picMsg_ = value;
-          }
-          onChanged();
-        } else {
-          picMsgBuilder_.mergeFrom(value);
-        }
-
-        return this;
       }
 
       /**
@@ -10720,7 +10412,58 @@ public final class RichMsgHandle {
       /**
        * <code>.PicRec picMsg = 2;</code>
        */
-      public RichMsgHandle.PicRec.Builder getPicMsgBuilder() {
+      public Builder setPicMsg(PicRec value) {
+        if (picMsgBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          picMsg_ = value;
+          onChanged();
+        } else {
+          picMsgBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.PicRec picMsg = 2;</code>
+       */
+      public Builder setPicMsg(
+              PicRec.Builder builderForValue) {
+        if (picMsgBuilder_ == null) {
+          picMsg_ = builderForValue.build();
+          onChanged();
+        } else {
+          picMsgBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.PicRec picMsg = 2;</code>
+       */
+      public Builder mergePicMsg(PicRec value) {
+        if (picMsgBuilder_ == null) {
+          if (picMsg_ != null) {
+            picMsg_ =
+              PicRec.newBuilder(picMsg_).mergeFrom(value).buildPartial();
+          } else {
+            picMsg_ = value;
+          }
+          onChanged();
+        } else {
+          picMsgBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.PicRec picMsg = 2;</code>
+       */
+      public PicRec.Builder getPicMsgBuilder() {
 
         onChanged();
         return getPicMsgFieldBuilder().getBuilder();
@@ -10729,30 +10472,13 @@ public final class RichMsgHandle {
       /**
        * <code>.PicRec picMsg = 2;</code>
        */
-      public RichMsgHandle.PicRecOrBuilder getPicMsgOrBuilder() {
+      public PicRecOrBuilder getPicMsgOrBuilder() {
         if (picMsgBuilder_ != null) {
           return picMsgBuilder_.getMessageOrBuilder();
         } else {
           return picMsg_ == null ?
-                  RichMsgHandle.PicRec.getDefaultInstance() : picMsg_;
+                  PicRec.getDefaultInstance() : picMsg_;
         }
-      }
-
-      /**
-       * <code>.PicRec picMsg = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.PicRec, RichMsgHandle.PicRec.Builder, RichMsgHandle.PicRecOrBuilder>
-      getPicMsgFieldBuilder() {
-        if (picMsgBuilder_ == null) {
-          picMsgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  RichMsgHandle.PicRec, RichMsgHandle.PicRec.Builder, RichMsgHandle.PicRecOrBuilder>(
-                  getPicMsg(),
-                  getParentForChildren(),
-                  isClean());
-          picMsg_ = null;
-        }
-        return picMsgBuilder_;
       }
 
       /**
@@ -10765,13 +10491,29 @@ public final class RichMsgHandle {
       }
 
       /**
+       * <code>.PicRec picMsg = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+              PicRec, PicRec.Builder, PicRecOrBuilder>
+      getPicMsgFieldBuilder() {
+        if (picMsgBuilder_ == null) {
+          picMsgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  PicRec, PicRec.Builder, PicRecOrBuilder>(
+                  getPicMsg(),
+                  getParentForChildren(),
+                  isClean());
+          picMsg_ = null;
+        }
+        return picMsgBuilder_;
+      }
+
+      /**
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
-       *
        * @return The markfaceMsg.
        */
-      public RichMsgHandle.MarketFaceRec getMarkfaceMsg() {
+      public MarketFaceRec getMarkfaceMsg() {
         if (markfaceMsgBuilder_ == null) {
-          return markfaceMsg_ == null ? RichMsgHandle.MarketFaceRec.getDefaultInstance() : markfaceMsg_;
+          return markfaceMsg_ == null ? MarketFaceRec.getDefaultInstance() : markfaceMsg_;
         } else {
           return markfaceMsgBuilder_.getMessage();
         }
@@ -10780,7 +10522,7 @@ public final class RichMsgHandle {
       /**
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
        */
-      public Builder setMarkfaceMsg(RichMsgHandle.MarketFaceRec value) {
+      public Builder setMarkfaceMsg(MarketFaceRec value) {
         if (markfaceMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10798,31 +10540,12 @@ public final class RichMsgHandle {
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
        */
       public Builder setMarkfaceMsg(
-              RichMsgHandle.MarketFaceRec.Builder builderForValue) {
+              MarketFaceRec.Builder builderForValue) {
         if (markfaceMsgBuilder_ == null) {
           markfaceMsg_ = builderForValue.build();
           onChanged();
         } else {
           markfaceMsgBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-
-      /**
-       * <code>.MarketFaceRec markfaceMsg = 3;</code>
-       */
-      public Builder mergeMarkfaceMsg(RichMsgHandle.MarketFaceRec value) {
-        if (markfaceMsgBuilder_ == null) {
-          if (markfaceMsg_ != null) {
-            markfaceMsg_ =
-                    RichMsgHandle.MarketFaceRec.newBuilder(markfaceMsg_).mergeFrom(value).buildPartial();
-          } else {
-            markfaceMsg_ = value;
-          }
-          onChanged();
-        } else {
-          markfaceMsgBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -10846,7 +10569,26 @@ public final class RichMsgHandle {
       /**
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
        */
-      public RichMsgHandle.MarketFaceRec.Builder getMarkfaceMsgBuilder() {
+      public Builder mergeMarkfaceMsg(MarketFaceRec value) {
+        if (markfaceMsgBuilder_ == null) {
+          if (markfaceMsg_ != null) {
+            markfaceMsg_ =
+                    MarketFaceRec.newBuilder(markfaceMsg_).mergeFrom(value).buildPartial();
+          } else {
+            markfaceMsg_ = value;
+          }
+          onChanged();
+        } else {
+          markfaceMsgBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+
+      /**
+       * <code>.MarketFaceRec markfaceMsg = 3;</code>
+       */
+      public MarketFaceRec.Builder getMarkfaceMsgBuilder() {
 
         onChanged();
         return getMarkfaceMsgFieldBuilder().getBuilder();
@@ -10855,12 +10597,12 @@ public final class RichMsgHandle {
       /**
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
        */
-      public RichMsgHandle.MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder() {
+      public MarketFaceRecOrBuilder getMarkfaceMsgOrBuilder() {
         if (markfaceMsgBuilder_ != null) {
           return markfaceMsgBuilder_.getMessageOrBuilder();
         } else {
           return markfaceMsg_ == null ?
-                  RichMsgHandle.MarketFaceRec.getDefaultInstance() : markfaceMsg_;
+                  MarketFaceRec.getDefaultInstance() : markfaceMsg_;
         }
       }
 
@@ -10868,11 +10610,11 @@ public final class RichMsgHandle {
        * <code>.MarketFaceRec markfaceMsg = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-              RichMsgHandle.MarketFaceRec, RichMsgHandle.MarketFaceRec.Builder, RichMsgHandle.MarketFaceRecOrBuilder>
+              MarketFaceRec, MarketFaceRec.Builder, MarketFaceRecOrBuilder>
       getMarkfaceMsgFieldBuilder() {
         if (markfaceMsgBuilder_ == null) {
           markfaceMsgBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                  RichMsgHandle.MarketFaceRec, RichMsgHandle.MarketFaceRec.Builder, RichMsgHandle.MarketFaceRecOrBuilder>(
+                  MarketFaceRec, MarketFaceRec.Builder, MarketFaceRecOrBuilder>(
                   getMarkfaceMsg(),
                   getParentForChildren(),
                   isClean());
@@ -10886,16 +10628,16 @@ public final class RichMsgHandle {
        *
        * @return The sourceMsgInfo.
        */
-      public java.lang.String getSourceMsgInfo() {
-        java.lang.Object ref = sourceMsgInfo_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getSourceMsgInfo() {
+        Object ref = sourceMsgInfo_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           sourceMsgInfo_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
 
@@ -10906,7 +10648,7 @@ public final class RichMsgHandle {
        * @return This builder for chaining.
        */
       public Builder setSourceMsgInfo(
-              java.lang.String value) {
+              String value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -10923,11 +10665,11 @@ public final class RichMsgHandle {
        */
       public com.google.protobuf.ByteString
       getSourceMsgInfoBytes() {
-        java.lang.Object ref = sourceMsgInfo_;
+        Object ref = sourceMsgInfo_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b =
                   com.google.protobuf.ByteString.copyFromUtf8(
-                          (java.lang.String) ref);
+                          (String) ref);
           sourceMsgInfo_ = b;
           return b;
         } else {
@@ -10965,13 +10707,13 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
               final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -10987,30 +10729,10 @@ public final class RichMsgHandle {
    * Protobuf type {@code Msg}
    */
   public static final class Msg extends
-          com.google.protobuf.GeneratedMessageV3 implements
+      com.google.protobuf.GeneratedMessageV3 implements
           // @@protoc_insertion_point(message_implements:Msg)
-          MsgOrBuilder {
+      MsgOrBuilder {
     public static final int ELEMS_FIELD_NUMBER = 1;
-    private static final long serialVersionUID = 0L;
-    // @@protoc_insertion_point(class_scope:Msg)
-    private static final RichMsgHandle.Msg DEFAULT_INSTANCE;
-    private static final com.google.protobuf.Parser<Msg>
-            PARSER = new com.google.protobuf.AbstractParser<Msg>() {
-      @java.lang.Override
-      public Msg parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Msg(input, extensionRegistry);
-      }
-    };
-
-    static {
-      DEFAULT_INSTANCE = new RichMsgHandle.Msg();
-    }
-
-    private java.util.List<RichMsgHandle.Elem> elems_;
-    private byte memoizedIsInitialized = -1;
 
     // Use Msg.newBuilder() to construct.
     private Msg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -11021,13 +10743,34 @@ public final class RichMsgHandle {
       elems_ = java.util.Collections.emptyList();
     }
 
+    private static final long serialVersionUID = 0L;
+    // @@protoc_insertion_point(class_scope:Msg)
+    private static final Msg DEFAULT_INSTANCE;
+    private static final com.google.protobuf.Parser<Msg>
+        PARSER = new com.google.protobuf.AbstractParser<Msg>() {
+      @Override
+      public Msg parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg(input, extensionRegistry);
+      }
+    };
+
+    static {
+      DEFAULT_INSTANCE = new Msg();
+    }
+
+    private java.util.List<Elem> elems_;
+    private byte memoizedIsInitialized = -1;
+
     private Msg(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -11042,11 +10785,11 @@ public final class RichMsgHandle {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                elems_ = new java.util.ArrayList<RichMsgHandle.Elem>();
+                elems_ = new java.util.ArrayList<Elem>();
                 mutable_bitField0_ |= 0x00000001;
               }
               elems_.add(
-                      input.readMessage(RichMsgHandle.Elem.parser(), extensionRegistry));
+                      input.readMessage(Elem.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -11077,51 +10820,51 @@ public final class RichMsgHandle {
       return RichMsgHandle.internal_static_Msg_descriptor;
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Msg parseFrom(byte[] data)
+    public static Msg parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
 
-    public static RichMsgHandle.Msg parseFrom(java.io.InputStream input)
-            throws java.io.IOException {
+    public static Msg parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -11129,13 +10872,13 @@ public final class RichMsgHandle {
               .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.Msg parseDelimitedFrom(java.io.InputStream input)
+    public static Msg parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Msg parseDelimitedFrom(
+    public static Msg parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -11143,14 +10886,14 @@ public final class RichMsgHandle {
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             com.google.protobuf.CodedInputStream input)
-            throws java.io.IOException {
+        throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
     }
 
-    public static RichMsgHandle.Msg parseFrom(
+    public static Msg parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -11162,11 +10905,11 @@ public final class RichMsgHandle {
       return DEFAULT_INSTANCE.toBuilder();
     }
 
-    public static Builder newBuilder(RichMsgHandle.Msg prototype) {
+    public static Builder newBuilder(Msg prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
 
-    public static RichMsgHandle.Msg getDefaultInstance() {
+    public static Msg getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11174,40 +10917,40 @@ public final class RichMsgHandle {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
             UnusedPrivateParameter unused) {
       return new Msg();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
     internalGetFieldAccessorTable() {
       return RichMsgHandle.internal_static_Msg_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                      RichMsgHandle.Msg.class, RichMsgHandle.Msg.Builder.class);
+                      Msg.class, Builder.class);
     }
 
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<RichMsgHandle.Elem> getElemsList() {
+    @Override
+    public java.util.List<Elem> getElemsList() {
       return elems_;
     }
 
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends RichMsgHandle.ElemOrBuilder>
+    @Override
+    public java.util.List<? extends ElemOrBuilder>
     getElemsOrBuilderList() {
       return elems_;
     }
@@ -11215,7 +10958,7 @@ public final class RichMsgHandle {
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    @java.lang.Override
+    @Override
     public int getElemsCount() {
       return elems_.size();
     }
@@ -11223,21 +10966,21 @@ public final class RichMsgHandle {
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    @java.lang.Override
-    public RichMsgHandle.Elem getElems(int index) {
+    @Override
+    public Elem getElems(int index) {
       return elems_.get(index);
     }
 
     /**
      * <code>repeated .Elem elems = 1;</code>
      */
-    @java.lang.Override
-    public RichMsgHandle.ElemOrBuilder getElemsOrBuilder(
+    @Override
+    public ElemOrBuilder getElemsOrBuilder(
             int index) {
       return elems_.get(index);
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -11247,7 +10990,7 @@ public final class RichMsgHandle {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
             throws java.io.IOException {
       for (int i = 0; i < elems_.size(); i++) {
@@ -11256,7 +10999,7 @@ public final class RichMsgHandle {
       unknownFields.writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -11271,22 +11014,22 @@ public final class RichMsgHandle {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
-      if (!(obj instanceof RichMsgHandle.Msg)) {
+      if (!(obj instanceof Msg)) {
         return super.equals(obj);
       }
-      RichMsgHandle.Msg other = (RichMsgHandle.Msg) obj;
+      Msg other = (Msg) obj;
 
       if (!getElemsList()
               .equals(other.getElemsList())) return false;
       return unknownFields.equals(other.unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -11302,31 +11045,31 @@ public final class RichMsgHandle {
       return hash;
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() {
       return newBuilder();
     }
 
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
               ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Msg> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public RichMsgHandle.Msg getDefaultInstanceForType() {
+    @Override
+    public Msg getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11336,35 +11079,16 @@ public final class RichMsgHandle {
     public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:Msg)
-            RichMsgHandle.MsgOrBuilder {
+            MsgOrBuilder {
       private int bitField0_;
-      private java.util.List<RichMsgHandle.Elem> elems_ =
+      private java.util.List<Elem> elems_ =
               java.util.Collections.emptyList();
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              RichMsgHandle.Elem, RichMsgHandle.Elem.Builder, RichMsgHandle.ElemOrBuilder> elemsBuilder_;
+              Elem, Elem.Builder, ElemOrBuilder> elemsBuilder_;
 
       // Construct using RichMsgHandle.Msg.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return RichMsgHandle.internal_static_Msg_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return RichMsgHandle.internal_static_Msg_fieldAccessorTable
-                .ensureFieldAccessorsInitialized(
-                        RichMsgHandle.Msg.class, RichMsgHandle.Msg.Builder.class);
       }
 
       private void maybeForceBuilderInitialization() {
@@ -11374,7 +11098,26 @@ public final class RichMsgHandle {
         }
       }
 
-      @java.lang.Override
+      private Builder(
+              BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return RichMsgHandle.internal_static_Msg_descriptor;
+      }
+
+      @Override
+      protected FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return RichMsgHandle.internal_static_Msg_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        Msg.class, Builder.class);
+      }
+
+      @Override
       public Builder clear() {
         super.clear();
         if (elemsBuilder_ == null) {
@@ -11386,29 +11129,29 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
       getDescriptorForType() {
         return RichMsgHandle.internal_static_Msg_descriptor;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Msg getDefaultInstanceForType() {
-        return RichMsgHandle.Msg.getDefaultInstance();
+      @Override
+      public Msg getDefaultInstanceForType() {
+        return Msg.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Msg build() {
-        RichMsgHandle.Msg result = buildPartial();
+      @Override
+      public Msg build() {
+        Msg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public RichMsgHandle.Msg buildPartial() {
-        RichMsgHandle.Msg result = new RichMsgHandle.Msg(this);
+      @Override
+      public Msg buildPartial() {
+        Msg result = new Msg(this);
         int from_bitField0_ = bitField0_;
         if (elemsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
@@ -11423,56 +11166,56 @@ public final class RichMsgHandle {
         return result;
       }
 
-      @java.lang.Override
+      @Override
       public Builder clone() {
         return super.clone();
       }
 
-      @java.lang.Override
+      @Override
       public Builder setField(
-              com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
         return super.setField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearField(
-              com.google.protobuf.Descriptors.FieldDescriptor field) {
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
 
-      @java.lang.Override
+      @Override
       public Builder clearOneof(
               com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
 
-      @java.lang.Override
+      @Override
       public Builder setRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              int index, java.lang.Object value) {
+              int index, Object value) {
         return super.setRepeatedField(field, index, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder addRepeatedField(
               com.google.protobuf.Descriptors.FieldDescriptor field,
-              java.lang.Object value) {
+              Object value) {
         return super.addRepeatedField(field, value);
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof RichMsgHandle.Msg) {
-          return mergeFrom((RichMsgHandle.Msg) other);
+        if (other instanceof Msg) {
+          return mergeFrom((Msg) other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(RichMsgHandle.Msg other) {
-        if (other == RichMsgHandle.Msg.getDefaultInstance()) return this;
+      public Builder mergeFrom(Msg other) {
+        if (other == Msg.getDefaultInstance()) return this;
         if (elemsBuilder_ == null) {
           if (!other.elems_.isEmpty()) {
             if (elems_.isEmpty()) {
@@ -11504,21 +11247,21 @@ public final class RichMsgHandle {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-        RichMsgHandle.Msg parsedMessage = null;
+        Msg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (RichMsgHandle.Msg) e.getUnfinishedMessage();
+          parsedMessage = (Msg) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -11530,22 +11273,21 @@ public final class RichMsgHandle {
 
       private void ensureElemsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          elems_ = new java.util.ArrayList<RichMsgHandle.Elem>(elems_);
+          elems_ = new java.util.ArrayList<Elem>(elems_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public java.util.List<RichMsgHandle.Elem> getElemsList() {
+      public java.util.List<Elem> getElemsList() {
         if (elemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(elems_);
         } else {
           return elemsBuilder_.getMessageList();
         }
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
@@ -11556,23 +11298,21 @@ public final class RichMsgHandle {
           return elemsBuilder_.getCount();
         }
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public RichMsgHandle.Elem getElems(int index) {
+      public Elem getElems(int index) {
         if (elemsBuilder_ == null) {
           return elems_.get(index);
         } else {
           return elemsBuilder_.getMessage(index);
         }
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder setElems(
-              int index, RichMsgHandle.Elem value) {
+          int index, Elem value) {
         if (elemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11585,12 +11325,11 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder setElems(
-              int index, RichMsgHandle.Elem.Builder builderForValue) {
+          int index, Elem.Builder builderForValue) {
         if (elemsBuilder_ == null) {
           ensureElemsIsMutable();
           elems_.set(index, builderForValue.build());
@@ -11600,11 +11339,10 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public Builder addElems(RichMsgHandle.Elem value) {
+      public Builder addElems(Elem value) {
         if (elemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11617,12 +11355,11 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder addElems(
-              int index, RichMsgHandle.Elem value) {
+          int index, Elem value) {
         if (elemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -11635,12 +11372,11 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder addElems(
-              RichMsgHandle.Elem.Builder builderForValue) {
+          Elem.Builder builderForValue) {
         if (elemsBuilder_ == null) {
           ensureElemsIsMutable();
           elems_.add(builderForValue.build());
@@ -11650,12 +11386,11 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder addElems(
-              int index, RichMsgHandle.Elem.Builder builderForValue) {
+          int index, Elem.Builder builderForValue) {
         if (elemsBuilder_ == null) {
           ensureElemsIsMutable();
           elems_.add(index, builderForValue.build());
@@ -11665,23 +11400,21 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
       public Builder addAllElems(
-              java.lang.Iterable<? extends RichMsgHandle.Elem> values) {
+          Iterable<? extends Elem> values) {
         if (elemsBuilder_ == null) {
           ensureElemsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, elems_);
+              values, elems_);
           onChanged();
         } else {
           elemsBuilder_.addAllMessages(values);
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
@@ -11695,7 +11428,6 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
@@ -11709,70 +11441,62 @@ public final class RichMsgHandle {
         }
         return this;
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public RichMsgHandle.Elem.Builder getElemsBuilder(
-              int index) {
+      public Elem.Builder getElemsBuilder(
+          int index) {
         return getElemsFieldBuilder().getBuilder(index);
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public RichMsgHandle.ElemOrBuilder getElemsOrBuilder(
-              int index) {
+      public ElemOrBuilder getElemsOrBuilder(
+          int index) {
         if (elemsBuilder_ == null) {
-          return elems_.get(index);
-        } else {
+          return elems_.get(index);  } else {
           return elemsBuilder_.getMessageOrBuilder(index);
         }
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public java.util.List<? extends RichMsgHandle.ElemOrBuilder>
-      getElemsOrBuilderList() {
+      public java.util.List<? extends ElemOrBuilder>
+           getElemsOrBuilderList() {
         if (elemsBuilder_ != null) {
           return elemsBuilder_.getMessageOrBuilderList();
         } else {
           return java.util.Collections.unmodifiableList(elems_);
         }
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public RichMsgHandle.Elem.Builder addElemsBuilder() {
+      public Elem.Builder addElemsBuilder() {
         return getElemsFieldBuilder().addBuilder(
-                RichMsgHandle.Elem.getDefaultInstance());
+            Elem.getDefaultInstance());
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public RichMsgHandle.Elem.Builder addElemsBuilder(
-              int index) {
+      public Elem.Builder addElemsBuilder(
+          int index) {
         return getElemsFieldBuilder().addBuilder(
-                index, RichMsgHandle.Elem.getDefaultInstance());
+            index, Elem.getDefaultInstance());
       }
-
       /**
        * <code>repeated .Elem elems = 1;</code>
        */
-      public java.util.List<RichMsgHandle.Elem.Builder>
-      getElemsBuilderList() {
+      public java.util.List<Elem.Builder>
+           getElemsBuilderList() {
         return getElemsFieldBuilder().getBuilderList();
       }
-
       private com.google.protobuf.RepeatedFieldBuilderV3<
-              RichMsgHandle.Elem, RichMsgHandle.Elem.Builder, RichMsgHandle.ElemOrBuilder>
-      getElemsFieldBuilder() {
+          Elem, Elem.Builder, ElemOrBuilder>
+          getElemsFieldBuilder() {
         if (elemsBuilder_ == null) {
           elemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                  RichMsgHandle.Elem, RichMsgHandle.Elem.Builder, RichMsgHandle.ElemOrBuilder>(
+              Elem, Elem.Builder, ElemOrBuilder>(
                   elems_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -11781,16 +11505,15 @@ public final class RichMsgHandle {
         }
         return elemsBuilder_;
       }
-
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
-              final com.google.protobuf.UnknownFieldSet unknownFields) {
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
