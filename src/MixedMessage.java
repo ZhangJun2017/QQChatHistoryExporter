@@ -34,12 +34,12 @@ public class MixedMessage extends Message {
         StringBuilder stringBuilder = new StringBuilder();
         for (RichMsgHandle.Elem elem : elemList) {
             if (elem.hasPicMsg()) {
-                stringBuilder.append(new Picture(elem.getPicMsg()));
+                stringBuilder.append(new Picture(elem.getPicMsg()).toString());
             } else {
                 stringBuilder.append(elem.getTextMsg());
             }
         }
-        return stringBuilder.toString();
+        return GlobalValues.HtmlFormattingText.MIXED_MESSAGE_HTML.replace("{MIXED_MESSAGE_CONTENT}", stringBuilder.toString());
     }
 
     @Override

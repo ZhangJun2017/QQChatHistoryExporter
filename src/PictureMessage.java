@@ -14,10 +14,10 @@ public class PictureMessage extends Message {
     public PictureMessage(Person sender, long time, long uniseq, byte[] data) {
         super(sender, time, uniseq);
         try {
-            this.picture = new Picture(RichMsgHandle.PicRec.parseFrom(data));
+            picture = new Picture(RichMsgHandle.PicRec.parseFrom(data));
         } catch (InvalidProtocolBufferException e) {
             //this should not happen
-            this.picture = new Picture();
+            picture = new Picture();
             e.printStackTrace();
         }
     }

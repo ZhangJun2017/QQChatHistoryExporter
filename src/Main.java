@@ -124,18 +124,22 @@ public class Main {
     }
 
     */
-        String destDir = "-";
+        String sourceDir = "-";
+        String assetDir = "-";
+        String destDir = sourceDir;
         String key = "-";
         String uinSelf = "-";
-        //-
-        //String uinOpposite="-";
+        String dbFileName = uinSelf + ".db";
+        String dbSlowTableFileName = "slowtable_" + dbFileName;
         //-
         String uinOpposite = "-";
         //-
         //String uinOpposite = "-";
+        //-
+        //String uinOpposite = "-";
         final String Class_Name = "org.sqlite.JDBC";
-        final String DB_URL = "jdbc:sqlite:-";
-        final String DB_URL_slowtable = "jdbc:sqlite:-";
+        final String DB_URL = "jdbc:sqlite:" + sourceDir + "\\" + dbFileName;
+        final String DB_URL_slowtable = "jdbc:sqlite:" + sourceDir + "\\" + dbSlowTableFileName;
         Connection connection;
         HashMap<String, String> friendMap = new HashMap<>();
         MessageStack topMessageStack = new MessageStack();
@@ -152,11 +156,7 @@ public class Main {
             Person opposite = new Person(uinOpposite, friendMap.get(uinOpposite));
             Person toStore;
             for (int i = 0; i < 2; i++) {
-                if (i == 0) {
-                    connection = DriverManager.getConnection(DB_URL);
-                } else {
-                    connection = DriverManager.getConnection(DB_URL_slowtable);
-                }
+                connection = DriverManager.getConnection(i == 0 ? DB_URL : DB_URL_slowtable);
                 statement = connection.createStatement();
                 try {
                     rs = statement.executeQuery("select msgData,senderuin,time,msgtype,uniseq from mr_friend_<TARGET>_New".replace("<TARGET>", new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase()));
@@ -166,35 +166,40 @@ public class Main {
                 while (rs.next()) {
                     if (decryptString(rs.getBytes(2), key).equals(uinSelf)) toStore = me;
                     else toStore = opposite;
-                    switch (rs.getString("msgtype")) {
-                        case "-1000":
-                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
-                            break;
-                        case "-2000":
-                            topMessageStack.add(new PictureMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptProtobuf(rs.getBytes("msgData"), key)));
-                            break;
-                        default:
-                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), rs.getString("msgtype")));
-                            break;
+                    if (Long.valueOf(rs.getString("time")) > 1622476800) { //for debugging
+                        switch (rs.getString("msgtype")) {
+                            case "-1000":
+                                topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
+                                break;
+                            case "-2000":
+                                topMessageStack.add(new PictureMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptProtobuf(rs.getBytes("msgData"), key)));
+                                break;
+                            case "-1035":
+                                topMessageStack.add(new MixedMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), (decryptProtobuf(rs.getBytes("msgData"), key))));
+                                break;
+                            default:
+                                topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), rs.getString("msgtype")));
+                                break;
+                        }
                     }
                 }
             }
-            FileOutputStream fileOutputStream = new FileOutputStream(destDir + "exop.bat", false);
-            fileOutputStream.write(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline()).getBytes("GB2312"));
+            FileOutputStream fileOutputStream = new FileOutputStream(destDir + "\\exop.bat", false);
+            fileOutputStream.write(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets")).getBytes("GB2312"));
             fileOutputStream.flush();
             fileOutputStream.close();
-            //Runtime.getRuntime().exec(destDir + "exop.bat");
-            fileOutputStream = new FileOutputStream(destDir + GlobalValues.AssetsPath.CSS_FILE_PATH, false);
-            fileOutputStream.write(GlobalValues.HtmlFormattingText.CSS_CONTENT.getBytes(StandardCharsets.UTF_8));
+            //Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user
+            fileOutputStream = new FileOutputStream(destDir + "\\assets\\css\\main.css", false);
+            fileOutputStream.write(GlobalValues.HtmlFormattingText.CSS_CONTENT.getBytes("UTF-8"));
             fileOutputStream.flush();
             fileOutputStream.close();
-            fileOutputStream = new FileOutputStream(destDir + uinOpposite + ".html", false);
+            fileOutputStream = new FileOutputStream(destDir + "\\" + uinOpposite + ".html", false);
             StringBuilder htmlBuilder = new StringBuilder();
             String htmlTitle = GlobalValues.HtmlFormattingText.HTML_TITLE.replace("{HOST_NICKNAME}", me.nickName).replace("{HOST_UIN}", me.uin).replace("{OPPOSITE_NICKNAME}", opposite.nickName).replace("{OPPOSITE_UIN}", opposite.uin);
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_HEADER.replace("{HTML_TITLE}", htmlTitle));
             htmlBuilder.append(topMessageStack.printToHtml(me));
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_FOOTER);
-            fileOutputStream.write(htmlBuilder.toString().getBytes(StandardCharsets.UTF_8));
+            fileOutputStream.write(htmlBuilder.toString().getBytes("UTF-8"));
             fileOutputStream.flush();
             fileOutputStream.close();
         } catch (SQLException | ClassNotFoundException | NoSuchAlgorithmException | UnsupportedEncodingException e) {
