@@ -58,7 +58,7 @@ public class MessageStack {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(messageArray[0]);
         for (int i = 1; i < messageArray.length; i++) {
-            stringBuilder.append(messageArray[i].replace(String.valueOf(messageArray[i].charAt(0)), GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQDes())));
+            stringBuilder.append(GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQDes()) + messageArray[i].substring(1));
         }
         return stringBuilder.toString();
     }
