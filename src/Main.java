@@ -1,12 +1,20 @@
+import com.google.gson.Gson;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * QQChatHistoryExporter/
@@ -197,7 +205,9 @@ public class Main {
             StringBuilder htmlBuilder = new StringBuilder();
             String htmlTitle = GlobalValues.HtmlFormattingText.HTML_TITLE.replace("{HOST_NICKNAME}", me.nickName).replace("{HOST_UIN}", me.uin).replace("{OPPOSITE_NICKNAME}", opposite.nickName).replace("{OPPOSITE_UIN}", opposite.uin);
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_HEADER.replace("{HTML_TITLE}", htmlTitle));
-            htmlBuilder.append(topMessageStack.printToHtml(me));
+            ArrayList emotionConfig = new Gson().fromJson(new JsonParser().parse(new JsonReader(new InputStreamReader(Main.class.getResourceAsStream("face_config.json")))).getAsJsonObject().get("sysface").getAsJsonArray(), new TypeToken<List<QEmotion>>() {
+            }.getType());
+            htmlBuilder.append(topMessageStack.replaceEmotion(topMessageStack.printToHtml(me), emotionConfig));
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_FOOTER);
             fileOutputStream.write(htmlBuilder.toString().getBytes("UTF-8"));
             fileOutputStream.flush();

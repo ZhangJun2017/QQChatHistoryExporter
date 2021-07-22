@@ -3,6 +3,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * QQChatHistoryExporter/
@@ -44,6 +46,20 @@ public class MessageStack {
             toAppend = toAppend.replace("{MESSAGE_CONTENT}", message.printToHtml());
             stringBuilder.append(toAppend);
         });
+        return stringBuilder.toString();
+    }
+
+    public String replaceEmotion(String message, List<QEmotion> configList) {
+        HashMap<String, QEmotion> configMap = new HashMap<>();
+        for (QEmotion emotion : configList) {
+            configMap.put(emotion.getAQLid(), emotion);
+        }
+        String[] messageArray = message.split("\u0014");
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(messageArray[0]);
+        for (int i = 1; i < messageArray.length; i++) {
+            stringBuilder.append(messageArray[i].replace(String.valueOf(messageArray[i].charAt(0)), GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQDes())));
+        }
         return stringBuilder.toString();
     }
 
