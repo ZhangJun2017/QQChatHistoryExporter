@@ -29,7 +29,9 @@ public abstract class Message {
 
     public abstract String printToHtml();
 
-    public abstract String getExternalOperationCmdline();
+    public String getExternalOperationCmdline() {
+        return "";
+    }
 
 }
 

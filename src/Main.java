@@ -185,6 +185,10 @@ public class Main {
                             case "-1035":
                                 topMessageStack.add(new MixedMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), (decryptProtobuf(rs.getBytes("msgData"), key))));
                                 break;
+                            case "-5012":
+                            case "-5018":
+                                topMessageStack.add(new PokeMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
+                                break;
                             default:
                                 topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), rs.getString("msgtype")));
                                 break;
@@ -235,7 +239,7 @@ public class Main {
         }
     }
 
-    static String decryptString(byte[] data, String key) throws UnsupportedEncodingException {
+    static String decryptString(byte[] data, String key) {
         if (data == null) {
             return "";
         } else {

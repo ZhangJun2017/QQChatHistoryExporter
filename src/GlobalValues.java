@@ -21,6 +21,7 @@ public class GlobalValues {
         public static final String PICTURE_MESSAGE_HTML = "<div class=\"message-content picture-message\"><span>{PICTURE_MESSAGE_CONTENT}</span></div>";
         public static final String PICTURE_HTML = "<img src=\"{PICTURE_SRC}\"  width=\"{PICTURE_WIDTH}\" height=\"{PICTURE_HEIGHT}\" alt=\"{PICTURE_ALT}\" title=\"{PICTURE_TITLE}\" onclick='window.open(\"{PICTURE_SRC}\")'/>";
         public static final String MIXED_MESSAGE_HTML = "<div class=\"message-content mixed-message\"><span>{MIXED_MESSAGE_CONTENT}</span></div>";
+        public static final String POKE_MESSAGE_HTML = "<div class=\"message-content poke-message\"><span>{POKE_MESSAGE_CONTENT}</span></div>";
     }
 
     public static class BatchFormattingText {

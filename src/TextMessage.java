@@ -30,11 +30,6 @@ public class TextMessage extends Message {
     }
 
     @Override
-    public String getExternalOperationCmdline() {
-        return "";
-    }
-
-    @Override
     public String printToHtml() {
         return GlobalValues.HtmlFormattingText.TEXT_MESSAGE_HTML.replace("{TEXT_MESSAGE_CONTENT}", escapeHtml(content));
     }
