@@ -54,13 +54,14 @@ public class MessageStack {
         for (QEmotion emotion : configList) {
             configMap.put(emotion.getAQLid(), emotion);
         }
-        String[] messageArray = message.split("\u0014");
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(messageArray[0]);
-        for (int i = 1; i < messageArray.length; i++) {
-            stringBuilder.append(GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageArray[i].codePointAt(0))).getQDes()) + messageArray[i].substring(1));
+        StringBuffer messageBuffer = new StringBuffer(message);
+        for (int i = 0; i < messageBuffer.length(); i++) {
+            if (messageBuffer.charAt(i) == '\u0014') {
+                messageBuffer.insert(i + 2, GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageBuffer.codePointAt(i + 1))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageBuffer.codePointAt(i + 1))).getQDes()));
+                messageBuffer.delete(i, i + 2);
+            }
         }
-        return stringBuilder.toString();
+        return messageBuffer.toString();
     }
 
     public void printToConsole() {
