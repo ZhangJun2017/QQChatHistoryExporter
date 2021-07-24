@@ -177,6 +177,7 @@ public class Main {
                     if (Long.valueOf(rs.getString("time")) > 1622476800) { //for debugging
                         switch (rs.getString("msgtype")) {
                             case "-1000":
+                            case "-1051":
                                 topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
                                 break;
                             case "-2000":

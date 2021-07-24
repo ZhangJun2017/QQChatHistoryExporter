@@ -26,6 +26,7 @@ public class TextMessage extends Message {
         toEscape = toEscape.replace(" ", "&nbsp;");
         toEscape = toEscape.replace("<", "&lt;");
         toEscape = toEscape.replace(">", "&gt;");
+        toEscape = toEscape.replace("\n", "<br>");
         return toEscape;
     }
 

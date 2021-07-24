@@ -36,7 +36,7 @@ public class MixedMessage extends Message {
             if (elem.hasPicMsg()) {
                 stringBuilder.append(new Picture(elem.getPicMsg()).toString());
             } else {
-                stringBuilder.append(elem.getTextMsg());
+                stringBuilder.append(TextMessage.escapeHtml(elem.getTextMsg()));
             }
         }
         return GlobalValues.HtmlFormattingText.MIXED_MESSAGE_HTML.replace("{MIXED_MESSAGE_CONTENT}", stringBuilder.toString());
