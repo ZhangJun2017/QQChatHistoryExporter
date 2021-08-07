@@ -1,13 +1,5 @@
 import com.google.protobuf.InvalidProtocolBufferException;
 
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/9
- */
-
 public class PictureMessage extends Message {
     public Picture picture;
 

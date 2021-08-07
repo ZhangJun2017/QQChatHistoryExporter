@@ -1,11 +1,3 @@
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/17
- */
-
 public class GlobalValues {
     public static class HtmlFormattingText {
         //HTML

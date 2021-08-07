@@ -1,11 +1,3 @@
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/23
- */
-
 public class QEmotion {
     private String QSid;
     private String QDes;

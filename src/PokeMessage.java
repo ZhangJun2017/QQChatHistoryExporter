@@ -1,14 +1,6 @@
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/24
- */
-
 public class PokeMessage extends Message {
     private final String pokeJson;
 

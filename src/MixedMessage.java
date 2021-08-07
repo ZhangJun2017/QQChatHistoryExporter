@@ -3,14 +3,6 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/16
- */
-
 public class MixedMessage extends Message {
     private List<RichMsgHandle.Elem> elemList = null;
 

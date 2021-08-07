@@ -1,22 +1,9 @@
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/8
- */
-
 public class TextMessage extends Message {
     public final String content;
 
     public TextMessage(Person sender, long time, long uniseq, String content) {
         super(sender, time, uniseq);
         this.content = content;
-    }
-
-    @Override
-    public String toString() {
-        return "<TextMessage>" + sender.nickName + "(" + sender.uin + "):" + content;
     }
 
     public static String escapeHtml(String toEscape) {
@@ -28,6 +15,11 @@ public class TextMessage extends Message {
         toEscape = toEscape.replace(">", "&gt;");
         toEscape = toEscape.replace("\n", "<br>");
         return toEscape;
+    }
+
+    @Override
+    public String toString() {
+        return "<TextMessage>" + sender.nickName + "(" + sender.uin + "):" + content;
     }
 
     @Override

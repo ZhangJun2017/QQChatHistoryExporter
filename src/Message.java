@@ -1,13 +1,5 @@
 import java.util.Comparator;
 
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/8
- */
-
 public abstract class Message {
     public final Person sender;
     public final long time;
@@ -32,7 +24,6 @@ public abstract class Message {
     public String getExternalOperationCmdline() {
         return "";
     }
-
 }
 
 class SequenceOrderedComparator implements Comparator<Message> {

@@ -1,11 +1,3 @@
-/**
- * QQChatHistoryExporter/
- * Description:
- *
- * @author:ZhangJun2017
- * @date:2021/7/9
- */
-
 public class Picture {
     public String md5;
     public String localPath;
@@ -28,17 +20,6 @@ public class Picture {
         printOptimize();
         String CRC64Value = String.valueOf(CRC64.crc64Long(("chatimg:" + md5)));
         fileName = "Cache_" + (CRC64Value.startsWith("-") ? "-" : "") + Long.toHexString(Long.valueOf(CRC64Value.replace("-", "")));
-        /*
-        if (parser.getBytesPbReserved().toByteArray().length != 0) {
-            try {
-                if (RichMsgHandle.MessageInfo.parseFrom(parser.getBytesPbReserved().toByteArray()).getInfo().equals("[动画表情]")) {
-                    //do something
-                }
-            } catch (InvalidProtocolBufferException e) {
-                e.printStackTrace();
-            }
-        }
-       */
     }
 
     @Override
