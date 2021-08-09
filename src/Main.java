@@ -35,77 +35,48 @@ public class Main {
         String destDir = sourceDir;
         String dbFileName = uinSelf + ".db";
         String dbSlowTableFileName = "slowtable_" + dbFileName;
-        final String Class_Name = "org.sqlite.JDBC";
         final String DB_URL = "jdbc:sqlite:" + sourceDir + "\\" + dbFileName;
         final String DB_URL_slowtable = "jdbc:sqlite:" + sourceDir + "\\" + dbSlowTableFileName;
-        Connection connection;
-        HashMap<String, String> friendMap = new HashMap<>();
-        MessageStack topMessageStack = new MessageStack();
+        ResultSet rs;
         try {
-            Class.forName(Class_Name);
-            connection = DriverManager.getConnection(DB_URL);
+            String targetMD5 = new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase();
+            Connection connection = DriverManager.getConnection(DB_URL);
+            Connection connectionSlowTable = DriverManager.getConnection(DB_URL_slowtable);
             Statement statement = connection.createStatement();
-            statement.setQueryTimeout(30);
-            ResultSet rs = statement.executeQuery("SELECT uin,name,remark FROM Friends");
+            Statement statementSlowTable = connectionSlowTable.createStatement();
+            HashMap<String, Person> friendMap = fetchFriends(statement.executeQuery("SELECT uin,name,remark FROM Friends"), key);
+            HashMap<String, HashMap<String, Person>> friendMapMultiMsg = fetchMultiMsgFriends(statement.executeQuery("SELECT uin,nick,uniseq FROM MultiMsgNick"), key);
+            StringBuilder multiMsgQueryBuilder = new StringBuilder("(");
+            rs = statement.executeQuery("SELECT uniseq FROM mr_friend_<TARGET>_New WHERE msgtype='-2011'".replace("<TARGET>", targetMD5));
             while (rs.next()) {
-                friendMap.put(decryptChar(rs.getString("uin"), key), (decryptChar(rs.getString("remark"), key).equals("") ? decryptChar(rs.getString("name"), key) : decryptChar(rs.getString("remark"), key)));
+                multiMsgQueryBuilder.append("'" + rs.getString("uniseq") + "',");
             }
-            Person me = new Person(uinSelf, friendMap.get(uinSelf));
-            Person opposite = new Person(uinOpposite, friendMap.get(uinOpposite));
-            Person toStore;
-            for (int i = 0; i < 2; i++) {
-                connection = DriverManager.getConnection(i == 0 ? DB_URL : DB_URL_slowtable);
-                statement = connection.createStatement();
-                try {
-                    rs = statement.executeQuery("SELECT msgData,senderuin,time,msgtype,uniseq FROM mr_friend_<TARGET>_New".replace("<TARGET>", new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase()));
-                } catch (SQLException e) {
-                    //slowtable.db might not have that table since the regular database is enough to store messages
-                }
-                while (rs.next()) {
-                    toStore = decryptString(rs.getBytes("senderuin"), key).equals(uinSelf) ? me : opposite;
-                    switch (rs.getString("msgtype")) {
-                        case "-1000":
-                        case "-1049":
-                        case "-1051":
-                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
-                            break;
-                        case "-2000":
-                            topMessageStack.add(new PictureMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptProtobuf(rs.getBytes("msgData"), key)));
-                            break;
-                        case "-1035":
-                            topMessageStack.add(new MixedMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), (decryptProtobuf(rs.getBytes("msgData"), key))));
-                            break;
-                        case "-5012":
-                        case "-5018":
-                            topMessageStack.add(new PokeMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), decryptString(rs.getBytes("msgData"), key)));
-                            break;
-                        default:
-                            topMessageStack.add(new TextMessage(toStore, Long.valueOf(rs.getString("time")), Long.valueOf(rs.getString("uniseq")), "不支持的消息类型：" + rs.getString("msgtype")));
-                            break;
-                    }
-                }
+            rs = statementSlowTable.executeQuery("SELECT uniseq FROM mr_friend_<TARGET>_New WHERE msgtype='-2011'".replace("<TARGET>", targetMD5));
+            while (rs.next()) {
+                multiMsgQueryBuilder.append("'" + rs.getString("uniseq") + "',");
             }
-            FileOutputStream fileOutputStream = new FileOutputStream(destDir + "\\exop.bat", false);
-            fileOutputStream.write(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets")).getBytes("GB2312"));
-            fileOutputStream.flush();
-            fileOutputStream.close();
-            //Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user
-            fileOutputStream = new FileOutputStream(destDir + "\\assets\\css\\main.css", false);
-            fileOutputStream.write(GlobalValues.HtmlFormattingText.CSS_CONTENT.getBytes("UTF-8"));
-            fileOutputStream.flush();
-            fileOutputStream.close();
-            fileOutputStream = new FileOutputStream(destDir + "\\" + uinOpposite + ".html", false);
+            multiMsgQueryBuilder.replace(multiMsgQueryBuilder.length() - 1, multiMsgQueryBuilder.length(), ")");
+            ResultSet multiMessageList = connection.createStatement().executeQuery("SELECT * FROM mr_multimessage WHERE msgseq IN " + multiMsgQueryBuilder.toString());
+            ResultSet messageList = connection.createStatement().executeQuery("SELECT * FROM mr_friend_<TARGET>_New".replace("<TARGET>", targetMD5));
+            ResultSet messageListSlowTable = null;
+            try {
+                messageListSlowTable = connectionSlowTable.createStatement().executeQuery("SELECT * FROM mr_friend_<TARGET>_New".replace("<TARGET>", targetMD5));
+            } catch (SQLException e) {
+                //slowtable.db might not have that table since the regular database is enough to store messages
+            }
+            MessageStack topMessageStack = MessageStack.process(messageList, messageListSlowTable, multiMessageList, friendMap, friendMapMultiMsg, key);
             StringBuilder htmlBuilder = new StringBuilder();
-            String htmlTitle = GlobalValues.HtmlFormattingText.HTML_TITLE.replace("{HOST_NICKNAME}", me.nickName).replace("{HOST_UIN}", me.uin).replace("{OPPOSITE_NICKNAME}", opposite.nickName).replace("{OPPOSITE_UIN}", opposite.uin);
+            String htmlTitle = GlobalValues.HtmlFormattingText.HTML_TITLE.replace("{HOST_NICKNAME}", friendMap.get(uinSelf).nickName).replace("{HOST_UIN}", friendMap.get(uinSelf).uin).replace("{OPPOSITE_NICKNAME}", friendMap.get(uinOpposite).nickName).replace("{OPPOSITE_UIN}", friendMap.get(uinOpposite).uin);
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_HEADER.replace("{HTML_TITLE}", htmlTitle));
             ArrayList emotionConfig = new Gson().fromJson(new JsonParser().parse(new JsonReader(new InputStreamReader(Main.class.getResourceAsStream("face_config.json")))).getAsJsonObject().get("sysface").getAsJsonArray(), new TypeToken<List<QEmotion>>() {
             }.getType());
-            htmlBuilder.append(topMessageStack.replaceEmotion(topMessageStack.printToHtml(me), emotionConfig));
+            htmlBuilder.append(topMessageStack.replaceEmotion(topMessageStack.printToHtml(friendMap.get(uinSelf)), emotionConfig));
             htmlBuilder.append(GlobalValues.HtmlFormattingText.HTML_FILE_FOOTER);
-            fileOutputStream.write(htmlBuilder.toString().getBytes("UTF-8"));
-            fileOutputStream.flush();
-            fileOutputStream.close();
-        } catch (ClassNotFoundException | NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            writeFile(htmlBuilder.toString(), destDir + "\\" + uinOpposite + ".html");
+            writeFile(GlobalValues.HtmlFormattingText.CSS_CONTENT, destDir + "\\assets\\css\\main.css");
+            writeBatchFile(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets")), destDir + "\\exop.bat");
+            //Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             System.err.println("未知错误");
             e.printStackTrace();
         } catch (SQLException e) {
@@ -115,6 +86,45 @@ public class Main {
             System.err.println("文件写出失败");
             e.printStackTrace();
         }
+    }
+
+    static void writeFile(String content, String path) throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(path, false);
+        fileOutputStream.write(content.getBytes("UTF-8"));
+        fileOutputStream.flush();
+        fileOutputStream.close();
+    }
+
+    static void writeBatchFile(String content, String path) throws IOException {
+        FileOutputStream fileOutputStream = new FileOutputStream(path, false);
+        fileOutputStream.write(content.getBytes("GB2312"));
+        fileOutputStream.flush();
+        fileOutputStream.close();
+    }
+
+    static HashMap<String, Person> fetchFriends(ResultSet rs, String key) throws SQLException {
+        HashMap<String, Person> toReturn = new HashMap<>();
+        while (rs.next()) {
+            String uin = decryptChar(rs.getString("uin"), key);
+            String name = decryptChar(rs.getString("name"), key);
+            String remark = decryptChar(rs.getString("remark"), key);
+            toReturn.put(uin, new Person(uin, remark.equals("") ? name : remark));
+        }
+        return toReturn;
+    }
+
+    static HashMap<String, HashMap<String, Person>> fetchMultiMsgFriends(ResultSet rs, String key) throws SQLException {
+        HashMap<String, HashMap<String, Person>> toReturn = new HashMap<>();
+        while (rs.next()) {
+            String uin = decryptChar(rs.getString("uin"), key);
+            String nick = decryptChar(rs.getString("nick"), key);
+            String uniseq = rs.getString("uniseq");
+            if (toReturn.get(uniseq) == null) {
+                toReturn.put(uniseq, new HashMap<>());
+            }
+            toReturn.get(uniseq).put(uin, new Person(uin, nick));
+        }
+        return toReturn;
     }
 
     static String decryptChar(String data, String key) {
