@@ -51,7 +51,14 @@ public class Main {
             while (rs.next()) {
                 multiMsgQueryBuilder.append("'" + rs.getString("uniseq") + "',");
             }
-            rs = statementSlowTable.executeQuery("SELECT uniseq FROM mr_friend_<TARGET>_New WHERE msgtype='-2011'".replace("<TARGET>", targetMD5));
+            try {
+                rs = statementSlowTable.executeQuery("SELECT uniseq FROM mr_friend_<TARGET>_New WHERE msgtype='-2011'".replace("<TARGET>", targetMD5));
+                while (rs.next()) {
+                    multiMsgQueryBuilder.append("'" + rs.getString("uniseq") + "',");
+                }
+            } catch (SQLException e) {
+            }
+            rs = statement.executeQuery("SELECT uniseq FROM mr_multimessage WHERE msgtype='-2011'");
             while (rs.next()) {
                 multiMsgQueryBuilder.append("'" + rs.getString("uniseq") + "',");
             }

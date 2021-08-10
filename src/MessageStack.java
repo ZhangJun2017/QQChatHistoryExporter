@@ -100,6 +100,13 @@ public class MessageStack {
                 case "-5018":
                     toReturn.add(new PokeMessage(sender, time, uniseq, Main.decryptString(msgData, key)));
                     break;
+                case "-2011":
+                    if (ForwardMessage.isForwardMessage(Main.decryptProtobuf(msgData, key))) {
+                        toReturn.add(new ForwardMessage(sender, time, uniseq, multiMessageList, friendMapMultiMsg.get(uniseq), key));
+                    } else {
+                        toReturn.add(new TextMessage(sender, time, uniseq, "[分享消息]"));
+                    }
+                    break;
                 default:
                     toReturn.add(new TextMessage(sender, time, uniseq, "不支持的消息类型：" + msgtype));
                     break;
