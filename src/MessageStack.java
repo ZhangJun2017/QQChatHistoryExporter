@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class MessageStack {
-    private final ArrayList<Message> messages;
+    public final ArrayList<Message> messages;
     private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public MessageStack() {
@@ -51,7 +51,7 @@ public class MessageStack {
         StringBuffer messageBuffer = new StringBuffer(message);
         for (int i = 0; i < messageBuffer.length(); i++) {
             if (messageBuffer.charAt(i) == '\u0014') {
-                messageBuffer.insert(i + 2, GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.get(String.valueOf(messageBuffer.codePointAt(i + 1))).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.get(String.valueOf(messageBuffer.codePointAt(i + 1))).getQDes()));
+                messageBuffer.insert(i + 2, GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.getOrDefault(String.valueOf(messageBuffer.codePointAt(i + 1)), new QEmotion()).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.getOrDefault(String.valueOf(messageBuffer.codePointAt(i + 1)), new QEmotion()).getQDes()));
                 messageBuffer.delete(i, i + 2);
             }
         }
@@ -65,52 +65,27 @@ public class MessageStack {
         return toReturn;
     }
 
-    public static MessageStack process(ResultSet messageList, ResultSet messageListSlowTable, ResultSet multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
+    public static MessageStack process(ResultSet messageList, ResultSet messageListSlowTable, HashMap<String, ArrayList<RawMessage>> multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
         return MessageStack.join(MessageStack.parse(messageList, multiMessageList, friendMap, friendMapMultiMsg, key), MessageStack.parse(messageListSlowTable, multiMessageList, friendMap, friendMapMultiMsg, key));
     }
 
-    public static MessageStack parse(ResultSet messageList, ResultSet multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
+    public static MessageStack parse(ResultSet messageList, HashMap<String, ArrayList<RawMessage>> multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
         MessageStack toReturn = new MessageStack();
         if (messageList == null) {
             return toReturn;
         }
         while (messageList.next()) {
-            String senderuin = Main.decryptString(messageList.getBytes("senderuin"), key);
-            long time = Long.valueOf(messageList.getString("time"));
-            long uniseq = Long.valueOf(messageList.getString("uniseq"));
-            String msgtype = messageList.getString("msgtype");
-            byte[] msgData = messageList.getBytes("msgData");
-            Person sender = friendMap.get(senderuin);
-            if (sender == null) {
-                sender = new Person(senderuin, senderuin);
-            }
-            switch (msgtype) {
-                case "-1000":
-                case "-1049":
-                case "-1051":
-                    toReturn.add(new TextMessage(sender, time, uniseq, Main.decryptString(msgData, key)));
-                    break;
-                case "-2000":
-                    toReturn.add(new PictureMessage(sender, time, uniseq, Main.decryptProtobuf(msgData, key)));
-                    break;
-                case "-1035":
-                    toReturn.add(new MixedMessage(sender, time, uniseq, Main.decryptProtobuf(msgData, key)));
-                    break;
-                case "-5012":
-                case "-5018":
-                    toReturn.add(new PokeMessage(sender, time, uniseq, Main.decryptString(msgData, key)));
-                    break;
-                case "-2011":
-                    if (ForwardMessage.isForwardMessage(Main.decryptProtobuf(msgData, key))) {
-                        toReturn.add(new ForwardMessage(sender, time, uniseq, multiMessageList, friendMapMultiMsg.get(uniseq), key));
-                    } else {
-                        toReturn.add(new TextMessage(sender, time, uniseq, "[分享消息]"));
-                    }
-                    break;
-                default:
-                    toReturn.add(new TextMessage(sender, time, uniseq, "不支持的消息类型：" + msgtype));
-                    break;
-            }
+            toReturn.add(new RawMessage(messageList).parse(key, friendMapMultiMsg, friendMap, multiMessageList));
+        }
+        return toReturn;
+    }
+
+    public static HashMap<String, ArrayList<RawMessage>> parseMultiMsg(ResultSet rs) throws SQLException {
+        HashMap<String, ArrayList<RawMessage>> toReturn = new HashMap<>();
+        while (rs.next()) {
+            RawMessage message = new RawMessage(rs);
+            toReturn.putIfAbsent(message.msgseq, new ArrayList<>());
+            toReturn.get(message.msgseq).add(message);
         }
         return toReturn;
     }

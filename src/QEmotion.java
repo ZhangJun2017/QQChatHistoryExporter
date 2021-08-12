@@ -6,6 +6,11 @@ public class QEmotion {
     private String EMCode;
 
     public QEmotion() {
+        QSid = "9999";
+        QDes = "Unknown";
+        IQLid = "9999";
+        AQLid = "9999";
+        EMCode = "9999";
     }
 
     public String getQSid() {
