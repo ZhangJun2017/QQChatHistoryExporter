@@ -7,7 +7,7 @@ public class QEmotion {
 
     public QEmotion() {
         QSid = "9999";
-        QDes = "Unknown";
+        QDes = "未知表情";
         IQLid = "9999";
         AQLid = "9999";
         EMCode = "9999";
@@ -32,4 +32,5 @@ public class QEmotion {
     public String getEMCode() {
         return EMCode;
     }
+
 }

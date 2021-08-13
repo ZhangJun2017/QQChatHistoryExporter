@@ -67,7 +67,8 @@ public class Main {
                 //slowtable.db might not have that table since the regular database is enough to store messages
             }
             MessageStack topMessageStack = MessageStack.process(messageList, messageListSlowTable, MessageStack.parseMultiMsg(multiMessageList), friendMap, friendMapMultiMsg, key);
-            writeFile(new MessageWrapper(topMessageStack, friendMap.get(uinSelf), friendMap.get(uinOpposite)).printToHtml(), destDir + "\\" + uinOpposite + ".html");
+            writeFile(GlobalValues.HtmlFormattingText.ROUTER_HTML_CONTENT.replace("{MAIN_HTML_FILE_URL}", GlobalValues.AssetsPath.MAIN_HTML_FILE_PATH + uinOpposite + ".html"), destDir + "\\" + uinOpposite + ".html");
+            writeFile(new MessageWrapper(topMessageStack, friendMap.get(uinSelf), friendMap.get(uinOpposite)).printToHtml(), destDir + "\\assets\\html\\" + uinOpposite + ".html");
             writeFile(GlobalValues.HtmlFormattingText.CSS_CONTENT, destDir + "\\assets\\css\\main.css");
             writeBatchFile(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets")), destDir + "\\exop.bat");
             Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user

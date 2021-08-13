@@ -40,18 +40,17 @@ public class ForwardMessage extends Message {
 
     @Override
     public String printToHtml() {
-        return GlobalValues.HtmlFormattingText.FORWARD_MESSAGE_HTML.replace("{FORWARD_MESSAGE_HTML_URL}", GlobalValues.AssetsPath.FORWARD_MESSAGE_HTML_PATH + uniseq + ".html").replace("{FORWARD_MESSAGE_COUNT}", String.valueOf(messages.messages.size()));
+        return GlobalValues.HtmlFormattingText.FORWARD_MESSAGE_HTML.replace("{FORWARD_MESSAGE_HTML_URL}", GlobalValues.AssetsPath.HTML_FILE_PATH + uniseq + ".html").replace("{FORWARD_MESSAGE_COUNT}", String.valueOf(messages.messages.size()));
     }
 
     @Override
     public String getExternalOperationCmdline() {
         try {
             Main.writeFile(new MessageWrapper(messages, host, opposite).printToHtml(), System.getProperty("java.io.tmpdir") + "\\" + uniseq + ".html");
-            Main.writeFile(GlobalValues.HtmlFormattingText.FORWARD_MESSAGE_ROUTER_HTML_CONTENT.replace("{FORWARD_MESSAGE_HTML_URL}", GlobalValues.AssetsPath.FORWARD_MESSAGE_ROUTER_HTML_PATH + uniseq + ".html"), System.getProperty("java.io.tmpdir") + "\\" + uniseq + "_router.html");
         } catch (IOException e) {
             System.err.println("写出转发的聊天记录失败");
             e.printStackTrace();
         }
-        return messages.getExternalOperationCmdline() + "move /Y \"" + System.getProperty("java.io.tmpdir") + "\\" + uniseq + ".html" + "\" \"<destDir>\\html\\" + uniseq + ".html" + "\" >nul\r\n" + "move /Y \"" + System.getProperty("java.io.tmpdir") + "\\" + uniseq + "_router.html" + "\" \"<destDir>\\html\\assets\\html\\" + uniseq + ".html" + "\" >nul\r\n";
+        return messages.getExternalOperationCmdline() + "move /Y \"" + System.getProperty("java.io.tmpdir") + "\\" + uniseq + ".html" + "\" \"<destDir>\\html\\" + uniseq + ".html" + "\" >nul\r\n";
     }
 }
