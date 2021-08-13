@@ -67,6 +67,9 @@ public class RawMessage {
                     toReturn = new TextMessage(sender, time, uniseq, "[分享消息]");
                 }
                 break;
+            case "-2002":
+                toReturn = new VoiceMessage(sender, time, uniseq, decryptProtobuf(msgData, key));
+                break;
             default:
                 toReturn = new TextMessage(sender, time, uniseq, "不支持的消息类型：" + msgtype);
                 break;

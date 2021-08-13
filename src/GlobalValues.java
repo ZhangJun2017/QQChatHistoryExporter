@@ -16,6 +16,8 @@ public class GlobalValues {
         public static final String MIXED_MESSAGE_HTML = "<div class=\"message-content mixed-message\"><span>{MIXED_MESSAGE_CONTENT}</span></div>";
         public static final String POKE_MESSAGE_HTML = "<div class=\"message-content poke-message\"><span>{POKE_MESSAGE_CONTENT}</span></div>";
         public static final String FORWARD_MESSAGE_HTML = "<div class=\"message-content forward-message\"><span><a href=\"{FORWARD_MESSAGE_HTML_URL}\" target=\"_blank\">查看 {FORWARD_MESSAGE_COUNT} 条转发的消息</a></span></div>";
+        public static final String VOICE_MESSAGE_HTML = "<div class=\"message-content voice-message\"><span>{VOICE_MESSAGE_CONTENT}</span></div>";
+        public static final String VOICE_HTML = "{STT_TEXT}<br><audio src=\"{VOICE_SRC}\" controls title=\"{VOICE_TITLE}\"></audio>";
     }
 
     public static class BatchFormattingText {
@@ -29,5 +31,6 @@ public class GlobalValues {
         public static final String EMOTION_PATH = "./../emotion/";
         public static final String MAIN_HTML_FILE_PATH = "./assets/html/";
         public static final String HTML_FILE_PATH = "./";
+        public static final String VOICE_PATH = "./../voice/";
     }
 }

@@ -70,7 +70,7 @@ public class Main {
             writeFile(GlobalValues.HtmlFormattingText.ROUTER_HTML_CONTENT.replace("{MAIN_HTML_FILE_URL}", GlobalValues.AssetsPath.MAIN_HTML_FILE_PATH + uinOpposite + ".html"), destDir + "\\" + uinOpposite + ".html");
             writeFile(new MessageWrapper(topMessageStack, friendMap.get(uinSelf), friendMap.get(uinOpposite)).printToHtml(), destDir + "\\assets\\html\\" + uinOpposite + ".html");
             writeFile(GlobalValues.HtmlFormattingText.CSS_CONTENT, destDir + "\\assets\\css\\main.css");
-            writeBatchFile(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets")), destDir + "\\exop.bat");
+            writeBatchFile(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets").replace("<silkDecoder>", "\"" + assetDir + "\\silk_v3_decoder.exe\"").replace("<ffmpeg>", "\"" + assetDir + "\\ffmpeg.exe\"")), destDir + "\\exop.bat");
             Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user
         } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
             System.err.println("未知错误");
