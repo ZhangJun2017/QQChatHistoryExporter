@@ -1,24 +1,29 @@
 public class Voice {
-    public String fullLocalPath;
+    public String localPath;
     public String sttText;
     public int voiceLength;
+    public String filePath = "";
     public String fileName;
     private RichMsgHandle.PttRec parser = null;
 
     public Voice() {
-        fullLocalPath = "";
+        localPath = "";
         sttText = "无效语音消息";
     }
 
     public Voice(RichMsgHandle.PttRec parser) {
         this.parser = parser;
-        fullLocalPath = parser.getFullLocalPath();
+        localPath = parser.getLocalPath();
         sttText = parser.getSttText();
         voiceLength = parser.getVoiceLength();
-        String[] pathArr = fullLocalPath.split("/");
+        String[] pathArr = localPath.split("/");
         for (int i = pathArr.length - 2; i >= 0; i--) {
             if (pathArr[i].equals("ptt")) {
-                fileName = pathArr[i + 1].substring(0, pathArr[i + 1].length() - 4);
+                for (int j = i + 1; j < pathArr.length - 1; j++) {
+                    filePath += pathArr[j] + "\\";
+                }
+                fileName = pathArr[pathArr.length - 1].substring(0, pathArr[pathArr.length - 1].length() - 4);
+                filePath += fileName;
                 i = -1;
             }
         }
@@ -30,6 +35,6 @@ public class Voice {
     }
 
     public String getExternalOperationCmdline() {
-        return "copy /Y \"<sourceDir>\\ptt\\" + fileName + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" >nul\r\n" + "<silkDecoder> \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm" + "\" -quiet>nul\r\n" + "<ffmpeg> -loglevel quiet -y -f s16le -ar 24000 -ac 1 -i \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm" + "\" -ar 24000 -b:a 320k \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".mp3\" >nul\r\n" + "move /Y \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".mp3" + "\" \"<destDir>\\voice\\" + fileName + ".mp3" + "\" >nul\r\n" + "del \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm\" >nul\r\n";
+        return "copy /Y \"<sourceDir>\\ptt\\" + filePath + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" >nul\r\n" + "<silkDecoder> \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm" + "\" -quiet>nul\r\n" + "<ffmpeg> -loglevel quiet -y -f s16le -ar 24000 -ac 1 -i \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm" + "\" -ar 24000 -b:a 320k \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".mp3\" >nul\r\n" + "move /Y \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".mp3" + "\" \"<destDir>\\voice\\" + fileName + ".mp3" + "\" >nul\r\n" + "del \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".slk\" \"" + System.getProperty("java.io.tmpdir") + "\\" + fileName + ".pcm\" >nul\r\n";
     }
 }
