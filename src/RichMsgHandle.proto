@@ -92,6 +92,20 @@ message MarketFaceRec {
   uint32 uint32_image_height = 11;
 }
 
+message ShortVideo {
+  string localPath = 3;
+  uint32 fileSize = 6;
+}
+
+message Tip {
+  string tip = 5;
+  RecallInfo recallInfo = 9;
+}
+
+message RecallInfo {
+  string RecallDetail = 8;
+}
+
 message Elem {
   string textMsg = 1;
   PicRec picMsg = 2;

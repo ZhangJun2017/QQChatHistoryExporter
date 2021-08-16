@@ -71,7 +71,7 @@ public class RawMessage {
                 toReturn = new VoiceMessage(sender, time, uniseq, decryptProtobuf(msgData, key));
                 break;
             default:
-                toReturn = new TextMessage(sender, time, uniseq, "不支持的消息类型：" + msgtype);
+                toReturn = MiscMessageHandle.parse(sender, time, uniseq, msgtype, decryptProtobuf(msgData, key));
                 break;
         }
         return toReturn;
