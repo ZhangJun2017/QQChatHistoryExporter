@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MixedMessage extends Message {
-    private List<RichMsgHandle.Elem> elemList = null;
+    private List<RichMsgHandle.Elem> elemList;
 
     public MixedMessage(Person sender, long time, long uniseq, byte[] data) {
         super(sender, time, uniseq);

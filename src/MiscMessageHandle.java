@@ -34,7 +34,8 @@ public class MiscMessageHandle {
                 }
                 break;
             case "-2007":
-                toReturn = new TextMessage(sender, time, uniseq, "[表情]");
+                //toReturn = new TextMessage(sender, time, uniseq, "[表情]");
+                toReturn = new TextMessage(sender, time, uniseq, "[表情]" + hanziExtract(msgStr));  //experimental feature
                 break;
             case "-5040":
                 try {
@@ -49,5 +50,9 @@ public class MiscMessageHandle {
                 break;
         }
         return toReturn;
+    }
+
+    public static String hanziExtract(String str) {
+        return str.replaceAll("[^\u4e00-\u9fa5]", "");
     }
 }

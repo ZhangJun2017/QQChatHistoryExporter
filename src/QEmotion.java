@@ -1,9 +1,9 @@
 public class QEmotion {
-    private String QSid;
-    private String QDes;
-    private String IQLid;
-    private String AQLid;
-    private String EMCode;
+    private final String QSid;
+    private final String QDes;
+    private final String IQLid;
+    private final String AQLid;
+    private final String EMCode;
 
     public QEmotion() {
         QSid = "9999";
@@ -32,5 +32,4 @@ public class QEmotion {
     public String getEMCode() {
         return EMCode;
     }
-
 }

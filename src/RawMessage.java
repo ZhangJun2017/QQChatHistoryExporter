@@ -46,9 +46,11 @@ public class RawMessage {
         Message toReturn;
         switch (msgtype) {
             case "-1000":
-            case "-1049":
             case "-1051":
                 toReturn = new TextMessage(sender, time, uniseq, decryptString(msgData, key));
+                break;
+            case "-1049":
+                toReturn = new TextMessage(sender, time, uniseq, "[回复的消息]\n" + decryptString(msgData, key));
                 break;
             case "-2000":
                 toReturn = new PictureMessage(sender, time, uniseq, decryptProtobuf(msgData, key));
