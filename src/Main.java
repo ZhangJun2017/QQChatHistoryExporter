@@ -32,6 +32,8 @@ public class Main {
         final String DB_URL_slowtable = "jdbc:sqlite:" + sourceDir + "\\" + dbSlowTableFileName;
         try {
             String targetMD5 = new BigInteger(1, MessageDigest.getInstance("md5").digest(uinOpposite.getBytes())).toString(16).toUpperCase();
+            targetMD5 = "00000000000000000000000000000000" + targetMD5;
+            targetMD5 = targetMD5.substring(targetMD5.length() - 32);
             Connection connection = DriverManager.getConnection(DB_URL);
             Connection connectionSlowTable = DriverManager.getConnection(DB_URL_slowtable);
             Statement statement = connection.createStatement();
