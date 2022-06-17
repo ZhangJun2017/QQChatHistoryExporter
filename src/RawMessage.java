@@ -72,6 +72,9 @@ public class RawMessage {
             case "-2002":
                 toReturn = new VoiceMessage(sender, time, uniseq, decryptProtobuf(msgData, key));
                 break;
+            case "-2007":
+                toReturn = new MarkFaceMessage(sender, time, uniseq, decryptProtobuf(msgData, key));
+                break;
             default:
                 toReturn = MiscMessageHandle.parse(sender, time, uniseq, msgtype, decryptProtobuf(msgData, key));
                 break;

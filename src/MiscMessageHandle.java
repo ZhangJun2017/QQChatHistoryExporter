@@ -33,10 +33,6 @@ public class MiscMessageHandle {
                     toReturn = new TextMessage(sender, time, uniseq, "[短视频]解析失败");
                 }
                 break;
-            case "-2007":
-                //toReturn = new TextMessage(sender, time, uniseq, "[表情]");
-                toReturn = new TextMessage(sender, time, uniseq, "[表情]" + hanziExtract(msgStr));  //experimental feature
-                break;
             case "-5040":
                 try {
                     RichMsgHandle.Tip tip = RichMsgHandle.Tip.parseFrom(msgData);
@@ -50,9 +46,5 @@ public class MiscMessageHandle {
                 break;
         }
         return toReturn;
-    }
-
-    public static String hanziExtract(String str) {
-        return str.replaceAll("[^\u4e00-\u9fa5]", "");
     }
 }
