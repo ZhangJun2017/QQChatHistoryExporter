@@ -1,6 +1,6 @@
 # QQChatHistoryExporter
 手机QQ聊天记录导出，在现有项目基础上增加对语音消息和转发聊天记录的支持，不支持群聊导出，下载
-[本体](https://github.com/ZhangJun2017/QQChatHistoryExporter/releases/download/v1.0/QQChatHistoryExporter_v1.0.jar) [附加包](https://github.com/ZhangJun2017/QQChatHistoryExporter/releases/download/v1.0/QQChatHistoryExporter_v1.0_extra.zip)
+[本体](https://github.com/ZhangJun2017/QQChatHistoryExporter/releases/download/v1.1/QQChatHistoryExporter_v1.1.jar) [附加包](https://github.com/ZhangJun2017/QQChatHistoryExporter/releases/download/v1.1/QQChatHistoryExporter_v1.1_extra.zip)
 ，需要Java环境
 
 ## 使用方法
