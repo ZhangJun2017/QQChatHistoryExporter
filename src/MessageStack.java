@@ -51,7 +51,8 @@ public class MessageStack {
         StringBuffer messageBuffer = new StringBuffer(message);
         for (int i = 0; i < messageBuffer.length(); i++) {
             if (messageBuffer.charAt(i) == '\u0014') {
-                messageBuffer.insert(i + 2, GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + configMap.getOrDefault(String.valueOf(messageBuffer.codePointAt(i + 1)), new QEmotion()).getQSid() + ".png").replace("{EMOTION_ALT}", configMap.getOrDefault(String.valueOf(messageBuffer.codePointAt(i + 1)), new QEmotion()).getQDes()));
+                QEmotion emotion = configMap.getOrDefault(String.valueOf(messageBuffer.codePointAt(i + 1)), new QEmotion(String.valueOf(i + 1)));
+                messageBuffer.insert(i + 2, GlobalValues.HtmlFormattingText.EMOTION_HTML.replace("{EMOTION_SRC}", GlobalValues.AssetsPath.EMOTION_PATH + "s" + emotion.getQSid() + ".png").replace("{EMOTION_ALT}", emotion.getQDes()).replace("{EMOTION_TITLE}", emotion.getAQLid() + " -> " + emotion.getQDes()));
                 messageBuffer.delete(i, i + 2);
             }
         }

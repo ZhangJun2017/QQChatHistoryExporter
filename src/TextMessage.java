@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class TextMessage extends Message {
     public final String content;
 
@@ -17,23 +19,28 @@ public class TextMessage extends Message {
             toEscape = toEscape.replace("\n", "<br>");
             return toEscape;
         } else {
-            if (toEscape.equals("\u0014\u0014")) {
-                return toEscape;
-            }
-            String[] toEscapeArray = toEscape.split("\u0014");
-            StringBuilder message = new StringBuilder(escapeHtml(toEscapeArray[0]));
-            for (int i = 0; i < toEscapeArray.length - 1; i++) {
-                message.append('\u0014');
-                if (toEscapeArray[i + 1].length() > 0) {
-                    message.append(toEscapeArray[i + 1].charAt(0));
-                    message.append(escapeHtml(toEscapeArray[i + 1].substring(1)));
-                } else {
-                    // a standalone \u0014 ??
-                    message.append('\u0034');
+            ArrayList<Integer> markIndex = new ArrayList<>();
+            StringBuilder toReturn = new StringBuilder("");
+            for (int i = 0; i < toEscape.length(); i++) {
+                if (toEscape.charAt(i) == '\u0014' && !markIndex.contains(i - 1)) {  //sometimes there are two consecutive \u0014
+                    markIndex.add(i);
                 }
             }
-            message.append(toEscapeArray.length < 3 || toEscapeArray[toEscapeArray.length - 1].length() < 2 ? "" : escapeHtml(toEscapeArray[toEscapeArray.length - 1]));
-            return message.toString();
+            toReturn.append(escapeHtml(toEscape.substring(0, markIndex.get(0))));  //handle first \u0014 separately
+            for (int i = 0; i < markIndex.size() - 1; i++) {
+                toReturn.append(toEscape.substring(markIndex.get(i), markIndex.get(i) + 2));
+                toReturn.append(escapeHtml(toEscape.substring(markIndex.get(i) + 2, markIndex.get(i + 1))));
+            }
+            if (markIndex.get(markIndex.size() - 1) == toEscape.length() - 1) {  //handle last \u0014 separately
+                //seems like there's a standalone \u0014 appear at the end of the message....
+                toReturn.append('\u0014');
+                toReturn.append((char) 9999);
+            } else {
+                //normal case
+                toReturn.append(toEscape.substring(markIndex.get(markIndex.size() - 1), markIndex.get(markIndex.size() - 1) + 2));
+                toReturn.append(escapeHtml(toEscape.substring(markIndex.get(markIndex.size() - 1) + 2, toEscape.length())));
+            }
+            return toReturn.toString();
         }
     }
 

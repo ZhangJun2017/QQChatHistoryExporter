@@ -13,6 +13,14 @@ public class QEmotion {
         EMCode = "9999";
     }
 
+    public QEmotion(String AQLid) {
+        QSid = AQLid;
+        QDes = "未知表情";
+        IQLid = AQLid;
+        this.AQLid = AQLid;
+        EMCode = AQLid;
+    }
+
     public String getQSid() {
         return QSid;
     }
