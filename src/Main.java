@@ -6,7 +6,6 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -37,8 +36,9 @@ public class Main {
             Connection connection = DriverManager.getConnection(DB_URL);
             Connection connectionSlowTable = DriverManager.getConnection(DB_URL_slowtable);
             Statement statement = connection.createStatement();
-            HashMap<String, Person> friendMap = fetchFriends(statement.executeQuery("SELECT uin,name,remark FROM Friends"), key);
-            HashMap<String, HashMap<String, Person>> friendMapMultiMsg = fetchMultiMsgFriends(statement.executeQuery("SELECT uin,nick,uniseq FROM MultiMsgNick"), key);
+            FriendManager friendManager = new FriendManager();
+            friendManager.fetchFriends(statement.executeQuery("SELECT uin,name,remark FROM Friends"), key);
+            friendManager.fetchMultiMsgFriends(statement.executeQuery("SELECT uin,nick,uniseq FROM MultiMsgNick"), key);
             ResultSet multiMessageList = connection.createStatement().executeQuery("SELECT * FROM mr_multimessage");
             ResultSet messageList = connection.createStatement().executeQuery("SELECT * FROM mr_friend_<TARGET>_New".replace("<TARGET>", targetMD5));
             ResultSet messageListSlowTable = null;
@@ -47,9 +47,9 @@ public class Main {
             } catch (SQLException e) {
                 //slowtable.db might not have that table since the regular database is enough to store messages
             }
-            MessageStack topMessageStack = MessageStack.process(messageList, messageListSlowTable, MessageStack.parseMultiMsg(multiMessageList), friendMap, friendMapMultiMsg, key);
+            MessageStack topMessageStack = MessageStack.process(messageList, messageListSlowTable, MessageStack.parseMultiMsg(multiMessageList), friendManager, key);
             writeFile(GlobalValues.HtmlFormattingText.ROUTER_HTML_CONTENT.replace("{MAIN_HTML_FILE_URL}", GlobalValues.AssetsPath.MAIN_HTML_FILE_PATH + uinOpposite + ".html"), destDir + "\\" + uinOpposite + ".html");
-            writeFile(new MessageWrapper(topMessageStack, friendMap.get(uinSelf), friendMap.get(uinOpposite)).printToHtml(), destDir + "\\assets\\html\\" + uinOpposite + ".html");
+            writeFile(new MessageWrapper(topMessageStack, friendManager.getPersonByUin(uinSelf), friendManager.getPersonByUin(uinOpposite)).printToHtml(), destDir + "\\assets\\html\\" + uinOpposite + ".html");
             writeFile(GlobalValues.HtmlFormattingText.CSS_CONTENT, destDir + "\\assets\\css\\main.css");
             writeBatchFile(GlobalValues.BatchFormattingText.BATCH_FILE_BODY.replace("{BATCH_FILE_BODY}", topMessageStack.getExternalOperationCmdline().replace("<sourceDir>", assetDir).replace("<destDir>", destDir + "\\assets").replace("<silkDecoder>", "\"" + assetDir + "\\silk_v3_decoder.exe\"").replace("<ffmpeg>", "\"" + assetDir + "\\ffmpeg.exe\"")), destDir + "\\exop.bat");
             Runtime.getRuntime().exec("cmd.exe /c start cmd.exe /c " + destDir + "\\exop.bat");  //show a dialog to user
@@ -89,26 +89,4 @@ public class Main {
         fileOutputStream.close();
     }
 
-    static HashMap<String, Person> fetchFriends(ResultSet rs, String key) throws SQLException {
-        HashMap<String, Person> toReturn = new HashMap<>();
-        while (rs.next()) {
-            String uin = RawMessage.decryptChar(rs.getString("uin"), key);
-            String name = RawMessage.decryptChar(rs.getString("name"), key);
-            String remark = RawMessage.decryptChar(rs.getString("remark"), key);
-            toReturn.put(uin, new Person(uin, remark.equals("") ? name : remark));
-        }
-        return toReturn;
-    }
-
-    static HashMap<String, HashMap<String, Person>> fetchMultiMsgFriends(ResultSet rs, String key) throws SQLException {
-        HashMap<String, HashMap<String, Person>> toReturn = new HashMap<>();
-        while (rs.next()) {
-            String uin = RawMessage.decryptChar(rs.getString("uin"), key);
-            String nick = RawMessage.decryptChar(rs.getString("nick"), key);
-            String uniseq = rs.getString("uniseq");
-            toReturn.putIfAbsent(uniseq, new HashMap<>());
-            toReturn.get(uniseq).put(uin, new Person(uin, nick));
-        }
-        return toReturn;
-    }
 }

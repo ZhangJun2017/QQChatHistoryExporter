@@ -10,7 +10,6 @@ import java.util.List;
 
 public class MessageStack {
     public final ArrayList<Message> messages;
-    private final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public MessageStack() {
         messages = new ArrayList<>();
@@ -36,11 +35,16 @@ public class MessageStack {
             } else {
                 toAppend = GlobalValues.HtmlFormattingText.MESSAGE_RECEIVED_HTML;
             }
-            toAppend = toAppend.replace("{MESSAGE_HEADER}", message.sender.nickName + " " + LocalDateTime.ofInstant(Instant.ofEpochSecond(message.time), ZoneOffset.of("+8")).format(dateTimeFormatter));
+            toAppend = toAppend.replace("{MESSAGE_HEADER}", message.sender.nickName + " " + generalTimeFormat(message.time));
             toAppend = toAppend.replace("{MESSAGE_CONTENT}", message.printToHtml());
+            toAppend = toAppend.replace("{MSGUID}", String.valueOf(message.msgUid));
             stringBuilder.append(toAppend);
         });
         return stringBuilder.toString();
+    }
+
+    public static String generalTimeFormat(long time) {
+        return LocalDateTime.ofInstant(Instant.ofEpochSecond(time), ZoneOffset.of("+8")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
     public String replaceEmotion(String message, List<QEmotion> configList) {
@@ -66,17 +70,17 @@ public class MessageStack {
         return toReturn;
     }
 
-    public static MessageStack process(ResultSet messageList, ResultSet messageListSlowTable, HashMap<String, ArrayList<RawMessage>> multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
-        return MessageStack.join(MessageStack.parse(messageList, multiMessageList, friendMap, friendMapMultiMsg, key), MessageStack.parse(messageListSlowTable, multiMessageList, friendMap, friendMapMultiMsg, key));
+    public static MessageStack process(ResultSet messageList, ResultSet messageListSlowTable, HashMap<String, ArrayList<RawMessage>> multiMessageList, FriendManager friendManager, String key) throws SQLException {
+        return MessageStack.join(MessageStack.parse(messageList, multiMessageList, friendManager, key), MessageStack.parse(messageListSlowTable, multiMessageList, friendManager, key));
     }
 
-    public static MessageStack parse(ResultSet messageList, HashMap<String, ArrayList<RawMessage>> multiMessageList, HashMap<String, Person> friendMap, HashMap<String, HashMap<String, Person>> friendMapMultiMsg, String key) throws SQLException {
+    public static MessageStack parse(ResultSet messageList, HashMap<String, ArrayList<RawMessage>> multiMessageList, FriendManager friendManager, String key) throws SQLException {
         MessageStack toReturn = new MessageStack();
         if (messageList == null) {
             return toReturn;
         }
         while (messageList.next()) {
-            toReturn.add(new RawMessage(messageList).parse(key, friendMapMultiMsg, friendMap, multiMessageList));
+            toReturn.add(new RawMessage(messageList).parse(key, friendManager, multiMessageList, false));
         }
         return toReturn;
     }
@@ -93,6 +97,6 @@ public class MessageStack {
 
     public void printToConsole() {
         messages.sort(new SequenceOrderedComparator());
-        messages.forEach(message -> System.out.println("[" + LocalDateTime.ofInstant(Instant.ofEpochSecond(message.time), ZoneOffset.of("+8")).format(dateTimeFormatter) + "]" + message));
+        messages.forEach(message -> System.out.println("[" + generalTimeFormat(message.time) + "]" + message));
     }
 }

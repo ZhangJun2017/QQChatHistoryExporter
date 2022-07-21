@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class TextMessage extends Message {
     public final String content;
 
-    public TextMessage(Person sender, long time, long uniseq, String content) {
-        super(sender, time, uniseq);
+    public TextMessage(Person sender, long time, long uniseq, long msgUid, String content) {
+        super(sender, time, uniseq, msgUid);
         this.content = content;
     }
 

@@ -3,8 +3,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
 public class VoiceMessage extends Message {
     public Voice voice;
 
-    public VoiceMessage(Person sender, long time, long uniseq, byte[] data) {
-        super(sender, time, uniseq);
+    public VoiceMessage(Person sender, long time, long uniseq, long msgUid, byte[] data) {
+        super(sender, time, uniseq, msgUid);
         try {
             voice = new Voice(RichMsgHandle.PttRec.parseFrom(data));
         } catch (InvalidProtocolBufferException e) {

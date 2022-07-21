@@ -3,8 +3,8 @@ import com.google.protobuf.InvalidProtocolBufferException;
 public class PictureMessage extends Message {
     public Picture picture;
 
-    public PictureMessage(Person sender, long time, long uniseq, byte[] data) {
-        super(sender, time, uniseq);
+    public PictureMessage(Person sender, long time, long uniseq, long msgUid, byte[] data) {
+        super(sender, time, uniseq, msgUid);
         try {
             picture = new Picture(RichMsgHandle.PicRec.parseFrom(data));
         } catch (InvalidProtocolBufferException e) {

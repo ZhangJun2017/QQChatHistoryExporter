@@ -4,11 +4,13 @@ public abstract class Message {
     public final Person sender;
     public final long time;
     public final long uniseq;
+    public final long msgUid;
 
-    public Message(Person sender, long time, long uniseq) {
+    public Message(Person sender, long time, long uniseq, long msgUid) {
         this.sender = sender;
         this.time = time;
         this.uniseq = uniseq;
+        this.msgUid = msgUid;
     }
 
     @Override

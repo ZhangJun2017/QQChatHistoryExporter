@@ -6,8 +6,8 @@ import java.util.List;
 public class MixedMessage extends Message {
     private List<RichMsgHandle.Elem> elemList;
 
-    public MixedMessage(Person sender, long time, long uniseq, byte[] data) {
-        super(sender, time, uniseq);
+    public MixedMessage(Person sender, long time, long uniseq, long msgUid, byte[] data) {
+        super(sender, time, uniseq, msgUid);
         try {
             elemList = RichMsgHandle.Msg.parseFrom(data).getElemsList();
         } catch (InvalidProtocolBufferException e) {

@@ -4,8 +4,8 @@ import com.google.gson.JsonSyntaxException;
 public class PokeMessage extends Message {
     private final String pokeJson;
 
-    public PokeMessage(Person sender, long time, long uniseq, String pokeJson) {
-        super(sender, time, uniseq);
+    public PokeMessage(Person sender, long time, long uniseq, long msgUid, String pokeJson) {
+        super(sender, time, uniseq, msgUid);
         this.pokeJson = pokeJson;
     }
 

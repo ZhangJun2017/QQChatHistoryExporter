@@ -4,20 +4,29 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ForwardMessage extends Message {
+    public final long msgseq;
     public MessageStack messages = new MessageStack();
     public static final Person unknown = new Person("未知", "未知");
     public Person host = unknown;
     public Person opposite = unknown;
-    public static final TextMessage invalidForwardMessageNotice = new TextMessage(new Person("", ""), 0, 0, "无效的转发消息");
+    public static final TextMessage invalidForwardMessageNotice = new TextMessage(new Person("", ""), 0, 0, 0, "无效的转发消息");
 
-    public ForwardMessage(Person sender, long time, long uniseq, String key, HashMap<String, HashMap<String, Person>> multiMsgFriendMap, HashMap<String, Person> friendMap, HashMap<String, ArrayList<RawMessage>> multiMsgList) {
-        super(sender, time, uniseq);
+    public ForwardMessage(Person sender, long time, long uniseq, long msgseq, long msgUid, String key, FriendManager friendManager, HashMap<String, ArrayList<RawMessage>> multiMsgList, byte[] msgData, boolean isNestedMultiMsg) {
+        super(sender, time, uniseq, msgUid);
+        this.msgseq = msgseq;
         if (!multiMsgList.containsKey(String.valueOf(uniseq))) {
             messages.add(invalidForwardMessageNotice);
+            messages.add(new TextMessage(new Person("", ""), 0, 1, 0, RawMessage.decryptString(msgData, key)));
             return;
         }
         for (RawMessage message : multiMsgList.get(String.valueOf(uniseq))) {
-            Message toAdd = message.parse(key, multiMsgFriendMap, friendMap, multiMsgList);
+            if (isNestedMultiMsg) {
+                message.msgseq = String.valueOf(msgseq);
+                /* force messages in nested forward message to inherit msgseq
+                   in order to handle sender nickname properly,since these names
+                   are stacked only in the top forward message's name map */
+            }
+            Message toAdd = message.parse(key, friendManager, multiMsgList, true);
             messages.add(toAdd);
             if (host == unknown || opposite == unknown) {
                 if (message.selfuin.equals(message.senderuin)) {
